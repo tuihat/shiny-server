@@ -1,0 +1,591 @@
+Country code,"Latitude, longitude DDMM(SS) DDDMM(SS)",TZ database name,Portion of country covered,Status,UTC offset hh_mm,UTC DST offset hh_mm,Notes
+CI,+0519_00402,Africa/Abidjan,,Canonical,+00:00,+00:00,
+GH,+0533_00013,Africa/Accra,,Canonical,+00:00,+00:00,
+ML,+1239_00800,Africa/Bamako,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+GM,+1328_01639,Africa/Banjul,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+GW,+1151_01535,Africa/Bissau,,Canonical,+00:00,+00:00,
+GN,+0931_01343,Africa/Conakry,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+SN,+1440_01726,Africa/Dakar,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+EH,+2709_01312,Africa/El_Aaiun,,Canonical,+00:00,+01:00,
+SL,+0830_01315,Africa/Freetown,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+TG,721,Africa/Lome,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+LR,+0618_01047,Africa/Monrovia,,Canonical,+00:00,+00:00,
+MR,+1806_01557,Africa/Nouakchott,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+BF,+1222_00131,Africa/Ouagadougou,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+ST,664,Africa/Sao_Tome,,Alias,+00:00,+00:00,Link to Africa/Lagos
+,,Africa/Timbuktu,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+GL,+7646_01840,America/Danmarkshavn,National Park (east coast),Canonical,+00:00,+00:00,
+AQ,_720041+0023206,Antarctica/Troll,Troll,Canonical,+00:00,+02:00,Previously used +01:00 for a brief period between standard and daylight time.[2]
+ES,+2806_01524,Atlantic/Canary,Canary Islands,Canonical,+00:00,+01:00,
+,,Atlantic/Faeroe,,Alias,+00:00,+01:00,Link to Atlantic/Faroe
+FO,+6201_00646,Atlantic/Faroe,,Canonical,+00:00,+01:00,
+PT,+3238_01654,Atlantic/Madeira,Madeira Islands,Canonical,+00:00,+01:00,
+IS,+6409_02151,Atlantic/Reykjavik,,Canonical,+00:00,+00:00,
+SH,_1555_00542,Atlantic/St_Helena,,Alias,+00:00,+00:00,Link to Africa/Abidjan
+,,Eire,,Deprecated,+00:00,+01:00,Link to Europe/Dublin
+,,Etc/GMT,,Canonical,+00:00,+00:00,
+,,Etc/GMT+0,,Alias,+00:00,+00:00,Link to Etc/GMT
+,,Etc/GMT0,,Alias,+00:00,+00:00,Link to Etc/GMT
+,,Etc/GMT-0,,Alias,+00:00,+00:00,Link to Etc/GMT
+,,Etc/Greenwich,,Deprecated,+00:00,+00:00,Link to Etc/GMT
+,,Etc/UCT,,Deprecated,+00:00,+00:00,
+,,Etc/Universal,,Deprecated,+00:00,+00:00,Link to Etc/UTC
+,,Etc/UTC,,Canonical,+00:00,+00:00,
+,,Etc/Zulu,,Deprecated,+00:00,+00:00,Link to Etc/UTC
+,,Europe/Belfast,,Alias,+00:00,+01:00,Link to Europe/London
+IE,+5320_00615,Europe/Dublin,,Canonical,+00:00,+01:00,
+GG,+492717_0023210,Europe/Guernsey,,Alias,+00:00,+01:00,Link to Europe/London
+IM,+5409_00428,Europe/Isle_of_Man,,Alias,+00:00,+01:00,Link to Europe/London
+JE,+491101_0020624,Europe/Jersey,,Alias,+00:00,+01:00,Link to Europe/London
+PT,+3843_00908,Europe/Lisbon,Portugal (mainland),Canonical,+00:00,+01:00,
+GB,+513030_0000731,Europe/London,,Canonical,+00:00,+01:00,
+,,GB,,Deprecated,+00:00,+01:00,Link to Europe/London
+,,GB-Eire,,Deprecated,+00:00,+01:00,Link to Europe/London
+,,GMT,,Alias,+00:00,+00:00,Link to Etc/GMT
+,,GMT_0,,Deprecated,+00:00,+00:00,Link to Etc/GMT
+,,GMT+0,,Deprecated,+00:00,+00:00,Link to Etc/GMT
+,,GMT0,,Deprecated,+00:00,+00:00,Link to Etc/GMT
+,,Greenwich,,Deprecated,+00:00,+00:00,Link to Etc/GMT
+,,Iceland,,Deprecated,+00:00,+00:00,Link to Atlantic/Reykjavik
+,,Portugal,,Deprecated,+00:00,+01:00,Link to Europe/Lisbon
+,,UCT,,Deprecated,+00:00,+00:00,Link to Etc/UCT
+,,Universal,,Deprecated,+00:00,+00:00,Link to Etc/UTC
+,,UTC,,Alias,+00:00,+00:00,Link to Etc/UTC
+,,WET,,Deprecated,+00:00,+01:00,"Choose a zone that observes WET, such as Europe/Lisbon."
+,,Zulu,,Deprecated,+00:00,+00:00,Link to Etc/UTC
+DZ,3950,Africa/Algiers,,Canonical,+01:00,+01:00,
+CF,2257,Africa/Bangui,,Alias,+01:00,+01:00,Link to Africa/Lagos
+CG,_0416+01517,Africa/Brazzaville,,Alias,+01:00,+01:00,Link to Africa/Lagos
+MA,+3339_00735,Africa/Casablanca,,Canonical,+01:00,+01:00,
+ES,+3553_00519,Africa/Ceuta,"Ceuta, Melilla",Canonical,+01:00,+02:00,
+CM,1345,Africa/Douala,,Alias,+01:00,+01:00,Link to Africa/Lagos
+CD,_0418+01518,Africa/Kinshasa,Dem. Rep. of Congo (west),Alias,+01:00,+01:00,Link to Africa/Lagos
+NG,951,Africa/Lagos,,Canonical,+01:00,+01:00,
+GA,950,Africa/Libreville,,Alias,+01:00,+01:00,Link to Africa/Lagos
+AO,_0848+01314,Africa/Luanda,,Alias,+01:00,+01:00,Link to Africa/Lagos
+GQ,1192,Africa/Malabo,,Alias,+01:00,+01:00,Link to Africa/Lagos
+TD,2710,Africa/Ndjamena,,Canonical,+01:00,+01:00,
+NE,1538,Africa/Niamey,,Alias,+01:00,+01:00,Link to Africa/Lagos
+BJ,866,Africa/Porto-Novo,,Alias,+01:00,+01:00,Link to Africa/Lagos
+TN,4659,Africa/Tunis,,Canonical,+01:00,+01:00,
+SJ,9400,Arctic/Longyearbyen,,Alias,+01:00,+02:00,Link to Europe/Oslo
+,,Atlantic/Jan_Mayen,,Alias,+01:00,+02:00,Link to Europe/Oslo
+,,CET,,Deprecated,+01:00,+02:00,"Choose a zone that observes CET, such as Europe/Paris."
+,,Etc/GMT-1,,Canonical,+01:00,+01:00,Sign is intentionally inverted. See the Etc area description.
+NL,5676,Europe/Amsterdam,,Canonical,+01:00,+02:00,
+AD,4361,Europe/Andorra,,Canonical,+01:00,+02:00,
+RS,6480,Europe/Belgrade,,Canonical,+01:00,+02:00,
+DE,6552,Europe/Berlin,Germany (most areas),Canonical,+01:00,+02:00,"In 1945, the Trizone did not follow Berlin's switch to DST, see Time in Germany"
+SK,6516,Europe/Bratislava,,Alias,+01:00,+02:00,Link to Europe/Prague
+BE,5470,Europe/Brussels,,Canonical,+01:00,+02:00,
+HU,6635,Europe/Budapest,,Canonical,+01:00,+02:00,
+DE,5583,Europe/Busingen,Büsingen am Hochrhein,Alias,+01:00,+02:00,Link to Europe/Zurich
+DK,6775,Europe/Copenhagen,,Canonical,+01:00,+02:00,
+GI,+3608_00521,Europe/Gibraltar,,Canonical,+01:00,+02:00,
+SI,6034,Europe/Ljubljana,,Alias,+01:00,+02:00,Link to Europe/Belgrade
+LU,5545,Europe/Luxembourg,,Canonical,+01:00,+02:00,
+ES,+4024_00341,Europe/Madrid,Spain (mainland),Canonical,+01:00,+02:00,
+MT,4985,Europe/Malta,,Canonical,+01:00,+02:00,
+MC,5065,Europe/Monaco,,Canonical,+01:00,+02:00,
+NO,7000,Europe/Oslo,,Canonical,+01:00,+02:00,
+FR,5072,Europe/Paris,,Canonical,+01:00,+02:00,
+ME,6142,Europe/Podgorica,,Alias,+01:00,+02:00,Link to Europe/Belgrade
+CZ,6431,Europe/Prague,,Canonical,+01:00,+02:00,
+IT,5383,Europe/Rome,,Canonical,+01:00,+02:00,
+SM,5583,Europe/San_Marino,,Alias,+01:00,+02:00,Link to Europe/Rome
+BA,6177,Europe/Sarajevo,,Alias,+01:00,+02:00,Link to Europe/Belgrade
+MK,6285,Europe/Skopje,,Alias,+01:00,+02:00,Link to Europe/Belgrade
+SE,7723,Europe/Stockholm,,Canonical,+01:00,+02:00,
+AL,6070,Europe/Tirane,,Canonical,+01:00,+02:00,
+LI,5640,Europe/Vaduz,,Alias,+01:00,+02:00,Link to Europe/Zurich
+VA,538119,Europe/Vatican,,Alias,+01:00,+02:00,Link to Europe/Rome
+AT,6433,Europe/Vienna,,Canonical,+01:00,+02:00,
+HR,6106,Europe/Zagreb,,Alias,+01:00,+02:00,Link to Europe/Belgrade
+CH,5555,Europe/Zurich,,Canonical,+01:00,+02:00,
+,,MET,,Deprecated,+01:00,+02:00,"Choose a zone that observes MET (sames as CET), such as Europe/Paris."
+,,Poland,,Deprecated,+01:00,+02:00,Link to Europe/Warsaw
+MW,_1547+03500,Africa/Blantyre,,Alias,+02:00,+02:00,Link to Africa/Maputo
+BI,_0323+02922,Africa/Bujumbura,,Alias,+02:00,+02:00,Link to Africa/Maputo
+EG,6118,Africa/Cairo,,Canonical,+02:00,+02:00,
+BW,_2439+02555,Africa/Gaborone,,Alias,+02:00,+02:00,Link to Africa/Maputo
+ZW,_1750+03103,Africa/Harare,,Alias,+02:00,+02:00,Link to Africa/Maputo
+ZA,_2615+02800,Africa/Johannesburg,,Canonical,+02:00,+02:00,
+SD,4768,Africa/Khartoum,,Canonical,+02:00,+02:00,
+RW,_0157+03004,Africa/Kigali,,Alias,+02:00,+02:00,Link to Africa/Maputo
+CD,_1140+02728,Africa/Lubumbashi,Dem. Rep. of Congo (east),Alias,+02:00,+02:00,Link to Africa/Maputo
+ZM,_1525+02817,Africa/Lusaka,,Alias,+02:00,+02:00,Link to Africa/Maputo
+MZ,_2558+03235,Africa/Maputo,,Canonical,+02:00,+02:00,
+LS,_2928+02730,Africa/Maseru,,Alias,+02:00,+02:00,Link to Africa/Johannesburg
+SZ,_2618+03106,Africa/Mbabane,,Alias,+02:00,+02:00,Link to Africa/Johannesburg
+LY,4565,Africa/Tripoli,,Canonical,+02:00,+02:00,
+NA,_2234+01706,Africa/Windhoek,,Canonical,+02:00,+02:00,
+JO,6713,Asia/Amman,,Canonical,+02:00,+03:00,
+LB,6883,Asia/Beirut,,Canonical,+02:00,+03:00,
+SY,6948,Asia/Damascus,,Canonical,+02:00,+03:00,
+CY,6864,Asia/Famagusta,Northern Cyprus,Canonical,+02:00,+02:00,
+PS,6558,Asia/Gaza,Gaza Strip,Canonical,+02:00,+03:00,
+PS,353674,Asia/Hebron,West Bank,Canonical,+02:00,+03:00,
+IL,665976,Asia/Jerusalem,,Canonical,+02:00,+03:00,
+CY,6832,Asia/Nicosia,Cyprus (most areas),Canonical,+02:00,+03:00,
+,,Asia/Tel_Aviv,,Alias,+02:00,+03:00,Link to Asia/Jerusalem
+,,EET,,Deprecated,+02:00,+03:00,"Choose a zone that observes EET, such as Europe/Sofia."
+,,Egypt,,Deprecated,+02:00,+02:00,Link to Africa/Cairo
+,,Etc/GMT-2,,Canonical,+02:00,+02:00,Sign is intentionally inverted. See the Etc area description.
+GR,6101,Europe/Athens,,Canonical,+02:00,+03:00,
+RO,7032,Europe/Bucharest,,Canonical,+02:00,+03:00,
+MD,7550,Europe/Chisinau,,Canonical,+02:00,+03:00,
+FI,8468,Europe/Helsinki,,Canonical,+02:00,+03:00,
+RU,7473,Europe/Kaliningrad,MSK_01 - Kaliningrad,Canonical,+02:00,+02:00,
+UA,8057,Europe/Kiev,Ukraine (most areas),Canonical,+02:00,+03:00,
+AX,7963,Europe/Mariehamn,,Alias,+02:00,+03:00,Link to Europe/Helsinki
+LV,8063,Europe/Riga,,Canonical,+02:00,+03:00,
+BG,6560,Europe/Sofia,,Canonical,+02:00,+03:00,
+EE,8370,Europe/Tallinn,,Canonical,+02:00,+03:00,
+,,Europe/Tiraspol,,Alias,+02:00,+03:00,Link to Europe/Chisinau
+UA,7055,Europe/Uzhgorod,Ruthenia,Canonical,+02:00,+03:00,
+LT,7960,Europe/Vilnius,,Canonical,+02:00,+03:00,
+PL,7315,Europe/Warsaw,,Canonical,+02:00,+03:00,
+UA,8260,Europe/Zaporozhye,Zaporozh'ye/Zaporizhia; Lugansk/Luhansk (east),Canonical,+02:00,+03:00,
+,,Israel,,Deprecated,+02:00,+03:00,Link to Asia/Jerusalem
+,,Libya,,Deprecated,+02:00,+02:00,Link to Africa/Tripoli
+ET,4744,Africa/Addis_Ababa,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+ER,5373,Africa/Asmara,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+TZ,_0648+03917,Africa/Dar_es_Salaam,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+DJ,5445,Africa/Djibouti,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+SS,3587,Africa/Juba,,Canonical,+03:00,+03:00,
+UG,3244,Africa/Kampala,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+SO,4726,Africa/Mogadishu,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+KE,_0117+03649,Africa/Nairobi,,Canonical,+03:00,+03:00,
+AQ,_690022+0393524,Antarctica/Syowa,Syowa,Canonical,+03:00,+03:00,
+YE,5757,Asia/Aden,,Alias,+03:00,+03:00,Link to Asia/Riyadh
+IQ,7746,Asia/Baghdad,,Canonical,+03:00,+03:00,
+BH,7658,Asia/Bahrain,,Alias,+03:00,+03:00,Link to Asia/Qatar
+,,Asia/Istanbul,,Alias,+03:00,+03:00,Link to Europe/Istanbul
+KW,7679,Asia/Kuwait,,Alias,+03:00,+03:00,Link to Asia/Riyadh
+QA,7649,Asia/Qatar,,Canonical,+03:00,+03:00,
+SA,7081,Asia/Riyadh,,Canonical,+03:00,+03:00,
+,,Etc/GMT-3,,Canonical,+03:00,+03:00,Sign is intentionally inverted. See the Etc area description.
+TR,6959,Europe/Istanbul,,Canonical,+03:00,+03:00,
+RU,10775,Europe/Kirov,MSK+00 - Kirov,Canonical,+03:00,+03:00,
+BY,8088,Europe/Minsk,,Canonical,+03:00,+03:00,
+RU,928225,Europe/Moscow,MSK+00 - Moscow area,Canonical,+03:00,+03:00,
+UA,7863,Europe/Simferopol,Crimea,Canonical,+03:00,+03:00,Disputed - Reflects data in the TZDB.[note 2]
+MG,_1855+04731,Indian/Antananarivo,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+KM,_1141+04316,Indian/Comoro,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+YT,_1247+04514,Indian/Mayotte,,Alias,+03:00,+03:00,Link to Africa/Nairobi
+,,Turkey,,Deprecated,+03:00,+03:00,Link to Europe/Istanbul
+,,W-SU,,Deprecated,+03:00,+03:00,Link to Europe/Moscow
+IR,8666,Asia/Tehran,,Canonical,+03:30,+04:30,
+,,Iran,,Deprecated,+03:30,+04:30,Link to Asia/Tehran
+AZ,8974,Asia/Baku,,Canonical,+04:00,+04:00,
+AE,8036,Asia/Dubai,,Canonical,+04:00,+04:00,
+OM,8171,Asia/Muscat,,Alias,+04:00,+04:00,Link to Asia/Dubai
+GE,8592,Asia/Tbilisi,,Canonical,+04:00,+04:00,
+AM,8441,Asia/Yerevan,,Canonical,+04:00,+04:00,
+,,Etc/GMT-4,,Canonical,+04:00,+04:00,Sign is intentionally inverted. See the Etc area description.
+RU,9424,Europe/Astrakhan,MSK+01 - Astrakhan,Canonical,+04:00,+04:00,
+RU,10321,Europe/Samara,"MSK+01 - Samara, Udmurtia",Canonical,+04:00,+04:00,
+RU,9736,Europe/Saratov,MSK+01 - Saratov,Canonical,+04:00,+04:00,
+RU,10244,Europe/Ulyanovsk,MSK+01 - Ulyanovsk,Canonical,+04:00,+04:00,
+RU,9269,Europe/Volgograd,MSK+01 - Volgograd,Canonical,+04:00,+04:00,
+SC,_0440+05528,Indian/Mahe,,Canonical,+04:00,+04:00,
+MU,_2010+05730,Indian/Mauritius,,Canonical,+04:00,+04:00,
+RE,_2052+05528,Indian/Reunion,,Canonical,+04:00,+04:00,
+AF,10343,Asia/Kabul,,Canonical,+04:30,+04:30,
+AQ,_6736+06253,Antarctica/Mawson,Mawson,Canonical,+05:00,+05:00,
+KZ,9447,Asia/Aqtau,Mangghystau/Mankistau,Canonical,+05:00,+05:00,
+KZ,10727,Asia/Aqtobe,Aqtobe/Aktobe,Canonical,+05:00,+05:00,
+TM,9580,Asia/Ashgabat,,Canonical,+05:00,+05:00,
+,,Asia/Ashkhabad,,Alias,+05:00,+05:00,Link to Asia/Ashgabat
+KZ,9863,Asia/Atyrau,Atyrau/Atirau/Gur'yev,Canonical,+05:00,+05:00,
+TJ,10683,Asia/Dushanbe,,Canonical,+05:00,+05:00,
+PK,9155,Asia/Karachi,,Canonical,+05:00,+05:00,
+KZ,10234,Asia/Oral,West Kazakhstan,Canonical,+05:00,+05:00,
+KZ,10976,Asia/Qyzylorda,Qyzylorda/Kyzylorda/Kzyl-Orda,Canonical,+05:00,+05:00,
+UZ,10588,Asia/Samarkand,Uzbekistan (west),Canonical,+05:00,+05:00,
+UZ,11038,Asia/Tashkent,Uzbekistan (east),Canonical,+05:00,+05:00,
+RU,11687,Asia/Yekaterinburg,MSK+02 - Urals,Canonical,+05:00,+05:00,
+,,Etc/GMT-5,,Canonical,+05:00,+05:00,Sign is intentionally inverted. See the Etc area description.
+TF,_492110+0701303,Indian/Kerguelen,,Canonical,+05:00,+05:00,
+MV,7740,Indian/Maldives,,Canonical,+05:00,+05:00,
+,,Asia/Calcutta,,Alias,+05:30,+05:30,Link to Asia/Kolkata
+LK,8607,Asia/Colombo,,Canonical,+05:30,+05:30,
+IN,11054,Asia/Kolkata,,Canonical,+05:30,+05:30,"Note: Different zones in history, see Time in India."
+NP,11262,Asia/Kathmandu,,Canonical,+05:45,+05:45,
+,,Asia/Katmandu,,Alias,+05:45,+05:45,Link to Asia/Kathmandu
+AQ,_7824+10654,Antarctica/Vostok,Vostok,Canonical,+06:00,+06:00,
+KZ,11972,Asia/Almaty,Kazakhstan (most areas),Canonical,+06:00,+06:00,
+KG,11690,Asia/Bishkek,,Canonical,+06:00,+06:00,
+,,Asia/Dacca,,Alias,+06:00,+06:00,Link to Asia/Dhaka
+BD,11368,Asia/Dhaka,,Canonical,+06:00,+06:00,
+,,Asia/Kashgar,,Alias,+06:00,+06:00,Link to Asia/Urumqi[note 1]
+RU,12824,Asia/Omsk,MSK+03 - Omsk,Canonical,+06:00,+06:00,
+,,Asia/Thimbu,,Alias,+06:00,+06:00,Link to Asia/Thimphu
+BT,11667,Asia/Thimphu,,Canonical,+06:00,+06:00,
+CN,13083,Asia/Urumqi,Xinjiang Time,Canonical,+06:00,+06:00,The Asia/Urumqi entry in the tz database reflected the use of Xinjiang Time by part of the local population. Consider using Asia/Shanghai for Beijing Time if that is preferred.
+,,Etc/GMT-6,,Canonical,+06:00,+06:00,Sign is intentionally inverted. See the Etc area description.
+IO,_0720+07225,Indian/Chagos,,Canonical,+06:00,+06:00,
+MM,11257,Asia/Rangoon,,Alias,+06:30,+06:30,Link to Asia/Yangon
+MM,11257,Asia/Yangon,,Canonical,+06:30,+06:30,
+CC,_1210+09655,Indian/Cocos,,Canonical,+06:30,+06:30,
+AQ,_6835+07758,Antarctica/Davis,Davis,Canonical,+07:00,+07:00,
+TH,11376,Asia/Bangkok,,Canonical,+07:00,+07:00,
+RU,13667,Asia/Barnaul,MSK+04 - Altai,Canonical,+07:00,+07:00,
+VN,11685,Asia/Ho_Chi_Minh,,Canonical,+07:00,+07:00,
+MN,13940,Asia/Hovd,"Bayan-Olgiy, Govi-Altai, Hovd, Uvs, Zavkhan",Canonical,+07:00,+07:00,
+ID,_0610+10648,Asia/Jakarta,"Java, Sumatra",Canonical,+07:00,+07:00,
+RU,14851,Asia/Krasnoyarsk,MSK+04 - Krasnoyarsk area,Canonical,+07:00,+07:00,
+RU,14052,Asia/Novokuznetsk,MSK+04 - Kemerovo,Canonical,+07:00,+07:00,
+RU,13757,Asia/Novosibirsk,MSK+04 - Novosibirsk,Canonical,+07:00,+07:00,
+KH,11588,Asia/Phnom_Penh,,Alias,+07:00,+07:00,Link to Asia/Bangkok
+ID,_0002+10920,Asia/Pontianak,"Borneo (west, central)",Canonical,+07:00,+07:00,
+,,Asia/Saigon,,Alias,+07:00,+07:00,Link to Asia/Ho_Chi_Minh
+RU,14088,Asia/Tomsk,MSK+04 - Tomsk,Canonical,+07:00,+07:00,
+LA,11994,Asia/Vientiane,,Alias,+07:00,+07:00,Link to Asia/Bangkok
+,,Etc/GMT-7,,Canonical,+07:00,+07:00,Sign is intentionally inverted. See the Etc area description.
+CX,_1025+10543,Indian/Christmas,,Canonical,+07:00,+07:00,
+BN,11911,Asia/Brunei,,Canonical,+08:00,+08:00,
+MN,16234,Asia/Choibalsan,"Dornod, Sukhbaatar",Canonical,+08:00,+08:00,
+,,Asia/Chongqing,,Alias,+08:00,+08:00,Link to Asia/Shanghai
+,,Asia/Chungking,,Alias,+08:00,+08:00,Link to Asia/Shanghai
+,,Asia/Harbin,,Alias,+08:00,+08:00,Link to Asia/Shanghai
+HK,13626,Asia/Hong_Kong,,Canonical,+08:00,+08:00,
+RU,15636,Asia/Irkutsk,"MSK+05 - Irkutsk, Buryatia",Canonical,+08:00,+08:00,
+MY,10452,Asia/Kuala_Lumpur,Malaysia (peninsula),Canonical,+08:00,+08:00,
+MY,11153,Asia/Kuching,"Sabah, Sarawak",Canonical,+08:00,+08:00,
+,,Asia/Macao,,Alias,+08:00,+08:00,Link to Asia/Macau
+MO,13549,Asia/Macau,,Canonical,+08:00,+08:00,
+ID,_0507+11924,Asia/Makassar,"Borneo (east, south); Sulawesi/Celebes, Bali, Nusa Tengarra; Timor (west)",Canonical,+08:00,+08:00,
+PH,13535,Asia/Manila,,Canonical,+08:00,+08:00,
+CN,15242,Asia/Shanghai,Beijing Time,Canonical,+08:00,+08:00,
+SG,10468,Asia/Singapore,,Canonical,+08:00,+08:00,
+TW,14633,Asia/Taipei,,Canonical,+08:00,+08:00,
+,,Asia/Ujung_Pandang,,Alias,+08:00,+08:00,Link to Asia/Makassar
+MN,15408,Asia/Ulaanbaatar,Mongolia (most areas),Canonical,+08:00,+08:00,
+,,Asia/Ulan_Bator,,Alias,+08:00,+08:00,Link to Asia/Ulaanbaatar
+AU,_3157+11551,Australia/Perth,Western Australia (most areas),Canonical,+08:00,+08:00,
+,,Australia/West,,Deprecated,+08:00,+08:00,Link to Australia/Perth
+,,Etc/GMT-8,,Canonical,+08:00,+08:00,Sign is intentionally inverted. See the Etc area description.
+,,Hongkong,,Deprecated,+08:00,+08:00,Link to Asia/Hong_Kong
+,,PRC,,Deprecated,+08:00,+08:00,Link to Asia/Shanghai
+,,ROC,,Deprecated,+08:00,+08:00,Link to Asia/Taipei
+,,Singapore,,Deprecated,+08:00,+08:00,Link to Asia/Singapore
+AU,_3143+12852,Australia/Eucla,Western Australia (Eucla),Canonical,+08:45,+08:45,
+RU,16531,Asia/Chita,MSK+06 - Zabaykalsky,Canonical,+09:00,+09:00,
+TL,_0833+12535,Asia/Dili,,Canonical,+09:00,+09:00,
+ID,_0232+14042,Asia/Jayapura,New Guinea (West Papua / Irian Jaya); Malukus/Moluccas,Canonical,+09:00,+09:00,
+RU,1977237,Asia/Khandyga,"MSK+06 - Tomponsky, Ust-Maysky",Canonical,+09:00,+09:00,
+KP,16446,Asia/Pyongyang,,Canonical,+09:00,+09:00,
+KR,16391,Asia/Seoul,,Canonical,+09:00,+09:00,
+JP,1748357,Asia/Tokyo,,Canonical,+09:00,+09:00,
+RU,19140,Asia/Yakutsk,MSK+06 - Lena River,Canonical,+09:00,+09:00,
+,,Etc/GMT-9,,Canonical,+09:00,+09:00,Sign is intentionally inverted. See the Etc area description.
+,,Japan,,Deprecated,+09:00,+09:00,Link to Asia/Tokyo
+PW,14149,Pacific/Palau,,Canonical,+09:00,+09:00,
+,,ROK,,Deprecated,+09:00,+09:00,Link to Asia/Seoul
+AU,_3455+13835,Australia/Adelaide,South Australia,Canonical,+09:30,+10:30,
+AU,_3157+14127,Australia/Broken_Hill,New South Wales (Yancowinna),Canonical,+09:30,+10:30,
+AU,_1228+13050,Australia/Darwin,Northern Territory,Canonical,+09:30,+09:30,
+,,Australia/North,,Deprecated,+09:30,+09:30,Link to Australia/Darwin
+,,Australia/South,,Deprecated,+09:30,+10:30,Link to Australia/Adelaide
+,,Australia/Yancowinna,,Alias,+09:30,+10:30,Link to Australia/Broken_Hill
+AQ,_6640+14001,Antarctica/DumontDUrville,Dumont-d'Urville,Canonical,+10:00,+10:00,
+RU,2074673,Asia/Ust-Nera,MSK+07 - Oymyakonsky,Canonical,+10:00,+10:00,
+RU,17466,Asia/Vladivostok,MSK+07 - Amur River,Canonical,+10:00,+10:00,
+,,Australia/ACT,,Deprecated,+10:00,+11:00,Link to Australia/Sydney
+AU,_2728+15302,Australia/Brisbane,Queensland (most areas),Canonical,+10:00,+10:00,
+,,Australia/Canberra,,Alias,+10:00,+11:00,Link to Australia/Sydney
+AU,_3956+14352,Australia/Currie,Tasmania (King Island),Canonical,+10:00,+11:00,
+AU,_4253+14719,Australia/Hobart,Tasmania (most areas),Canonical,+10:00,+11:00,
+AU,_2016+14900,Australia/Lindeman,Queensland (Whitsunday Islands),Canonical,+10:00,+10:00,
+AU,_3749+14458,Australia/Melbourne,Victoria,Canonical,+10:00,+11:00,
+,,Australia/NSW,,Deprecated,+10:00,+11:00,Link to Australia/Sydney
+,,Australia/Queensland,,Deprecated,+10:00,+10:00,Link to Australia/Brisbane
+AU,_3352+15113,Australia/Sydney,New South Wales (most areas),Canonical,+10:00,+11:00,
+,,Australia/Tasmania,,Deprecated,+10:00,+11:00,Link to Australia/Hobart
+,,Australia/Victoria,,Deprecated,+10:00,+11:00,Link to Australia/Melbourne
+,,Etc/GMT-10,,Canonical,+10:00,+10:00,Sign is intentionally inverted. See the Etc area description.
+FM,15872,Pacific/Chuuk,"Chuuk/Truk, Yap",Canonical,+10:00,+10:00,
+GU,15773,Pacific/Guam,,Canonical,+10:00,+10:00,
+PG,_0930+14710,Pacific/Port_Moresby,Papua New Guinea (most areas),Canonical,+10:00,+10:00,
+MP,16057,Pacific/Saipan,,Alias,+10:00,+10:00,Link to Pacific/Guam
+,,Pacific/Truk,,Alias,+10:00,+10:00,Link to Pacific/Chuuk
+,,Pacific/Yap,,Alias,+10:00,+10:00,Link to Pacific/Chuuk
+,,Australia/LHI,,Deprecated,+10:30,+11:00,Link to Australia/Lord_Howe
+AU,_3133+15905,Australia/Lord_Howe,Lord Howe Island,Canonical,+10:30,+11:00,This is the only time zone in the world that uses 30-minute DST transitions.
+AQ,_6617+11031,Antarctica/Casey,Casey,Canonical,+11:00,+11:00,
+AU,_5430+15857,Antarctica/Macquarie,Macquarie Island,Canonical,+11:00,+11:00,
+RU,20982,Asia/Magadan,MSK+08 - Magadan,Canonical,+11:00,+11:00,
+RU,18900,Asia/Sakhalin,MSK+08 - Sakhalin Island,Canonical,+11:00,+11:00,
+RU,22071,Asia/Srednekolymsk,MSK+08 - Sakha (E); North Kuril Is,Canonical,+11:00,+11:00,
+,,Etc/GMT-11,,Canonical,+11:00,+11:00,Sign is intentionally inverted. See the Etc area description.
+PG,_0613+15534,Pacific/Bougainville,Bougainville,Canonical,+11:00,+11:00,
+VU,_1740+16825,Pacific/Efate,,Canonical,+11:00,+11:00,
+SB,_0932+16012,Pacific/Guadalcanal,,Canonical,+11:00,+11:00,
+FM,16778,Pacific/Kosrae,Kosrae,Canonical,+11:00,+11:00,
+NF,_2903+16758,Pacific/Norfolk,,Canonical,+11:00,+11:00,
+NC,_2216+16627,Pacific/Noumea,,Canonical,+11:00,+11:00,
+FM,16471,Pacific/Pohnpei,Pohnpei/Ponape,Canonical,+11:00,+11:00,
+,,Pacific/Ponape,,Alias,+11:00,+11:00,Link to Pacific/Pohnpei
+AQ,_7750+16636,Antarctica/McMurdo,"New Zealand time - McMurdo, South Pole",Alias,+12:00,+13:00,Link to Pacific/Auckland
+,,Antarctica/South_Pole,,Alias,+12:00,+13:00,Link to Pacific/Auckland
+RU,24174,Asia/Anadyr,MSK+09 - Bering Sea,Canonical,+12:00,+12:00,
+RU,21140,Asia/Kamchatka,MSK+09 - Kamchatka,Canonical,+12:00,+12:00,
+,,Etc/GMT-12,,Canonical,+12:00,+12:00,Sign is intentionally inverted. See the Etc area description.
+,,Kwajalein,,Deprecated,+12:00,+12:00,Link to Pacific/Kwajalein
+,,NZ,,Deprecated,+12:00,+13:00,Link to Pacific/Auckland
+NZ,_3652+17446,Pacific/Auckland,New Zealand (most areas),Canonical,+12:00,+13:00,
+FJ,_1808+17825,Pacific/Fiji,,Canonical,+12:00,+13:00,
+TV,_0831+17913,Pacific/Funafuti,,Canonical,+12:00,+12:00,
+MH,17625,Pacific/Kwajalein,Kwajalein,Canonical,+12:00,+12:00,
+MH,17821,Pacific/Majuro,Marshall Islands (most areas),Canonical,+12:00,+12:00,
+NR,_0031+16655,Pacific/Nauru,,Canonical,+12:00,+12:00,
+KI,17425,Pacific/Tarawa,Gilbert Islands,Canonical,+12:00,+12:00,
+UM,18554,Pacific/Wake,Wake Island,Canonical,+12:00,+12:00,
+WF,_1318_17610,Pacific/Wallis,,Canonical,+12:00,+12:00,
+,,NZ-CHAT,,Deprecated,+12:45,+13:45,Link to Pacific/Chatham
+NZ,_4357_17633,Pacific/Chatham,Chatham Islands,Canonical,+12:45,+13:45,
+,,Etc/GMT-13,,Canonical,+13:00,+13:00,Sign is intentionally inverted. See the Etc area description.
+WS,_1350_17144,Pacific/Apia,,Canonical,+13:00,+14:00,
+KI,_0308_17105,Pacific/Enderbury,Phoenix Islands,Canonical,+13:00,+13:00,
+TK,_0922_17114,Pacific/Fakaofo,,Canonical,+13:00,+13:00,
+TO,_2110_17510,Pacific/Tongatapu,,Canonical,+13:00,+14:00,
+,,Etc/GMT-14,,Canonical,+14:00,+14:00,Sign is intentionally inverted. See the Etc area description.
+KI,+0152_15720,Pacific/Kiritimati,Line Islands,Canonical,+14:00,+14:00,
+GL,+7029_02158,America/Scoresbysund,Scoresbysund/Ittoqqortoormiit,Canonical,-01:00,+00:00,
+PT,+3744_02540,Atlantic/Azores,Azores,Canonical,-01:00,+00:00,
+CV,+1455_02331,Atlantic/Cape_Verde,,Canonical,-01:00,_01:00,
+,,Etc/GMT+1,,Canonical,-01:00,_01:00,Sign is intentionally inverted. See the Etc area description.
+BR,_0351_03225,America/Noronha,Atlantic islands,Canonical,-02:00,_02:00,
+GS,_5416_03632,Atlantic/South_Georgia,,Canonical,-02:00,_02:00,
+,,Brazil/DeNoronha,,Deprecated,-02:00,_02:00,Link to America/Noronha
+,,Etc/GMT+2,,Canonical,-02:00,_02:00,Sign is intentionally inverted. See the Etc area description.
+BR,_0712_04812,America/Araguaina,Tocantins,Canonical,-03:00,_03:00,
+AR,_3436_05827,America/Argentina/Buenos_Aires,"Buenos Aires (BA, CF)",Canonical,-03:00,_03:00,
+AR,_2828_06547,America/Argentina/Catamarca,Catamarca (CT); Chubut (CH),Canonical,-03:00,_03:00,
+,,America/Argentina/ComodRivadavia,,Alias,-03:00,_03:00,Link to America/Argentina/Catamarca
+AR,_3124_06411,America/Argentina/Cordoba,"Argentina (most areas: CB, CC, CN, ER, FM, MN, SE, SF)",Canonical,-03:00,_03:00,
+AR,_2411_06518,America/Argentina/Jujuy,Jujuy (JY),Canonical,-03:00,_03:00,
+AR,_2926_06651,America/Argentina/La_Rioja,La Rioja (LR),Canonical,-03:00,_03:00,
+AR,_3253_06849,America/Argentina/Mendoza,Mendoza (MZ),Canonical,-03:00,_03:00,
+AR,_5138_06913,America/Argentina/Rio_Gallegos,Santa Cruz (SC),Canonical,-03:00,_03:00,
+AR,_2447_06525,America/Argentina/Salta,"Salta (SA, LP, NQ, RN)",Canonical,-03:00,_03:00,
+AR,_3132_06831,America/Argentina/San_Juan,San Juan (SJ),Canonical,-03:00,_03:00,
+AR,_3319_06621,America/Argentina/San_Luis,San Luis (SL),Canonical,-03:00,_03:00,
+AR,_2649_06513,America/Argentina/Tucuman,Tucuman (TM),Canonical,-03:00,_03:00,
+AR,_5448_06818,America/Argentina/Ushuaia,Tierra del Fuego (TF),Canonical,-03:00,_03:00,
+BR,_1259_03831,America/Bahia,Bahia,Canonical,-03:00,_03:00,
+BR,_0127_04829,America/Belem,Para (east); Amapa,Canonical,-03:00,_03:00,
+,,America/Buenos_Aires,,Alias,-03:00,_03:00,Link to America/Argentina/Buenos_Aires
+,,America/Catamarca,,Alias,-03:00,_03:00,Link to America/Argentina/Catamarca
+GF,+0456_05220,America/Cayenne,,Canonical,-03:00,_03:00,
+,,America/Cordoba,,Alias,-03:00,_03:00,Link to America/Argentina/Cordoba
+BR,_0343_03830,America/Fortaleza,"Brazil (northeast: MA, PI, CE, RN, PB)",Canonical,-03:00,_03:00,
+GL,+6411_05144,America/Godthab,Greenland (most areas),Canonical,-03:00,_02:00,
+,,America/Jujuy,,Alias,-03:00,_03:00,Link to America/Argentina/Jujuy
+BR,_0940_03543,America/Maceio,"Alagoas, Sergipe",Canonical,-03:00,_03:00,
+,,America/Mendoza,,Alias,-03:00,_03:00,Link to America/Argentina/Mendoza
+PM,+4703_05620,America/Miquelon,,Canonical,-03:00,_02:00,
+UY,_3453_05611,America/Montevideo,,Canonical,-03:00,_03:00,
+SR,+0550_05510,America/Paramaribo,,Canonical,-03:00,_03:00,
+CL,_5309_07055,America/Punta_Arenas,Region of Magallanes,Canonical,-03:00,_03:00,Magallanes Region
+BR,_0803_03454,America/Recife,Pernambuco,Canonical,-03:00,_03:00,
+,,America/Rosario,,Alias,-03:00,_03:00,Link to America/Argentina/Cordoba
+BR,_0226_05452,America/Santarem,Para (west),Canonical,-03:00,_03:00,
+BR,_2332_04637,America/Sao_Paulo,"Brazil (southeast: GO, DF, MG, ES, RJ, SP, PR, SC, RS)",Canonical,-03:00,_02:00,
+AQ,_6448_06406,Antarctica/Palmer,Palmer,Canonical,-03:00,_03:00,Chilean Antarctica Region
+AQ,_6734_06808,Antarctica/Rothera,Rothera,Canonical,-03:00,_03:00,
+FK,_5142_05751,Atlantic/Stanley,,Canonical,-03:00,_03:00,
+,,Brazil/East,,Deprecated,-03:00,_02:00,Link to America/Sao_Paulo
+,,Etc/GMT+3,,Canonical,-03:00,_03:00,Sign is intentionally inverted. See the Etc area description.
+CA,+4734_05243,America/St_Johns,Newfoundland; Labrador (southeast),Canonical,-03:30,_02:30,
+,,Canada/Newfoundland,,Deprecated,-03:30,_02:30,Link to America/St_Johns
+AI,+1812_06304,America/Anguilla,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+AG,+1703_06148,America/Antigua,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+AW,+1230_06958,America/Aruba,,Alias,-04:00,_04:00,Link to America/Curacao
+PY,_2516_05740,America/Asuncion,,Canonical,-04:00,_03:00,
+BB,+1306_05937,America/Barbados,,Canonical,-04:00,_04:00,
+CA,+5125_05707,America/Blanc-Sablon,AST - QC (Lower North Shore),Canonical,-04:00,_04:00,
+BR,+0249_06040,America/Boa_Vista,Roraima,Canonical,-04:00,_04:00,
+BR,_2027_05437,America/Campo_Grande,Mato Grosso do Sul,Canonical,-04:00,_03:00,
+VE,+1030_06656,America/Caracas,,Canonical,-04:00,_04:00,
+BR,_1535_05605,America/Cuiaba,Mato Grosso,Canonical,-04:00,_03:00,
+CW,+1211_06900,America/Curacao,,Canonical,-04:00,_04:00,
+DM,+1518_06124,America/Dominica,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+CA,+4612_05957,America/Glace_Bay,Atlantic - NS (Cape Breton),Canonical,-04:00,_03:00,
+CA,+5320_06025,America/Goose_Bay,Atlantic - Labrador (most areas),Canonical,-04:00,_03:00,
+GD,+1203_06145,America/Grenada,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+GP,+1614_06132,America/Guadeloupe,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+GY,+0648_05810,America/Guyana,,Canonical,-04:00,_04:00,
+CA,+4439_06336,America/Halifax,Atlantic - NS (most areas); PE,Canonical,-04:00,_03:00,
+BQ,+120903_0681636,America/Kralendijk,,Alias,-04:00,_04:00,Link to America/Curacao
+BO,_1630_06809,America/La_Paz,,Canonical,-04:00,_04:00,
+SX,+180305_0630250,America/Lower_Princes,,Alias,-04:00,_04:00,Link to America/Curacao
+BR,_0308_06001,America/Manaus,Amazonas (east),Canonical,-04:00,_04:00,
+MF,+1804_06305,America/Marigot,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+MQ,+1436_06105,America/Martinique,,Canonical,-04:00,_04:00,
+CA,+4606_06447,America/Moncton,Atlantic - New Brunswick,Canonical,-04:00,_03:00,
+MS,+1643_06213,America/Montserrat,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+TT,+1039_06131,America/Port_of_Spain,,Canonical,-04:00,_04:00,
+BR,_0846_06354,America/Porto_Velho,Rondonia,Canonical,-04:00,_04:00,
+PR,+182806_0660622,America/Puerto_Rico,,Canonical,-04:00,_04:00,
+CL,_3327_07040,America/Santiago,Chile (most areas),Canonical,-04:00,_03:00,
+DO,+1828_06954,America/Santo_Domingo,,Canonical,-04:00,_04:00,
+BL,+1753_06251,America/St_Barthelemy,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+KN,+1718_06243,America/St_Kitts,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+LC,+1401_06100,America/St_Lucia,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+VI,+1821_06456,America/St_Thomas,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+VC,+1309_06114,America/St_Vincent,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+GL,+7634_06847,America/Thule,Thule/Pituffik,Canonical,-04:00,_03:00,
+VG,+1827_06437,America/Tortola,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+,,America/Virgin,,Alias,-04:00,_04:00,Link to America/Port_of_Spain
+BM,+3217_06446,Atlantic/Bermuda,,Canonical,-04:00,_03:00,
+,,Brazil/West,,Deprecated,-04:00,_04:00,Link to America/Manaus
+,,Canada/Atlantic,,Deprecated,-04:00,_03:00,Link to America/Halifax
+,,Chile/Continental,,Deprecated,-04:00,_03:00,Link to America/Santiago
+,,Etc/GMT+4,,Canonical,-04:00,_04:00,Sign is intentionally inverted. See the Etc area description.
+CA,+484531_0913718,America/Atikokan,EST - ON (Atikokan); NU (Coral H),Canonical,-05:00,_05:00,
+CO,+0436_07405,America/Bogota,,Canonical,-05:00,_05:00,
+MX,+2105_08646,America/Cancun,Eastern Standard Time - Quintana Roo,Canonical,-05:00,_05:00,
+KY,+1918_08123,America/Cayman,,Alias,-05:00,_05:00,Link to America/Panama
+,,America/Coral_Harbour,,Alias,-05:00,_05:00,Link to America/Atikokan
+US,+421953_0830245,America/Detroit,Eastern - MI (most areas),Canonical,-05:00,_04:00,
+BR,_0640_06952,America/Eirunepe,Amazonas (west),Canonical,-05:00,_05:00,
+,,America/Fort_Wayne,,Alias,-05:00,_04:00,Link to America/Indiana/Indianapolis
+TC,+2128_07108,America/Grand_Turk,,Canonical,-05:00,_04:00,
+EC,_0210_07950,America/Guayaquil,Ecuador (mainland),Canonical,-05:00,_05:00,
+CU,+2308_08222,America/Havana,,Canonical,-05:00,_04:00,
+US,+394606_0860929,America/Indiana/Indianapolis,Eastern - IN (most areas),Canonical,-05:00,_04:00,
+US,+382232_0862041,America/Indiana/Marengo,Eastern - IN (Crawford),Canonical,-05:00,_04:00,
+US,+382931_0871643,America/Indiana/Petersburg,Eastern - IN (Pike),Canonical,-05:00,_04:00,
+US,+384452_0850402,America/Indiana/Vevay,Eastern - IN (Switzerland),Canonical,-05:00,_04:00,
+US,+384038_0873143,America/Indiana/Vincennes,"Eastern - IN (Da, Du, K, Mn)",Canonical,-05:00,_04:00,
+US,+410305_0863611,America/Indiana/Winamac,Eastern - IN (Pulaski),Canonical,-05:00,_04:00,
+,,America/Indianapolis,,Alias,-05:00,_04:00,Link to America/Indiana/Indianapolis
+CA,+6344_06828,America/Iqaluit,Eastern - NU (most east areas),Canonical,-05:00,_04:00,
+JM,+175805_0764736,America/Jamaica,,Canonical,-05:00,_05:00,
+US,+381515_0854534,America/Kentucky/Louisville,Eastern - KY (Louisville area),Canonical,-05:00,_04:00,
+US,+364947_0845057,America/Kentucky/Monticello,Eastern - KY (Wayne),Canonical,-05:00,_04:00,
+PE,_1203_07703,America/Lima,,Canonical,-05:00,_05:00,
+,,America/Louisville,,Alias,-05:00,_04:00,Link to America/Kentucky/Louisville
+,,America/Montreal,,Alias,-05:00,_04:00,Link to America/Toronto
+BS,+2505_07721,America/Nassau,,Canonical,-05:00,_04:00,
+US,+404251_0740023,America/New_York,Eastern (most areas),Canonical,-05:00,_04:00,
+CA,+4901_08816,America/Nipigon,"Eastern - ON, QC (no DST 1967_73)",Canonical,-05:00,_04:00,
+PA,+0858_07932,America/Panama,,Canonical,-05:00,_05:00,
+CA,+6608_06544,America/Pangnirtung,Eastern - NU (Pangnirtung),Canonical,-05:00,_04:00,
+HT,+1832_07220,America/Port-au-Prince,,Canonical,-05:00,_04:00,
+,,America/Porto_Acre,,Alias,-05:00,_05:00,Link to America/Rio_Branco
+BR,_0958_06748,America/Rio_Branco,Acre,Canonical,-05:00,_05:00,
+CA,+4823_08915,America/Thunder_Bay,Eastern - ON (Thunder Bay),Canonical,-05:00,_04:00,
+CA,+4339_07923,America/Toronto,"Eastern - ON, QC (most areas)",Canonical,-05:00,_04:00,
+,,Brazil/Acre,,Deprecated,-05:00,_05:00,Link to America/Rio_Branco
+,,Canada/Eastern,,Deprecated,-05:00,_04:00,Link to America/Toronto
+,,Cuba,,Deprecated,-05:00,_04:00,Link to America/Havana
+,,EST,,Deprecated,-05:00,_05:00,"Choose a zone that currently observes EST without daylight savings time, such as America/Cancun."
+,,EST5EDT,,Deprecated,-05:00,_04:00,"Choose a zone that observes EST with United States daylight savings time rules, such as America/New_York."
+,,Etc/GMT+5,,Canonical,-05:00,_05:00,Sign is intentionally inverted. See the Etc area description.
+,,Jamaica,,Deprecated,-05:00,_05:00,Link to America/Jamaica
+,,US/Eastern,,Deprecated,-05:00,_04:00,Link to America/New_York
+,,US/East-Indiana,,Deprecated,-05:00,_04:00,Link to America/Indiana/Indianapolis
+,,US/Michigan,,Deprecated,-05:00,_04:00,Link to America/Detroit
+MX,+2048_10515,America/Bahia_Banderas,Central Time - Bahia de Banderas,Canonical,-06:00,_05:00,
+BZ,+1730_08812,America/Belize,,Canonical,-06:00,_06:00,
+US,+4151_08739,America/Chicago,Central (most areas),Canonical,-06:00,_05:00,
+CR,+0956_08405,America/Costa_Rica,,Canonical,-06:00,_06:00,
+SV,+1342_08912,America/El_Salvador,,Canonical,-06:00,_06:00,
+GT,+1438_09031,America/Guatemala,,Canonical,-06:00,_06:00,
+US,+411745_0863730,America/Indiana/Knox,Central - IN (Starke),Canonical,-06:00,_05:00,
+US,+375711_0864541,America/Indiana/Tell_City,Central - IN (Perry),Canonical,-06:00,_05:00,
+,,America/Knox_IN,,Alias,-06:00,_05:00,Link to America/Indiana/Knox
+NI,+1209_08617,America/Managua,,Canonical,-06:00,_06:00,
+MX,+2550_09730,America/Matamoros,"Central Time US - Coahuila, Nuevo Leon, Tamaulipas (US border)",Canonical,-06:00,_05:00,
+US,+450628_0873651,America/Menominee,Central - MI (Wisconsin border),Canonical,-06:00,_05:00,
+MX,+2058_08937,America/Merida,"Central Time - Campeche, Yucatan",Canonical,-06:00,_05:00,
+MX,+1924_09909,America/Mexico_City,Central Time,Canonical,-06:00,_05:00,
+MX,+2540_10019,America/Monterrey,"Central Time - Durango; Coahuila, Nuevo Leon, Tamaulipas (most areas)",Canonical,-06:00,_05:00,
+US,+471551_1014640,America/North_Dakota/Beulah,Central - ND (Mercer),Canonical,-06:00,_05:00,
+US,+470659_1011757,America/North_Dakota/Center,Central - ND (Oliver),Canonical,-06:00,_05:00,
+US,+465042_1012439,America/North_Dakota/New_Salem,Central - ND (Morton rural),Canonical,-06:00,_05:00,
+CA,+4843_09434,America/Rainy_River,"Central - ON (Rainy R, Ft Frances)",Canonical,-06:00,_05:00,
+CA,+6249_0920459,America/Rankin_Inlet,Central - NU (central),Canonical,-06:00,_05:00,
+CA,+5024_10439,America/Regina,CST - SK (most areas),Canonical,-06:00,_06:00,
+CA,+744144_0944945,America/Resolute,Central - NU (Resolute),Canonical,-06:00,_05:00,
+CA,+5017_10750,America/Swift_Current,CST - SK (midwest),Canonical,-06:00,_06:00,
+HN,+1406_08713,America/Tegucigalpa,,Canonical,-06:00,_06:00,
+CA,+4953_09709,America/Winnipeg,Central - ON (west); Manitoba,Canonical,-06:00,_05:00,
+,,Canada/Central,,Deprecated,-06:00,_05:00,Link to America/Winnipeg
+,,Canada/Saskatchewan,,Deprecated,-06:00,_06:00,Link to America/Regina
+,,Chile/EasterIsland,,Deprecated,-06:00,_05:00,Link to Pacific/Easter
+,,CST6CDT,,Deprecated,-06:00,_05:00,"Choose a zone that observes CST with United States daylight savings time rules, such as America/Chicago."
+,,Etc/GMT+6,,Canonical,-06:00,_06:00,Sign is intentionally inverted. See the Etc area description.
+,,Mexico/General,,Deprecated,-06:00,_05:00,Link to America/Mexico_City
+CL,_2709_10926,Pacific/Easter,Easter Island,Canonical,-06:00,_05:00,
+EC,_0054_08936,Pacific/Galapagos,Galapagos Islands,Canonical,-06:00,_06:00,
+,,US/Central,,Deprecated,-06:00,_05:00,Link to America/Chicago
+,,US/Indiana-Starke,,Deprecated,-06:00,_05:00,Link to America/Indiana/Knox
+US,+433649_1161209,America/Boise,Mountain - ID (south); OR (east),Canonical,-07:00,_06:00,
+CA,+690650_1050310,America/Cambridge_Bay,Mountain - NU (west),Canonical,-07:00,_06:00,
+MX,+2838_10605,America/Chihuahua,Mountain Time - Chihuahua (most areas),Canonical,-07:00,_06:00,
+CA,+4906_11631,America/Creston,MST - BC (Creston),Canonical,-07:00,_07:00,
+CA,+5946_12014,America/Dawson_Creek,"MST - BC (Dawson Cr, Ft St John)",Canonical,-07:00,_07:00,
+US,+394421_1045903,America/Denver,Mountain (most areas),Canonical,-07:00,_06:00,
+CA,+5333_11328,America/Edmonton,Mountain - AB; BC (E); SK (W),Canonical,-07:00,_06:00,
+CA,+5848_12242,America/Fort_Nelson,MST - BC (Ft Nelson),Canonical,-07:00,_07:00,
+MX,+2904_11058,America/Hermosillo,Mountain Standard Time - Sonora,Canonical,-07:00,_07:00,
+CA,+682059_13343,America/Inuvik,Mountain - NT (west),Canonical,-07:00,_06:00,
+MX,+2313_10625,America/Mazatlan,"Mountain Time - Baja California Sur, Nayarit, Sinaloa",Canonical,-07:00,_06:00,
+MX,+2934_10425,America/Ojinaga,Mountain Time US - Chihuahua (US border),Canonical,-07:00,_06:00,
+US,+332654_1120424,America/Phoenix,MST - Arizona (except Navajo),Canonical,-07:00,_07:00,
+,,America/Shiprock,,Alias,-07:00,_06:00,Link to America/Denver
+CA,+6227_11421,America/Yellowknife,Mountain - NT (central),Canonical,-07:00,_06:00,
+,,Canada/Mountain,,Deprecated,-07:00,_06:00,Link to America/Edmonton
+,,Etc/GMT+7,,Canonical,-07:00,_07:00,Sign is intentionally inverted. See the Etc area description.
+,,Mexico/BajaSur,,Deprecated,-07:00,_06:00,Link to America/Mazatlan
+,,MST,,Deprecated,-07:00,_07:00,"Choose a zone that currently observes MST without daylight savings time, such as America/Phoenix."
+,,MST7MDT,,Deprecated,-07:00,_06:00,"Choose a zone that observes MST with United States daylight savings time rules, such as America/Denver."
+,,Navajo,,Deprecated,-07:00,_06:00,Link to America/Denver
+,,US/Arizona,,Deprecated,-07:00,_07:00,Link to America/Phoenix
+,,US/Mountain,,Deprecated,-07:00,_06:00,Link to America/Denver
+CA,+6404_13925,America/Dawson,Pacific - Yukon (north),Canonical,-08:00,_07:00,
+,,America/Ensenada,,Alias,-08:00,_07:00,Link to America/Tijuana
+US,+340308_1181434,America/Los_Angeles,Pacific,Canonical,-08:00,_07:00,
+,,America/Santa_Isabel,,Alias,-08:00,_07:00,Link to America/Tijuana
+MX,+3232_11701,America/Tijuana,Pacific Time US - Baja California,Canonical,-08:00,_07:00,
+CA,+4916_12307,America/Vancouver,Pacific - BC (most areas),Canonical,-08:00,_07:00,
+CA,+6043_13503,America/Whitehorse,Pacific - Yukon (south),Canonical,-08:00,_07:00,
+,,Canada/Pacific,,Deprecated,-08:00,_07:00,Link to America/Vancouver
+,,Canada/Yukon,,Deprecated,-08:00,_07:00,Link to America/Whitehorse
+,,Etc/GMT+8,,Canonical,-08:00,_08:00,Sign is intentionally inverted. See the Etc area description.
+,,Mexico/BajaNorte,,Deprecated,-08:00,_07:00,Link to America/Tijuana
+PN,_2504_13005,Pacific/Pitcairn,,Canonical,-08:00,_08:00,
+,,PST8PDT,,Deprecated,-08:00,_07:00,"Choose a zone that observes PST with United States daylight savings time rules, such as America/Los_Angeles."
+,,US/Pacific,,Deprecated,-08:00,_07:00,Link to America/Los_Angeles
+,,US/Pacific-New,,Deprecated,-08:00,_07:00,Link to America/Los_Angeles
+US,+611305_1495401,America/Anchorage,Alaska (most areas),Canonical,-09:00,_08:00,
+US,+581807_1342511,America/Juneau,Alaska - Juneau area,Canonical,-09:00,_08:00,
+US,+550737_1313435,America/Metlakatla,Alaska - Annette Island,Canonical,-09:00,_08:00,
+US,+643004_1652423,America/Nome,Alaska (west),Canonical,-09:00,_08:00,
+US,+571035_1351807,America/Sitka,Alaska - Sitka area,Canonical,-09:00,_08:00,
+US,+593249_1394338,America/Yakutat,Alaska - Yakutat,Canonical,-09:00,_08:00,
+,,Etc/GMT+9,,Canonical,-09:00,_09:00,Sign is intentionally inverted. See the Etc area description.
+PF,_2308_13457,Pacific/Gambier,Gambier Islands,Canonical,-09:00,_09:00,
+,,US/Alaska,,Deprecated,-09:00,_08:00,Link to America/Anchorage
+PF,_0900_13930,Pacific/Marquesas,Marquesas Islands,Canonical,-09:30,_09:30,
+US,+515248_1763929,America/Adak,Aleutian Islands,Canonical,-10:00,_09:00,
+,,America/Atka,,Alias,-10:00,_09:00,Link to America/Adak
+,,Etc/GMT+10,,Canonical,-10:00,_10:00,Sign is intentionally inverted. See the Etc area description.
+,,HST,,Deprecated,-10:00,_10:00,"Choose a zone that currently observes HST without daylight savings time, such as Pacific/Honolulu."
+US,+211825_1575130,Pacific/Honolulu,Hawaii,Canonical,-10:00,_10:00,
+,,Pacific/Johnston,,Alias,-10:00,_10:00,Link to Pacific/Honolulu
+CK,_2114_15946,Pacific/Rarotonga,,Canonical,-10:00,_10:00,
+PF,_1732_14934,Pacific/Tahiti,Society Islands,Canonical,-10:00,_10:00,
+,,US/Aleutian,,Deprecated,-10:00,_09:00,Link to America/Adak
+,,US/Hawaii,,Deprecated,-10:00,_10:00,Link to Pacific/Honolulu
+,,Etc/GMT+11,,Canonical,-11:00,_11:00,Sign is intentionally inverted. See the Etc area description.
+UM,+2813_17722,Pacific/Midway,Midway Islands,Alias,-11:00,_11:00,Link to Pacific/Pago_Pago
+NU,_1901_16955,Pacific/Niue,,Canonical,-11:00,_11:00,
+AS,_1416_17042,Pacific/Pago_Pago,,Canonical,-11:00,_11:00,
+,,Pacific/Samoa,,Alias,-11:00,_11:00,Link to Pacific/Pago_Pago
+,,US/Samoa,,Deprecated,-11:00,_11:00,Link to Pacific/Pago_Pago
+,,Etc/GMT+12,,Canonical,-12:00,_12:00,Sign is intentionally inverted. See the Etc area description.
