@@ -21,6 +21,7 @@ if(!require(shiny)){ #check if the package is installed and sourced
 
 ui <- fluidPage(
   title = "R Shiny Applications for Ocean Drilling", #website title
+  h3("R Shiny Applications for Ocean Drilling"),
   tags$style('.container-fluid {
                              background-color:   #f5f5f0 ;
               }'), #background page color
