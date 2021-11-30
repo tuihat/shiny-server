@@ -37,7 +37,8 @@ ui <- fluidPage(
   column(3,
          tags$a(href="http://shinylaurel.com/shiny/Ops_DrillTypes/", 
                 "DSDP, ODP, IODP Coring Type Statistics:",
-                style = 'font-weight: bold; font-size: 15px'), #app link
+                style = 'font-weight: bold; font-size: 15px',
+                target="_blank"), #app link
          h5("This application provides a graphic 
          summary of drilling types including APC (advanced piston corer), 
          HLAPC (half-length advanced piston corer), RCB (rotary core barrel), and 
@@ -46,7 +47,8 @@ ui <- fluidPage(
          program and expedition. Scaled and unscaled graphs are available."), #app text
          tags$a(href="http://shinylaurel.com/shiny/Ops_DrillTypes/", 
                 "Visit the application page.",
-                style = 'font-style: italic;'), #another app link
+                style = 'font-style: italic;',
+                target="_blank"), #another app link
          style='border-right: 2px solid #3c3769; padding:5px' 
   ), #add the vertical border and nudge the text down a bit
   column(3,
@@ -77,7 +79,8 @@ ui <- fluidPage(
     column(3,
            tags$a(href="http://shinylaurel.com/shiny/JRhydrocarbon/", 
                   "Hydrocarbon Safety Monitoring:",
-                  style = 'font-weight: bold; font-size: 15px'),
+                  style = 'font-weight: bold; font-size: 15px',
+                  target="_blank"),
            h5("This application provides two sub-applications to assist with
               hydrocarbon safety monitoring. One assists in the construction of
               a thermal gradient. The other provides a graphic summary of 
@@ -86,7 +89,8 @@ ui <- fluidPage(
               geochemical knowledge or approval from appropriate drilling panels."),
            tags$a(href="http://shinylaurel.com/shiny/JRhydrocarbon/", 
                   "Visit the application page.",
-                  style = 'font-style: italic;'),
+                  style = 'font-style: italic;',
+                  target="_blank"),
            style= 'padding:5px'
     )),
   hr(style = "border-top: 1px solid #000000;"),
@@ -101,7 +105,9 @@ ui <- fluidPage(
     column(3,
            "Some sort of writeup about the cm-by-cm tool.",
            tags$a(href="https://web.iodp.tamu.edu/LORE/", 
-                  "Visit the application page."),
+                  "Visit the application page.",
+                  style = 'font-style: italic;',
+                  target="_blank"),
            style='border-right: 2px solid #3c3769; padding:60px'
     ),
     column(3,
@@ -122,7 +128,8 @@ ui <- fluidPage(
     column(3,
            tags$a(href="https://web.iodp.tamu.edu/LORE/", 
                   "GCR Sample Planning:",
-                  style = 'font-weight: bold; font-size: 15px'),
+                  style = 'font-weight: bold; font-size: 15px',
+                  target="_blank"),
            h5("This application provides several tools for sample planning
               purposes. (1) The user provides, singularly or in batch, sample
               requests by 'mbsf' scale (m CSF-A) and the application returns a
@@ -132,7 +139,8 @@ ui <- fluidPage(
               and either a volume or mass and the alternative is returned."),
            tags$a(href="https://web.iodp.tamu.edu/LORE/", 
                   "Visit the application page.",
-                  style = 'font-style: italic;'),
+                  style = 'font-style: italic;',
+                  target="_blank"),
            style='border-right: 2px solid #3c3769; padding:5px'
     ),
     column(3,
