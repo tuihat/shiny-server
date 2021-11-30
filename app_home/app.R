@@ -65,9 +65,9 @@ ui <- fluidPage(
                style="display: block; margin-left: auto; margin-right: auto; border: solid 2px black;")
     ),
     column(3,
-           "Some sort of writeup about the EPM Daily Report Maker.",
-           tags$a(href="https://web.iodp.tamu.edu/LORE/", 
-                  "Visit the application page."),
+           "It will be best to run the EPM Daily Report Maker locally while at sea.
+           Please get this installed locally on your machine. If you don't know
+           who to ask, I'm not sure how you got to this page.",
            style='border-right: 2px solid #3c3769; padding:60px'
     ),
     column(3,
