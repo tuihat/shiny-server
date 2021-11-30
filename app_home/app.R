@@ -20,10 +20,10 @@ if(!require(shiny)){ #check if the package is installed and sourced
 
 
 ui <- fluidPage(
+  title = "R Shiny Applications for Ocean Drilling", #website title
   tags$style('.container-fluid {
                              background-color:   #f5f5f0 ;
               }'), #background page color
-  h2("R Shiny Applications for Ocean Drilling"), #website title
   tags$i("These are not official IODP-JRSO applications and functionality is 
          not guaranteed. User assumes all risk."), #italic disclaimer
   hr(style = "border-top: 1px solid #000000;"), #horizontal line
@@ -63,7 +63,7 @@ ui <- fluidPage(
   br(),
   fluidRow(
     column(3,
-           img(src='daily_report_maker_image.jpg', height="60%", width="60%", 
+           img(src='daily_report_maker_image.jpg', height="80%", width="80%", 
                style="display: block; margin-left: auto; margin-right: auto; border: solid 2px black;")
     ),
     column(3,
@@ -86,7 +86,8 @@ ui <- fluidPage(
               a thermal gradient. The other provides a graphic summary of 
               hydrocarbon and temperature data, with guides for anomalous and
               normal measurements. This application is not a replacement for 
-              geochemical knowledge or approval from appropriate drilling panels."),
+              geochemical knowledge or approval from appropriate drilling panels.
+              This application will also work better at sea if run locally."),
            tags$a(href="http://shinylaurel.com/shiny/JRhydrocarbon/", 
                   "Visit the application page.",
                   style = 'font-style: italic;',
@@ -103,12 +104,13 @@ ui <- fluidPage(
                style="display: block; margin-left: auto; margin-right: auto;")
     ),
     column(3,
-           "Some sort of writeup about the cm-by-cm tool.",
+           "The 'cm-by-cm' tool: Convert section summaries to tables with rows
+           cm-by-cm. Add in splice and alternate depth scale information as desired. ",
            tags$a(href="https://web.iodp.tamu.edu/LORE/", 
                   "Visit the application page.",
                   style = 'font-style: italic;',
                   target="_blank"),
-           style='border-right: 2px solid #3c3769; padding:60px'
+           style='border-right: 2px solid #3c3769; padding:50px'
     ),
     column(3,
            " "
