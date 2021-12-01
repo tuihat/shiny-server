@@ -68,9 +68,17 @@ ui <- fluidPage(
                style="display: block; margin-left: auto; margin-right: auto; border: solid 2px black;")
     ),
     column(3,
-           "It will be best to run the EPM Daily Report Maker locally while at sea.
-           Please get this installed locally on your machine. If you don't know
-           who to ask, I'm not sure how you got to this page.",
+           tags$a(href="http://shinylaurel.com/shiny/daily_report_maker/", 
+                  "Hydrocarbon Safety Monitoring:",
+                  style = 'font-weight: bold; font-size: 15px',
+                  target="_blank"),
+           h5("This application assists with the summary of coring information
+              for the EPM daily report. While at sea it will be better to run
+              this application locally, however you may preview it here."),
+           tags$a(href="http://shinylaurel.com/shiny/daily_report_maker/", 
+                  "Visit the application page.",
+                  style = 'font-style: italic;',
+                  target="_blank"),
            style='border-right: 2px solid #3c3769; padding:60px'
     ),
     column(3,
