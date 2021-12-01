@@ -69,7 +69,7 @@ ui <- fluidPage(
     ),
     column(3,
            tags$a(href="http://shinylaurel.com/shiny/daily_report_maker/", 
-                  "Hydrocarbon Safety Monitoring:",
+                  "EPM Daily Report:",
                   style = 'font-weight: bold; font-size: 15px',
                   target="_blank"),
            h5("This application assists with the summary of coring information
