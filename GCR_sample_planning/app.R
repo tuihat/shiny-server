@@ -20,7 +20,12 @@ if(!require(shinyjs)){
 }
 
 #Data needed for App1 and App2
-section_summary <- read.csv("Section Summary_allExp.csv", stringsAsFactors = FALSE)
+#read in DSDP, ODP, and IODP files - separated only due to GitHub file size 
+#...upload limit. Can be combined locally.
+import_DSDP <- read.csv("Section Summary_DSDP.csv", stringsAsFactors = FALSE)
+import_ODP <- read.csv("Section Summary_ODP.csv", stringsAsFactors = FALSE)
+import_IODP <- read.csv("Section Summary_IODP.csv", stringsAsFactors = FALSE)
+section_summary <- do.call("rbind", list(import_DSDP, import_ODP, import_IODP))
 section_summary$Hole[section_summary$Hole == "*"] <- "NONE"
 #app1batch <- read.csv("mbsf_transform_template.csv", stringsAsFactors = FALSE)
 
