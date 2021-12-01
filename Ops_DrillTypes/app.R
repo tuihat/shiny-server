@@ -101,7 +101,10 @@ ui <- fluidPage(tags$head(tags$style(HTML("
                                         tabPanel("Depth and Recovery - Expedition",
                                                  h5("Note: graph only displays when 10 or fewer expeditions are selected."),
                                                  plotOutput("depthPlotExp", width = 1400, height = 800))))
-                ))
+                ),
+                tags$i("These are not official IODP-JRSO applications and functionality is 
+         not guaranteed. User assumes all risk.") #italic disclaimer
+                )
 
 server <- function(input, output, session) {
   ########REACTIVE SEARCHED DATAFRAME#############################################
