@@ -8,33 +8,30 @@
 ###############################################################################
 
 #Packages
-if(!require(rmarkdown)){
-  install.packages("rmarkdown")
-  library(rmarkdown) #rmarkdown
-}
+library(shiny)
+library(leaflet)
 
-if(!require(leaflet)){ #check if the package is installed and sourced
-  install.packages("leaflet") #if not, install the package
-  library(leaflet) #and source the package 
-}
-
-if(!require(shiny)){ #check if the package is installed and sourced
-  install.packages("shiny") #if not, install the package
-  library(shiny) #and source the package
-}
-
+r_colors <- rgb(t(col2rgb(colors()) / 255))
+names(r_colors) <- colors()
+  
 ui <- fluidPage(
-  title = "Scientific Ocean Drilling Map", #website title
-  h3("Scientific Ocean Drilling Map"),
-  leafletOutput("mymap")
+  leafletOutput("mymap"),
+  p(),
+  actionButton("recalc", "New points")
 )
 
-server <- function(input, output) {
+server <- function(input, output, session) {
+  
+  points <- eventReactive(input$recalc, {
+    cbind(rnorm(40) * 2 + 13, rnorm(40) + 48)
+  }, ignoreNULL = FALSE)
+  
   output$mymap <- renderLeaflet({
     leaflet() %>%
-      addTiles() %>% #related to our background, can allow us to label
-      setView( lng = 0, lat = 0, zoom = 2.5 ) %>% #set the initial view
-      addProviderTiles("Esri.WorldImagery") #nice looking background
+      addProviderTiles(providers$Stamen.TonerLite,
+                       options = providerTileOptions(noWrap = TRUE)
+      ) %>%
+      addMarkers(data = points())
   })
 }
 
