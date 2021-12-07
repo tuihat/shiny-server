@@ -1,7 +1,17 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
+#GCR Sample Planning Applications
+#started: 23 January 2021
+#updated: 7 December 2021
+#Laurel Childress; childress@iodp.tamu.edu
+
+###############################################################################
+# This application provides several tools for sample planning
+# purposes. (1) The user provides, singularly or in batch, sample
+# requests by 'mbsf' scale (m CSF-A) and the application returns a
+# samples list with appropriate sample IDs. (2) The user supplies a
+# range of cores and sample interval and the application returns a 
+# sample list of repetitive sampling. (3) The user provides a density
+# and either a volume or mass and the alternative is returned.
+###############################################################################
 
 if(!require(dplyr)){
     install.packages("dplyr")
@@ -18,7 +28,7 @@ if(!require(shinyjs)){
     install.packages("shinyjs")
     library(shinyjs) #shinyjs
 }
-
+###############################################################################
 #Data needed for App1 and App2
 #read in DSDP, ODP, and IODP files - separated only due to GitHub file size 
 #...upload limit. Can be combined locally.
@@ -27,48 +37,47 @@ import_ODP <- read.csv("Section Summary_ODP.csv", stringsAsFactors = FALSE)
 import_IODP <- read.csv("Section Summary_IODP.csv", stringsAsFactors = FALSE)
 section_summary <- do.call("rbind", list(import_DSDP, import_ODP, import_IODP))
 section_summary$Hole[section_summary$Hole == "*"] <- "NONE"
-#app1batch <- read.csv("mbsf_transform_template.csv", stringsAsFactors = FALSE)
-
+###############################################################################
 #user interface appearance and assets
-ui <- fluidPage(navbarPage("GCR Sample Planning Apps",
+ui <- fluidPage(useShinyjs(), #to use shinyjs
+                navbarPage("GCR Sample Planning Apps", #title of the whole app
                            tabPanel("SampleID from Depth Value", #App 1
-                                    h3("Single Sample"),
+                                    h3("Single Sample"), #single sample mbsf feature
                                     h6("Use this tool for manual entry of a single depth request."),
                                     br(),
-                                    fluidRow(
+                                    fluidRow( #get user input of Exp, Site, Hole, mbsf
                                         column(2,
                                             selectInput('var1', 'Expedition', choices = c("choose Expedition first" = "", unique(section_summary$Exp))),
                                             selectInput('var2', 'Site', 'placeholder1'),
                                             selectInput('var3', 'Hole', 'placeholder2'),
-                                            textInput("depth", "Enter mbsf:")
+                                            textInput("depth", "Enter mbsf (CSF-A m):")
                                         ),
-                                        column(10,
+                                        column(10, #return result to user
                                                   h2("The sample ID is:"),
                                                   br(),
-                                                  #span(textOutput("testing2"), style="size:10"),
-                                                  textOutput("testing2"),
+                                                  textOutput("testing2"), #sample ID output
                                                   tags$head(tags$style(HTML("#testing2 {font-size: 30px;}"))),
                                                   br(), br(),
                                                   h4("The LORE Section Summary row is shown here for convenience."),
                                                   DT::dataTableOutput("results") #display the results
                                                   )),
                                     hr(),
-                                    h3("Batch Processing"),
+                                    h3("Batch Processing"), #allow user to batch process
                                     h6("Use this tool to process multiple depth requests."),
                                     br(),
                                     h6("1. Download the template and enter data for all columns."),
-                                      fluidRow(
+                                      fluidRow( #user must comply with template use
                                           column(2,
                                                downloadButton("downloadtemplate1", "Download samples template", style='padding:4px; font-size:80%'),
                                                br(),
-                                               hr(),
+                                               hr(), #user enters data then uploads template
                                                h6("2. Upload the template after data entry. Keep the file in .csv format."),
                                                fileInput("file", "Upload your file",
                                                          accept = c(
                                                              "text/csv",
                                                              "text/comma-separated-values,text/plain",
                                                              ".csv")),
-                                               #br(),
+                                               #same as above but for a batch; user can download table
                                                h6("3. Process the uploaded data."),
                                                actionButton("goButton1", "Make my list!"),
                                                br(), br(),
@@ -77,42 +86,48 @@ ui <- fluidPage(navbarPage("GCR Sample Planning Apps",
                                                ),
                                           column(10,
                                                  DT::dataTableOutput("results_batch") #display the results
-                                                 ))),
+                                                 )), br(),
+                                    tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk.")), #italic disclaimer
                            tabPanel("Repetitive Sample Intervals", #App 2
+                                    tags$i("Please note that there are very few guardrails
+                                          in this application. If changing values causes
+                                          disruptions, refresh the app.",
+                                           style = "color: red;"), br(),
                                     fluidRow(
-                                      column(3,
+                                      column(3, #user supplies Exp Site Hole
                                              h4("Expedition-Site-Hole"),
                                              selectInput('var11', 'Select Expedition', 
-                                                         choices = c("choose" = "", unique(section_summary$Exp)), selected = "341"),
-                                             selectInput('var22', 'Select Site', 
-                                                         choices = c("choose" = "", unique(section_summary$Site)), selected = "U1417"),
-                                             selectInput('var33', 'Select Hole', 
-                                                         choices = c("choose" = "", unique(section_summary$Hole)), selected = "A")),
-                                      column(3,
+                                                         choices = c("choose Expedition first" = "", unique(section_summary$Exp))),
+                                             selectInput('var22', 'Select Site', 'placeholder11'),
+                                             selectInput('var33', 'Select Hole', 'placeholder22')),
+                                      column(3, #user supplies interval top
                                              h4("Interval Top"),
                                              selectInput('var44', 'Select Core', 
-                                                         choices = c("choose" = "", unique(section_summary$Core)), selected = 1),
+                                                         choices = c("choose Expedition first" = "", unique(section_summary$Core))),
                                              selectInput('var55', 'Select Section', 
-                                                         choices = c("choose" = "", unique(section_summary$Sect)), selected = "2"),
+                                                         choices = c("choose" = "", unique(section_summary$Sect))),
                                              numericInput("range1", "Enter start cm:", value = NULL)),
-                                      column(3,
+                                      column(3, #user supplies interval bottom
                                              h4("Interval Bottom"),
                                              selectInput('var66', 'Select Core', 
-                                                         choices = c("choose" = "", unique(section_summary$Core)), selected = 2),
+                                                         choices = c("choose" = "", unique(section_summary$Core))),
                                              selectInput('var77', 'Select Section', 
-                                                         choices = c("choose" = "", unique(section_summary$Sect)), selected = "3"),
+                                                         choices = c("choose" = "", unique(section_summary$Sect))),
                                              numericInput("range2", "Enter final cm:", value = NULL)),
-                                      column(3,
+                                      column(3, #user supplies interval settings
                                              h4("Sample Frequency/Size"),
                                              numericInput("interval", "Enter sampling interval (cm):", value = 10),
                                              numericInput("interval2", "Enter sample length (cm):", value = 2),
                                              numericInput("interval3", "Enter sample volume (cc):", value = 20))),
-                                    br(),
+                                    br(), #downloadable results for user
                                     downloadButton("downloadtable2", "Download results", style='padding:4px; font-size:80%'),
                                     h2("Table of repetitive samples at interval:"),
                                     br(), br(),
                                     DT::dataTableOutput("results2"), #display the results
-                                    width = 10),
+                                    width = 10,
+                                    tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk.")), #italic disclaimer
                            tabPanel("Volume-Mass Calculator", #App 3
                                     h2("Determine mass from volume:"),
                                     numericInput("volume1", "Enter volume (cc):", value = 20),
@@ -128,30 +143,32 @@ ui <- fluidPage(navbarPage("GCR Sample Planning Apps",
                                     hr(),
                                     h4("Density references:"),
                                     h4(HTML(paste0("basalt = 2.9 g/cm",tags$sup("3")))),
-                                    h4(HTML(paste0("clay = 1.7 g/cm",tags$sup("3"))))
+                                    h4(HTML(paste0("clay = 1.7 g/cm",tags$sup("3")))), br(),
+                                    tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
                            )
 ))
 
 server <- function(input, output, session) {
 #######Application 1############################################################
-    observe({
+  ##Limit site choices based on Expedition choice  
+  observe({
         updateSelectInput(session, "var2", choices = with(section_summary, Site[Exp == input$var1])) 
     })
-    
+  ##Limit hole choices based on Site choice  
     observeEvent(input$var2, {
         column_levels <- with(section_summary, Hole[Site == input$var2])
         updateSelectInput(session, "var3", choices = column_levels)
     })
-    
-    output$table <- renderTable({
-        subset(dataset(), dataset()[[input$column]] == input$level)
-    })
 
     #The central part: determines which Sample ID row is correct
     filtered <- reactive({
+      #get the rows that match the Exp, Site, Hole
         the_chosen <- subset(section_summary, Exp == input$var1 & Site == input$var2 & Hole == input$var3)
+      #convert to numeric values
         the_chosen$Top.depth.CSF.A..m. <- as.numeric(the_chosen$Top.depth.CSF.A..m.)
         the_chosen$Bottom.depth.CSF.A..m. <- as.numeric(the_chosen$Bottom.depth.CSF.A..m.)
+      #limit our results to a Section that contains the desired mbsf
         tmp <- the_chosen %>%
             filter(Top.depth.CSF.A..m. <= as.numeric(input$depth), as.numeric(input$depth) < Bottom.depth.CSF.A..m.)
     })
@@ -238,46 +255,58 @@ server <- function(input, output, session) {
 ################################################################################
 ################################################################################
 ###Application 2###
-    # Selectize 2 choice's list <---
-    var22.choice <- reactive({
-        section_summary %>% 
-            filter(Exp == input$var11) %>%
-            pull(Site)
+    
+    toListen <- reactive({
+      list(input$var11, input$var22, input$var33)
     })
     
-    # Selectize 3 choice's list <---
-    var33.choice <- reactive({
-        section_summary %>% 
-            filter(Exp == input$var11) %>%
-            filter(Site == input$var22) %>% 
-            pull(Hole)
+    toListen2 <- reactive({
+      list(input$var11, input$var22, input$var33, input$var44)
     })
     
-    # Selectize 4 choice's list <---
-    var44.choice <- reactive({
-        section_summary %>% 
-            filter(Exp == input$var11) %>%
-            filter(Site == input$var22) %>%
-            filter(Hole == input$var33) %>%
-            pull(Core)
+    toListen3 <- reactive({
+      list(input$var11, input$var22, input$var33, input$var66)
     })
     
-    # Selectize 5 choice's list <---
-    var55.choice <- reactive({
-        section_summary %>% 
-            filter(Exp == input$var11) %>%
-            filter(Site == input$var22) %>%
-            filter(Hole == input$var33) %>%
-            filter(Core == input$var44) %>%
-            pull(Sect)
+    observe({ #use Exp to limit Site choices
+      updateSelectInput(session, "var22", choices = with(section_summary, Site[Exp == input$var11]))
+      reset("range1")
+      reset("range2")
     })
     
-    # Observe <---
-    observe({
-        updateSelectizeInput(session, "var22", choices = var22.choice())
-        updateSelectizeInput(session, "var33", choices = var33.choice())
-        updateSelectizeInput(session, "var44", choices = var44.choice())
-        updateSelectizeInput(session, "var55", choices = var55.choice())
+    observeEvent(input$var22, { #use Site to limit Hole choices
+      column_levels <- with(section_summary, Hole[Site == input$var22])
+      updateSelectInput(session, "var33", choices = column_levels)
+      reset("range1")
+      reset("range2")
+    })
+    ## limit the core and section choices for the top
+    observeEvent(toListen(), { #use Site and Hole to limit Core choices
+      column_levels <- with(section_summary, Core[Site == input$var22 & Hole == input$var33])
+      updateSelectInput(session, "var44", choices = column_levels)
+      reset("range1")
+      reset("range2")
+    })
+    
+    observeEvent(toListen2(), { #use Site and Hole and Core to limit section choices
+      column_levels <- with(section_summary, Sect[Site == input$var22 & Hole == input$var33 & Core == input$var44])
+      updateSelectInput(session, "var55", choices = column_levels)
+      reset("range1")
+      reset("range2")
+    })
+    ## limit the core and section choices for the bottom
+    observeEvent(toListen(), { #use Site and Hole to limit Core choices
+      column_levels <- with(section_summary, Core[Site == input$var22 & Hole == input$var33])
+      updateSelectInput(session, "var66", choices = column_levels)
+      reset("range1")
+      reset("range2")
+    })
+    
+    observeEvent(toListen3(), { #use Site and Hole and Core to limit section choices
+      column_levels <- with(section_summary, Sect[Site == input$var22 & Hole == input$var33 & Core == input$var66])
+      updateSelectInput(session, "var77", choices = column_levels)
+      reset("range1")
+      reset("range2")
     })
     
     filtered2 <- reactive({
