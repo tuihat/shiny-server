@@ -137,7 +137,7 @@ ui <- fluidPage(
                style="display: block; margin-left: auto; margin-right: auto; border: solid 2px black;")
     ),
     column(3,
-           tags$a(href="https://web.iodp.tamu.edu/LORE/", 
+           tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
                   "GCR Sample Planning:",
                   style = 'font-weight: bold; font-size: 15px',
                   target="_blank"),
@@ -148,7 +148,7 @@ ui <- fluidPage(
               range of cores and sample interval and the application returns a 
               sample list of repetitive sampling. (3) The user provides a density
               and either a volume or mass and the alternative is returned."),
-           tags$a(href="https://web.iodp.tamu.edu/LORE/", 
+           tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
                   "Visit the application page.",
                   style = 'font-style: italic;',
                   target="_blank"),
