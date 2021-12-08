@@ -1,172 +1,157 @@
-#Shiny Laurel Homepage
-#started: 29 November 2021
-#updated: 29 November 2021
-#Laurel Childress; childress@iodp.tamu.edu
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
 
-###############################################################################
-# Navigation interface for ocean drilling related R Shiny applications.
-###############################################################################
+library(shiny)
+library(shinydashboard)
+library(shinydashboardPlus)
 
-#Packages
-if(!require(rmarkdown)){
-  install.packages("rmarkdown")
-  library(rmarkdown) #rmarkdown
-}
-
-if(!require(shiny)){ #check if the package is installed and sourced
-  install.packages("shiny") #if not, install the package
-  library(shiny) #and source the package
-}
-
-
-ui <- fluidPage(
-  title = "R Shiny Applications for Ocean Drilling", #website title
-  h3("R Shiny Applications for Ocean Drilling"),
-  tags$style('.container-fluid {
-                             background-color:   #f5f5f0 ;
-              }'), #background page color
-  tags$i("These are not official IODP-JRSO applications and functionality is 
+# Define UI for application that draws a histogram
+ui <- dashboardPage(
+    title = "R Shiny Applications for Ocean Drilling", #website title
+    header = dashboardHeader(title = "R Shiny Applications for Ocean Drilling"),
+    sidebar = dashboardSidebar(width = "0px"),
+    body = dashboardBody(
+        tags$i("These are not official IODP-JRSO applications and functionality is 
          not guaranteed. User assumes all risk."), #italic disclaimer
-  hr(style = "border-top: 1px solid #000000;"), #horizontal line
-  h4("General Applications", style = 'font-weight: bold;'), #subset of applications
-  br(),
-  fluidRow(
-  column(3,
-         img(src='ops_app_image.jpg', height="100%", width="100%", 
-             style="display: block; margin-left: auto; margin-right: auto; border: solid 2px black;")
-  ), #app image with border
-  column(3,
-         tags$a(href="http://shinylaurel.com/shiny/Ops_DrillTypes/", 
-                "DSDP, ODP, IODP Coring Type Statistics:",
-                style = 'font-weight: bold; font-size: 15px',
-                target="_blank"), #app link
-         h5("This application provides a graphic 
-         summary of drilling types including APC (advanced piston corer), 
-         HLAPC (half-length advanced piston corer), RCB (rotary core barrel), and 
-         XCB (extended core barrel). Recovery counts are available 
-         by program and expedition. Recovery with depth is also available by 
-         program and expedition. Scaled and unscaled graphs are available."), #app text
-         tags$a(href="http://shinylaurel.com/shiny/Ops_DrillTypes/", 
-                "Visit the application page.",
-                style = 'font-style: italic;',
-                target="_blank"), #another app link
-         style='border-right: 2px solid #3c3769; padding:5px' 
-  ), #add the vertical border and nudge the text down a bit
-  column(3,
-         " "
-  ),
-  column(3,
-         " "
-  )),
-  hr(style = "border-top: 1px solid #000000;"),
-  #############--At Sea Applications--##########################################
-  h4("At Sea Applications", style = 'font-weight: bold;'),
-  br(),
-  fluidRow(
-    column(3,
-           img(src='daily_report_maker_image.jpg', height="80%", width="80%", 
-               style="display: block; margin-left: auto; margin-right: auto; border: solid 2px black;")
-    ),
-    column(3,
-           tags$a(href="http://shinylaurel.com/shiny/daily_report_maker/", 
-                  "EPM Daily Report:",
-                  style = 'font-weight: bold; font-size: 15px',
-                  target="_blank"),
-           h5("This application assists with the summary of coring information
+        hr(style = "border-top: 1px solid #000000;"), #horizontal line
+        ########################################################################
+        h4("General Applications", style = 'font-weight: bold;'), #subset of applications
+        fluidRow(
+        userBox(
+            title = userDescription(
+                title = "DSDP, ODP, IODP Coring Type Statistics",
+                subtitle = "",
+                image = "ops_app_image.jpg"
+            ),
+            status = "teal",
+            closable = FALSE,
+            maximizable = TRUE,
+            tags$a(href="http://shinylaurel.com/shiny/Ops_DrillTypes/", 
+                   "Visit the application page.",
+                   target="_blank"), #another app link,
+            footer = "This application provides a graphic summary of drilling types including 
+            APC (advanced piston corer), HLAPC (half-length advanced piston corer), 
+            RCB (rotary core barrel), and XCB (extended core barrel). Recovery counts 
+            are available by program and expedition. Recovery with depth is also 
+            available by program and expedition. Scaled and unscaled graphs are available."
+        )),
+        ########################################################################
+        hr(style = "border-top: 1px solid #000000;"), #horizontal line
+        h4("At Sea Applications", style = 'font-weight: bold;'),
+        fluidRow(
+        userBox(
+            title = userDescription(
+                title = "EPM Daily Report",
+                subtitle = "",
+                image = "JR_icon.jpg"
+            ),
+            status = "maroon",
+            closable = FALSE,
+            maximizable = TRUE,
+            tags$a(href="http://shinylaurel.com/shiny/daily_report_maker/", 
+                   "Visit the application page.",
+                   target="_blank"), #another app link,
+            footer = "This application assists with the summary of coring information
               for the EPM daily report. While at sea it will be better to run
-              this application locally, however you may preview it here."),
-           tags$a(href="http://shinylaurel.com/shiny/daily_report_maker/", 
-                  "Visit the application page.",
-                  style = 'font-style: italic;',
-                  target="_blank"),
-           style='border-right: 2px solid #3c3769; padding:60px'
-    ),
-    column(3,
-           img(src='hydrocarbon_image.jpg', height="80%", width="80%", 
-               style="display: block; margin-left: auto; margin-right: auto;border: solid 2px black;")
-    ),
-    column(3,
-           tags$a(href="http://shinylaurel.com/shiny/JRhydrocarbon/", 
-                  "Hydrocarbon Safety Monitoring:",
-                  style = 'font-weight: bold; font-size: 15px',
-                  target="_blank"),
-           h5("This application provides two sub-applications to assist with
+              this application locally, however you may preview it here."
+        ),
+        userBox(
+            title = userDescription(
+                title = "Hydrocarbon Safety Monitoring",
+                subtitle = "",
+                image = "JR_icon.jpg"
+            ),
+            status = "maroon",
+            closable = FALSE,
+            maximizable = TRUE,
+            tags$a(href="http://shinylaurel.com/shiny/JRhydrocarbon/", 
+                   "Visit the application page.",
+                   target="_blank"), #another app link,
+            footer = "This application provides two sub-applications to assist with
               hydrocarbon safety monitoring. One assists in the construction of
               a thermal gradient. The other provides a graphic summary of 
               hydrocarbon and temperature data, with guides for anomalous and
               normal measurements. This application is not a replacement for 
               geochemical knowledge or approval from appropriate drilling panels.
-              This application will also work better at sea if run locally."),
-           tags$a(href="http://shinylaurel.com/shiny/JRhydrocarbon/", 
-                  "Visit the application page.",
-                  style = 'font-style: italic;',
-                  target="_blank"),
-           style= 'padding:5px'
-    )),
-  hr(style = "border-top: 1px solid #000000;"),
-  #############--Post Expedition Applications--##########################################
-  h4("Post-Expedition Applications", style = 'font-weight: bold;'),
-  br(),
-  fluidRow(
-    column(3,
-           img(src='coming_soon.png', height="60%", width="60%", 
-               style="display: block; margin-left: auto; margin-right: auto;")
-    ),
-    column(3,
-           "The 'cm-by-cm' tool: Convert section summaries to tables with rows
-           cm-by-cm. Add in splice and alternate depth scale information as desired. ",
-           tags$a(href="https://web.iodp.tamu.edu/LORE/", 
-                  "Visit the application page.",
-                  style = 'font-style: italic;',
-                  target="_blank"),
-           style='border-right: 2px solid #3c3769; padding:50px'
-    ),
-    column(3,
-           " "
-    ),
-    column(3,
-           " "
-    )),
-  hr(style = "border-top: 1px solid #000000;"),
-  #############--GCR Applications--##########################################
-  h4("GCR Applications", style = 'font-weight: bold;'),
-  br(),
-  fluidRow(
-    column(3,
-           img(src='GCR_app_image.jpg', height="100%", width="100%", 
-               style="display: block; margin-left: auto; margin-right: auto; border: solid 2px black;")
-    ),
-    column(3,
-           tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
-                  "GCR Sample Planning:",
-                  style = 'font-weight: bold; font-size: 15px',
-                  target="_blank"),
-           h5("This application provides several tools for sample planning
+              This application will also work better at sea if run locally."
+        )),
+        ########################################################################
+        hr(style = "border-top: 1px solid #000000;"), #horizontal line
+        h4("Post-Expedition Applications", style = 'font-weight: bold;'), #subset of applications
+        fluidRow(
+            userBox(
+                title = userDescription(
+                    title = "The 'cm-by-cm' Tool",
+                    subtitle = "",
+                    image = "coming_soon.jpg"
+                ),
+                status = "navy",
+                closable = FALSE,
+                maximizable = TRUE,
+                tags$a(href="https://web.iodp.tamu.edu/LORE/", 
+                       "Visit the application page.",
+                       target="_blank"), #another app link,
+                footer = "Convert section summaries to tables with rows
+           cm-by-cm. Add in splice and alternate depth scale information as desired."
+            )),
+        ########################################################################
+        hr(style = "border-top: 1px solid #000000;"), #horizontal line
+        h4("GCR Applications", style = 'font-weight: bold;'), #subset of applications
+        fluidRow(
+            userBox(
+                title = userDescription(
+                    title = "GCR Sample Planning",
+                    subtitle = "",
+                    image = "GCR_app_image.jpg"
+                ),
+                status = "purple",
+                closable = FALSE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
+                       "Visit the application page.",
+                       target="_blank"), #another app link,
+                footer = "This application provides several tools for sample planning
               purposes. (1) The user provides, singularly or in batch, sample
               requests by 'mbsf' scale (m CSF-A) and the application returns a
               samples list with appropriate sample IDs. (2) The user supplies a
               range of cores and sample interval and the application returns a 
               sample list of repetitive sampling. (3) The user provides a density
-              and either a volume or mass and the alternative is returned."),
-           tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
-                  "Visit the application page.",
-                  style = 'font-style: italic;',
-                  target="_blank"),
-           style='border-right: 2px solid #3c3769; padding:5px'
+              and either a volume or mass and the alternative is returned."
+            )),
+        tags$head(tags$style(HTML('
+        /* logo */
+        .skin-blue .main-header .logo {
+                              background-color: #f4b943;width: 400px;
+                              }
+
+        /* logo when hovered */
+        .skin-blue .main-header .logo:hover {
+                              background-color: #f4b943;
+                              }
+
+        /* navbar (rest of the header) */
+        .skin-blue .main-header .navbar {
+                              background-color: #f4b943;margin-left: 400px;
+                              }'))) 
     ),
-    column(3,
-           " "
-    ),
-    column(3,
-           " "
-    )),
-  br(),
-  tags$i("These are not official IODP-JRSO applications and functionality is 
-         not guaranteed. User assumes all risk.") #italic disclaimer
+    
+
 )
 
-server <- function(input, output) {
-  
+# Define server logic required to draw a histogram
+server <- function(input, output, session) {
+    # output$opsdrillimg <- renderImage({
+    #     return(list(src = "www/ops_app_image.jpg", height = 300,
+    #                 contentType = "image/png", alt = "App Preview Image"))
+    # }, deleteFile = FALSE) #where the src is wherever you have the picture
+
 }
 
+# Run the application 
 shinyApp(ui = ui, server = server)
