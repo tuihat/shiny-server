@@ -8,6 +8,7 @@
 #
 
 library(shiny)
+library(shinyjs)
 library(shinydashboard)
 library(shinydashboardPlus)
 
@@ -32,7 +33,7 @@ ui <- dashboardPage(
             status = "teal",
             closable = FALSE,
             maximizable = TRUE,
-            tags$a(href="http://shinylaurel.com/shiny/Ops_DrillTypes/", 
+            tags$a(href="https://shinylaurel.com/shiny/Ops_DrillTypes/", 
                    "Visit the application page.",
                    target="_blank"), #another app link,
             footer = "This application provides a graphic summary of drilling types including 
@@ -40,6 +41,24 @@ ui <- dashboardPage(
             RCB (rotary core barrel), and XCB (extended core barrel). Recovery counts 
             are available by program and expedition. Recovery with depth is also 
             available by program and expedition. Scaled and unscaled graphs are available."
+        ),
+        userBox(
+            title = userDescription(
+                title = "Scientific Ocean Drilling Map",
+                subtitle = "",
+                image = "map_app_image.jpg"
+            ),
+            status = "teal",
+            closable = FALSE,
+            maximizable = TRUE,
+            tags$a(href="https://shinylaurel.com/shiny/drilling_map/", 
+                   "Visit the application page.",
+                   target="_blank"), #another app link,
+            footer = "This application provides a visualization of all ocean drilling
+            sites for DSDP, ODP, and IODP. The map is interactive and holes can be
+            clicked on to learn further information. The map is subsettable by a
+            range of expeditions using the slider. A table is provided at the bottom
+            for additional reference."
         )),
         ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
@@ -54,7 +73,7 @@ ui <- dashboardPage(
             status = "maroon",
             closable = FALSE,
             maximizable = TRUE,
-            tags$a(href="http://shinylaurel.com/shiny/daily_report_maker/", 
+            tags$a(href="https://shinylaurel.com/shiny/daily_report_maker/", 
                    "Visit the application page.",
                    target="_blank"), #another app link,
             footer = "This application assists with the summary of coring information
@@ -70,7 +89,7 @@ ui <- dashboardPage(
             status = "maroon",
             closable = FALSE,
             maximizable = TRUE,
-            tags$a(href="http://shinylaurel.com/shiny/JRhydrocarbon/", 
+            tags$a(href="https://shinylaurel.com/shiny/JRhydrocarbon/", 
                    "Visit the application page.",
                    target="_blank"), #another app link,
             footer = "This application provides two sub-applications to assist with
@@ -138,18 +157,15 @@ ui <- dashboardPage(
         /* navbar (rest of the header) */
         .skin-blue .main-header .navbar {
                               background-color: #f4b943;margin-left: 400px;
-                              }'))) 
-    ),
+                              }'))),
+        tags$script("document.getElementsByClassName('sidebar-toggle')[0].style.visibility = 'hidden';") 
+    )
     
 
 )
 
 # Define server logic required to draw a histogram
 server <- function(input, output, session) {
-    # output$opsdrillimg <- renderImage({
-    #     return(list(src = "www/ops_app_image.jpg", height = 300,
-    #                 contentType = "image/png", alt = "App Preview Image"))
-    # }, deleteFile = FALSE) #where the src is wherever you have the picture
 
 }
 
