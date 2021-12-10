@@ -18,6 +18,11 @@ if(!require(leaflet)){ #check if the package is installed and sourced
   library(leaflet) #and source the package 
 }
 
+if(!require(DT)){ #check if the package is installed and sourced
+  install.packages("DT") #if not, install the package
+  library(DT) #and source the package 
+}
+
 if(!require(shiny)){ #check if the package is installed and sourced
   install.packages("shiny") #if not, install the package
   library(shiny) #and source the package
@@ -71,7 +76,6 @@ ui <- dashboardPage(
           leafletOutput("mymap")
       )
     ),
-    #br(),
     fluidRow(
              box(width = 12,
                  sliderTextInput(
@@ -80,9 +84,8 @@ ui <- dashboardPage(
                    choices = all_exp,
                    selected = all_exp[c(1,length(all_exp))]
                  )
-             ),
+             )
     ),
-    #br(),
       fluidRow(
         box(width = 12,
           DT::dataTableOutput("SiteHoleTable"))),
@@ -147,7 +150,9 @@ server <- function(input, output, session) {
 #########---Output Table---#####################################################  
   output$SiteHoleTable <- DT::renderDataTable({
     pretty_table <- chosen_progs()
-    pretty_table <- pretty_table[,c(1:22,24,25)]
+    pretty_table <- pretty_table[,c(1:22,25)]
+    round(pretty_table$Latitude_DD, digits = 4)
+    round(pretty_table$Longitude_DD, digits = 4)
     names(pretty_table)[4] <- "Latitude"
     names(pretty_table)[5] <- "Longitude"
     names(pretty_table)[6] <- "Water depth (m)"
@@ -160,16 +165,16 @@ server <- function(input, output, session) {
     names(pretty_table)[13] <- "Total cores"
     names(pretty_table)[14] <- "APC cores"
     names(pretty_table)[15] <- "HLAPC cores"
-    names(pretty_table)[16] <- "HLAPC cores"
-    names(pretty_table)[17] <- "XCB cores"
-    names(pretty_table)[18] <- "RCB cores"
-    names(pretty_table)[19] <- "Other cores"
-    names(pretty_table)[20] <- "Date started (UTC)"
-    names(pretty_table)[21] <- "Date finished (UTC)"
-    names(pretty_table)[22] <- "Time on hole (days)"
-    names(pretty_table)[23] <- "Comments"
-    names(pretty_table)[24] <- "Program"
-    DT::datatable(pretty_table, options = list(pageLength = 5, scrollX = TRUE), rownames= FALSE)
+    names(pretty_table)[16] <- "XCB cores"
+    names(pretty_table)[17] <- "RCB cores"
+    names(pretty_table)[18] <- "Other cores"
+    names(pretty_table)[19] <- "Date started (UTC)"
+    names(pretty_table)[20] <- "Date finished (UTC)"
+    names(pretty_table)[21] <- "Time on hole (days)"
+    names(pretty_table)[22] <- "Comments"
+    names(pretty_table)[23] <- "Program"
+    DT::datatable(pretty_table, options = list(pageLength = 5, scrollX = TRUE), rownames= FALSE)%>% 
+      formatRound(columns = c(4:5), digits = 4)
   })
 }
 
