@@ -106,7 +106,7 @@ ui <- fluidPage(navbarPage("The Itsy Bitsy Interval", #App title
 )
 
 # Define server logic required to draw a histogram
-server <- function(input, output) {
+server <- function(input, output, session) {
 ####APPLICATION 1 - cm by cm ###################################################    
     #################################################
     ####PREPARE DATA####
@@ -175,7 +175,7 @@ server <- function(input, output) {
             paste("cm_by_cm", ".csv", sep = "")
         },
         content = function(file) {
-            write.csv(summary_all_subsections(), file, row.names = FALSE)
+            write.csv(data_prep1(), file, row.names = FALSE)
         })
     #################################################
     output$download1.2 <- downloadHandler( # Downloadable zip (by hole) ----
