@@ -187,13 +187,14 @@ server <- function(input, output, session) {
                    paste("output", "zip", sep=".")
                },
                content = function(fname) {
+                   k <- site_hole_list()
                    fs <- c()
                    tmpdir <- tempdir()
                    setwd(tempdir())
-                   for(i in names(site_hole_list())){
+                   for(i in names(k)){
                        path <- paste0("sample_", i, ".csv")
+                       write(k[[i]], path)
                        fs <- c(fs, path)
-                       write(site_hole_list()[[i]], path, row.names = FALSE)
                    }
                    zip(zipfile=fname, files=fs)
                },
