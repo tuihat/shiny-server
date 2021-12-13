@@ -112,6 +112,7 @@ server <- function(input, output, session) {
     ####PREPARE DATA####
     data_prep1 <- eventReactive(input$goButton1, { #when user clicks Go Button
         show_modal_progress_line(text = "Please be patient - higher recovery expeditions may take more time.") # show the modal window
+        update_modal_progress(0.15) # update progress bar value
         file1 <- input$file1 # get user section summary file
         req(file1) #section summary file is required for operation
         #read in section summary file from user chosen location
@@ -120,14 +121,17 @@ server <- function(input, output, session) {
         section_summary <- head(section_summary, -1)
         #Number of columns original to a LIMS site summary
         LORE_cols <- ncol(section_summary)
-        update_modal_progress(0.1) # update progress bar value
+        update_modal_progress(0.25) # update progress bar value
         #Add a section ID to uniquely identify each section
         section_summary$ID_Section <- paste0(section_summary$Site,section_summary$Hole,"-",section_summary$Core, section_summary$Type,"-", section_summary$Sect)
         section_summary$ID_SiteHole <- paste0(section_summary$Site,section_summary$Hole)
         section_summary$ID_SiteHoleCore <- paste0(section_summary$Site,section_summary$Hole,"-",section_summary$Core)
         #Create a column of curated length in centimeters
         section_summary$cm_length <- section_summary$Curated.length..m.*100
-        update_modal_progress(0.65) # update progress bar value
+        section_summary$cm_char <- as.character(section_summary$cm_length) #don't ask me why the number makes the wrong integer
+        section_summary$cm_length <- as.integer(section_summary$cm_char)
+        section_summary <- section_summary[1:(length(section_summary)-1)] #drop temporary column
+        update_modal_progress(0.45) # update progress bar value
         ####PROCESS DATA####
         #Use the length of curated cm to determine how many times to duplicate each row
         subsection_summary <- section_summary[rep(seq(nrow(section_summary)), section_summary$cm_length),]
@@ -179,22 +183,21 @@ server <- function(input, output, session) {
         })
     #################################################
     output$download1.2 <- downloadHandler( # Downloadable zip (by hole) ----
-            filename = 'pdfs.zip',
-            content = function(fname) {
-            fs <- c()
-            tmpdir <- tempdir()
-            setwd(tempdir())
-           print (tempdir())
-                                               
-           for (i in 1:length(site_hole_list)) {
-            path <- paste("plot_", i, ".csv", sep="")
-            fs <- c(fs, path)
-            write.csv(site_hole_list[[i]], fname, row.names = FALSE)
-            }
-            print (fs)
-            zip(zipfile="pdfs.zip", files=fs)
-            },
-            contentType = "application/zip"
+               filename = function() {
+                   paste("output", "zip", sep=".")
+               },
+               content = function(fname) {
+                   fs <- c()
+                   tmpdir <- tempdir()
+                   setwd(tempdir())
+                   for(i in names(site_hole_list())){
+                       path <- paste0("sample_", i, ".csv")
+                       fs <- c(fs, path)
+                       write(site_hole_list()[[i]], path, row.names = FALSE)
+                   }
+                   zip(zipfile=fname, files=fs)
+               },
+               contentType = "application/zip"
     )
     #################################################
     ##Preview data to user##
