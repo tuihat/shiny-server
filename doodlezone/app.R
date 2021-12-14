@@ -196,7 +196,8 @@ server <- function(input, output, session) {
                        write(k[[i]], path)
                        fs <- c(fs, path)
                    }
-                   zip(zipfile=fname, files=fs)
+                   system2("zip", args=(paste(fname,fs,sep=" ")))
+                   #zip(zipfile=fname, files=fs)
                },
                contentType = "application/zip"
     )
