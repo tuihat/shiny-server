@@ -1,232 +1,161 @@
-# JOIDES Resolution: The Itsy Bitsy Interval
-# Features: divides all sections on a cm by cm basis
-# created: 24 October 2019
-# last updated: 2 December 2021
-# Laurel Childress
-# International Ocean Discovery Program
+#DSDP, ODP, IODP Expedition Map
+#started: 9 December 2021
+#updated: 10 December 2021
+#Laurel Childress; childress@iodp.tamu.edu
 
 ###############################################################################
-# To facilitate the implementation of post-cruise sample parties this script 
-# takes input from the user in the form of .csv data files from the LIMS
-# database and produces a new section summary file where each section is split
-# into cm by cm intervals.
+# A very basic map making tool for ocean drilling sites.
 ###############################################################################
 
+#Packages
 if(!require(rmarkdown)){
-    install.packages("rmarkdown")
-    library(rmarkdown) #rmarkdown
+  install.packages("rmarkdown")
+  library(rmarkdown) #rmarkdown
 }
 
 if(!require(shiny)){ #check if the package is installed and sourced
-    install.packages("shiny") #if not, install the package
-    library(shiny) #and source the package
+  install.packages("shiny") #if not, install the package
+  library(shiny) #and source the package
 }
 
-if(!require(shinyjs)){
-    install.packages("shinyjs")
-    library(shinyjs) #shinyjs
+if(!require(shinyjs)){ #check if the package is installed and sourced
+  install.packages("shinyjs") #if not, install the package
+  library(shinyjs) #and source the package
 }
 
-if(!require(shinyWidgets)){
-    install.packages("shinyWidgets")
-    library(shinyWidgets) #fancy buttons
+if(!require(shinyWidgets)){ #check if the package is installed and sourced
+  install.packages("shinyWidgets") #if not, install the package
+  library(shinyWidgets) #and source the package
 }
 
-if(!require(shinybusy)){
-    install.packages("shinybusy")
-    library(shinybusy) #ocupado; come back later
+if(!require(shinydashboard)){ #check if the package is installed and sourced
+  install.packages("shinydashboard") #if not, install the package
+  library(shinydashboard) #and source the package
 }
 
-# Define UI for application that draws a histogram
-ui <- fluidPage(navbarPage("The Itsy Bitsy Interval", #App title
-                           tabPanel("cm by cm", #Tab Title
-                                    titlePanel("cm by cm intervals"),
-                                    h4("Folks, this is the JRSO Core-O-Matic! It slices, it 
-                                    dices in teeny, tiny splices. It makes mounds of sample 
-                                    party tables in just seconds."),
-                                    h5("To facilitate the implementation of post-cruise 
-                                       sample parties this script takes input from the user 
-                                       in the form of .csv data files from the LIMS database 
-                                       and produces a new section summary file where each 
-                                       section is split into cm by cm intervals."),
-                                    hr(),
-                                    sidebarLayout( #page layout
-                                        sidebarPanel( #content of the sidebar
-                                            tags$b("1. Gather the Section Summary", style = "font-size: 20px;"),
-                                            br(),
-                                            h5("Go to the LIMS Online Report Portal:"),
-                                            tags$a(href="https://web.iodp.tamu.edu/LORE/", 
-                                                   "https://web.iodp.tamu.edu/LORE/"),
-                                            h5("Select report, Summaries -> Section Summary and pick your expedition."), 
-                                            h5("Click 'View data' and a table will appear."),
-                                            h5("Click 'Download tabular data' and save the csv file."),
-                                            br(),
-                                            tags$b("2. Upload the .csv file.", style = "font-size: 20px;"),
-                                            fileInput("file1", "",#user file upload
-                                                      accept = c( 
-                                                          "text/csv",
-                                                          "text/comma-separated-values,text/plain",
-                                                          ".csv")),
-                                            tags$b("3. Process the uploaded data.", style = "font-size: 20px;"),
-                                            br(),
-                                            actionButton("goButton1", "Process my sections!",
-                                                         style="color: #000; background-color: #edf8b1; border-color: #2e6da4"),
-                                            width = 3
-                                            ),
-                                        mainPanel(downloadButton("download1.1", "Download the entire 
-                                                                 expedition as a single file",
-                                                                 style="color: #fff; background-color: #337ab7; border-color: #2e6da4"),
-                                                  downloadButton("download1.2", "Download a zip file
-                                                                 containing a file for each site",
-                                                                 style="color: #fff; background-color: #337ab7; border-color: #2e6da4"),
-                                                  h5("This is a preview of your new file. Click
-                                                     download (above) to get the file."),
-                                                  h5("The first 18 columns are from the original section summary. The final
-                                                     three columns are the newly derived cm-by-cm data."),
-                                                  DT::dataTableOutput("data_preview1"),)
-                                        ),
-                                    tags$i("This is not an official IODP-JRSO application and
-                                       functionality is not guaranteed. User assumes all risk.")),
-                           
-                           tabPanel("Name of second tab.",
-                                    titlePanel("The second tab."),
-                                    sidebarLayout(
-                                        sidebarPanel(
-                                            h5("Some sidebar instructions.")),
-                                        mainPanel(br())
-                                    )),
-                           tabPanel("Name of third tab.",
-                                    titlePanel("The third tab."),
-                                    sidebarLayout(
-                                        sidebarPanel(
-                                            h5("Some sidebar instructions.")),
-                                        mainPanel(br())
-                                    )))
+if(!require(shinydashboardPlus)){ #check if the package is installed and sourced
+  install.packages("shinydashboardPlus") #if not, install the package
+  library(shinydashboardPlus) #and source the package
+}
 
+volumes <- read.csv("sample_volume.csv")
+
+ui <- dashboardPage(
+  title = "Sample Volume Calculations", #website title
+  header = dashboardHeader(title = "Easy Sample Volume Calculations"),
+  sidebar = dashboardSidebar(width = "0px"),
+  body = dashboardBody(
+    fluidRow(
+      box(width = 5,
+          fluidRow(
+            column(width = 6, 
+                   numericInput("slen1", label = "Enter sample length(s) in cm:", value = 1,
+                                min = 1, max = 150, step = 1), br(),
+                   numericInput("slen2", label = NULL, value = 2,
+                                min = 1, max = 150, step = 1), br(),
+                   numericInput("slen3", label = NULL, value = 3,
+                                min = 1, max = 150, step = 1),
+                   "Use integers only, please."),
+            column(width = 6,
+                   selectInput("tool1", "Choose your tool:",
+                               c("WRND", "SHLF", "QRND"),
+                               multiple = FALSE), br(),
+                   selectInput("tool2", label = NULL,
+                               c("WRND", "SHLF", "QRND"),
+                               multiple = FALSE), br(),
+                   selectInput("tool3", label = NULL,
+                               c("WRND", "SHLF", "QRND"),
+                               multiple = FALSE))
+          )),
+      box(width = 2, 
+          img(src="U4T.gif")),
+      box(width = 5,
+          fluidRow(
+            column(width = 6, align="center",
+                   tags$b("Sediment (APC, XCB) volume (cc)"),
+                   textOutput('sed1'), br(), br(), br(),
+                   textOutput('sed2'), br(), br(), br(),
+                   textOutput('sed3')
+                    ),
+            column(width = 6, align="center",
+                   tags$b("Rock (RCB) volume (cc)"),
+                   textOutput('rcb1'),br(), br(), br(),
+                   textOutput('rcb2'), br(), br(), br(),
+                   textOutput('rcb3'))
+          ))
+    ),
+    "--------------------------------------------------------------------------", br(),
+    "Will add some sort of thing that is either a batch processor or if I can figure it
+    out a table that you can paste into (fancy fancy).", br(),
+    br(),
+    tags$i("These are not official IODP-JRSO applications and functionality is 
+           not guaranteed. User assumes all risk."), #italic disclaimer
+    tags$head(tags$style(HTML('
+        /* logo */
+        .skin-blue .main-header .logo {
+                              background-color: #f4b943;width: 400px;
+                              }
+
+        /* logo when hovered */
+        .skin-blue .main-header .logo:hover {
+                              background-color: #f4b943;
+                              }
+
+        /* navbar (rest of the header) */
+        .skin-blue .main-header .navbar {
+                              background-color: #f4b943;margin-left: 400px;
+                              }
+        /* main sidebar */
+        .skin-blue .main-sidebar {
+                              background-color: #325669;
+                              }
+         .box-header{ display: none}
+                           '))),
+    tags$script("document.getElementsByClassName('sidebar-toggle')[0].style.visibility = 'hidden';")
+  )
 )
 
-# Define server logic required to draw a histogram
 server <- function(input, output, session) {
-####APPLICATION 1 - cm by cm ###################################################    
-    #################################################
-    ####PREPARE DATA####
-    data_prep1 <- eventReactive(input$goButton1, { #when user clicks Go Button
-        show_modal_progress_line(text = "Please be patient - higher recovery expeditions may take more time.") # show the modal window
-        update_modal_progress(0.15) # update progress bar value
-        file1 <- input$file1 # get user section summary file
-        req(file1) #section summary file is required for operation
-        #read in section summary file from user chosen location
-        section_summary <- read.csv(file = file1$datapath, stringsAsFactors = FALSE)
-        #Remove final row of pre-totaled information
-        section_summary <- head(section_summary, -1)
-        #Number of columns original to a LIMS site summary
-        LORE_cols <- ncol(section_summary)
-        update_modal_progress(0.25) # update progress bar value
-        #Add a section ID to uniquely identify each section
-        section_summary$ID_Section <- paste0(section_summary$Site,section_summary$Hole,"-",section_summary$Core, section_summary$Type,"-", section_summary$Sect)
-        section_summary$ID_SiteHole <- paste0(section_summary$Site,section_summary$Hole)
-        section_summary$ID_SiteHoleCore <- paste0(section_summary$Site,section_summary$Hole,"-",section_summary$Core)
-        #Create a column of curated length in centimeters
-        section_summary$cm_length <- section_summary$Curated.length..m.*100
-        section_summary$cm_char <- as.character(section_summary$cm_length) #don't ask me why the number makes the wrong integer
-        section_summary$cm_length <- as.integer(section_summary$cm_char)
-        section_summary <- section_summary[1:(length(section_summary)-1)] #drop temporary column
-        update_modal_progress(0.45) # update progress bar value
-        ####PROCESS DATA####
-        #Use the length of curated cm to determine how many times to duplicate each row
-        subsection_summary <- section_summary[rep(seq(nrow(section_summary)), section_summary$cm_length),]
-        #section_summary <- rep(section_summary, each = section_summary$cm_length)
-        
-        thelist <- list() #make an empty list
-        for(i in unique(subsection_summary$ID_Section)){ #step through the BIG dataframe by section
-            df_obj <- subset(subsection_summary, ID_Section == i) #make each set of section rows a dataframe
-            df_obj$top_cm <- 0:(nrow(df_obj)-1) #add a column for the top cm measurement in section
-            df_obj$bottom_cm <- 1:nrow(df_obj) #add a column for the bottom cm measurement in section
-            thelist[[i]] <- df_obj #store the section-based dataframe to a list
-        }
-        update_modal_progress(0.8) # update progress bar value
-        #Smash all the section-based dataframes together
-        summary_all_subsections <- do.call("rbind", thelist)
-        #Make sure the newly generated bottom column is type 'numeric'
-        summary_all_subsections$bottom_cm <- as.numeric(summary_all_subsections$bottom_cm)
-        #Add a column for the CSF-A depths based on your new top cm intervals
-        summary_all_subsections$Top_CSF_A_m <- summary_all_subsections$Top.depth.CSF.A..m. + (summary_all_subsections$top_cm/100)
-        #Clean it all up
-        summary_all_subsections$Sample_ID <- paste0(section_summary$Site,
-                                                    section_summary$Hole,"-",
-                                                    section_summary$Core, 
-                                                    section_summary$Type,"-", 
-                                                    section_summary$Sect,"-",
-                                                    summary_all_subsections$top_cm)
-        remove_modal_progress() # remove it when done
-        summary_all_subsections
-        #################################################
-    })#end of eventReactive goButton1
-    #################################################
-    #################################################
-    ####MAKE IT SMALLER SO YOUR COMPUTER DOESN'T BLOWUP####
-    site_hole_list <- reactive({ #Break apart by Site-Hole
-        list()
-        for(i in unique(data_prep1()$ID_SiteHole)){
-        site_hole <- subset(data_prep1(), ID_SiteHole == i)
-        site_hole_list[[i]] <- site_hole
-        }
-    site_hole_list
-    })
-    #################################################
-    output$download1.1 <- downloadHandler( # Downloadable csv (single file) ----
-        filename = function() {
-            paste("cm_by_cm", ".csv", sep = "")
-        },
-        content = function(file) {
-            write.csv(data_prep1(), file, row.names = FALSE)
-        })
-    #################################################
-    output$download1.2 <- downloadHandler( # Downloadable zip (by hole) ----
-               filename = function() {
-                   paste("output", "zip", sep=".")
-               },
-               content = function(fname) {
-                   k <- site_hole_list()
-                   fs <- c()
-                   tmpdir <- tempdir()
-                   setwd(tempdir())
-                   for(i in names(k)){
-                       path <- paste0("sample_", i, ".csv")
-                       write(k[[i]], path)
-                       fs <- c(fs, path)
-                   }
-                   system2("zip", args=(paste(fname,fs,sep=" ")))
-                   #zip(zipfile=fname, files=fs)
-               },
-               contentType = "application/zip"
-    )
-    #################################################
-    ##Preview data to user##
-    output$data_preview1 <- DT::renderDataTable({
-        pretty_table <- data_prep1()
-        pretty_table <- pretty_table[,c(1:18,23, 24, 25)]
-        names(pretty_table)[7] <- "Recovered length (m)"
-        names(pretty_table)[8] <- "Curated length (m)"
-        names(pretty_table)[9] <- "Top depth (CSF-A m)"
-        names(pretty_table)[10] <- "Bottom depth (CSF-A m)"
-        names(pretty_table)[11] <- "Top depth (CSF-B m)"
-        names(pretty_table)[12] <- "Bottom depth (CSF-B m)"
-        names(pretty_table)[13] <- "Text ID, Section"
-        names(pretty_table)[14] <- "Text ID, Archive half"
-        names(pretty_table)[15] <- "Text ID, Working half"
-        names(pretty_table)[16] <- "# catwalk samples"
-        names(pretty_table)[17] <- "# section half samples"
-        names(pretty_table)[18] <- "Comment"
-        names(pretty_table)[19] <- "Top (cm)"
-        names(pretty_table)[20] <- "Bottom (cm)"
-        names(pretty_table)[21] <- "Top depth-cm (CSF-A m)"
-        DT::datatable(pretty_table, rownames= FALSE, options = list(pageLength = 5, 
-                                                     language = list(
-                                                         zeroRecords = "Select single depth request values for Expedition, Site, Hole, and mbsf.")))
-    })
+#########---Results FIRST row---####################################  
+  the_first <- reactive({
+    df <- subset(volumes, length_cm == as.integer(input$slen1))
+    df2 <- df[grepl(input$tool1, names(df))]
+    df2
+  })
+  
+  output$sed1 <- renderText({ 
+    df <- the_first()
+    as.character(df[1,1]) })
+  output$rcb1 <- renderText({ 
+    df <- the_first()
+  as.character(df[1,2]) })
 
+#########---Results SECOND row---####################################  
+  the_second <- reactive({
+    df <- subset(volumes, length_cm == as.integer(input$slen2))
+    df2 <- df[grepl(input$tool2, names(df))]
+    df2
+  })
+  
+  output$sed2 <- renderText({ 
+    df <- the_second()
+    as.character(df[1,1]) })
+  output$rcb2 <- renderText({ 
+    df <- the_second()
+    as.character(df[1,2]) })
+#########---Results SECOND row---####################################  
+  the_third <- reactive({
+    df <- subset(volumes, length_cm == as.integer(input$slen3))
+    df2 <- df[grepl(input$tool3, names(df))]
+    df2
+  })
+  
+  output$sed3 <- renderText({ 
+    df <- the_third()
+    as.character(df[1,1]) })
+  output$rcb3 <- renderText({ 
+    df <- the_third()
+    as.character(df[1,2]) })
 }
 
-# Run the application 
 shinyApp(ui = ui, server = server)
