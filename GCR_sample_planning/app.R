@@ -136,7 +136,7 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                     tags$head(tags$style(HTML("#mass1 {font-size: 30px;}"))),
                                     hr(),
                                     h2("Determine volume from mass:"),
-                                    numericInput("mass", "Enter mass (mg):", value = 20),
+                                    numericInput("mass", "Enter mass (g):", value = 20),
                                     numericInput("density2", HTML(paste0("Enter density (g/cm",tags$sup("3"),"):")), value = 2.9),
                                     textOutput("volume2"),
                                     tags$head(tags$style(HTML("#volume2 {font-size: 30px;}"))),
@@ -383,11 +383,12 @@ server <- function(input, output, session) {
     })
     #String output of desired Sample ID
     output$mass1 <- renderText({
-        paste0("Mass = ", calc_mass(), " mg")
+        paste0("Mass = ", calc_mass(), " g")
     }) 
     
     calc_vol <- reactive({
-        vol <- input$mass * input$density2
+        vol <- input$mass / input$density2
+        vol <- signif(vol, digits = 2)
     })
     #String output of desired Sample ID
     output$volume2 <- renderText({
