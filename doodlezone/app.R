@@ -13,14 +13,9 @@
 # and either a volume or mass and the alternative is returned.
 ###############################################################################
 
-if(!require(dplyr)){
-    install.packages("dplyr")
-    library(dplyr) #pipes
-}
-
-if(!require(DT)){ #check if the package is installed and sourced
-  install.packages("DT") #if not, install the package
-  library(DT) #and source the package 
+if(!require(rhandsontable)){
+  install.packages("rhandsontable")
+  library(rhandsontable) #rhandsontable
 }
 
 if(!require(shiny)){
@@ -33,10 +28,15 @@ if(!require(shinyjs)){
     library(shinyjs) #shinyjs
 }
 
-if(!require(rhandsontable)){
-  install.packages("rhandsontable")
-  library(rhandsontable) #rhandsontable
+if(!require(dplyr)){
+  install.packages("dplyr")
+  library(dplyr) #pipes
 }
+
+# if(!require(DT)){ #check if the package is installed and sourced
+#   install.packages("DT") #if not, install the package
+#   library(DT) #and source the package 
+# }
 
 ###############################################################################
 #Data needed for App1 and App2
@@ -139,8 +139,9 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                     br(), br(),
                                     DT::dataTableOutput("results2"), #display the results
                                     width = 10,
-                                    tags$i("These are not official IODP-JRSO applications 
-                                    and functionality is not guaranteed. User assumes all risk.")), #italic disclaimer
+                                    #tags$i("These are not official IODP-JRSO applications 
+                                    #and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
+                                    br(),br()),
                            tabPanel("Volume-Mass Calculator", #App 3
                                     h2("Determine mass from volume:"),
                                     numericInput("volume1", "Enter volume (cc):", value = 20),
@@ -419,7 +420,7 @@ server <- function(input, output, session) {
       final_chosen_interval <- chosen_interval3[seq(1, nrow(chosen_interval3), input$interval), ]
       
       row.names(final_chosen_interval) <- 1:nrow(final_chosen_interval)
-      final_chosen_interval <- final_chosen_interval[,c(1:6,22)]
+      final_chosen_interval <- final_chosen_interval[,c(1:6,21)]
       final_chosen_interval$bottom_offset <- final_chosen_interval$top_cm + input$interval2
       final_chosen_interval$Volume <- input$interval3
       names(final_chosen_interval)[names(final_chosen_interval) == "top_cm"] <- "Top offset"
