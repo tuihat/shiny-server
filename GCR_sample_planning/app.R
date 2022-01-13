@@ -348,7 +348,7 @@ server <- function(input, output, session) {
       final_chosen_interval <- chosen_interval3[seq(1, nrow(chosen_interval3), input$interval), ]
       
       row.names(final_chosen_interval) <- 1:nrow(final_chosen_interval)
-      final_chosen_interval <- final_chosen_interval[,c(1:6,22)]
+      final_chosen_interval <- final_chosen_interval[,c(1:6,21)]
       final_chosen_interval$bottom_offset <- final_chosen_interval$top_cm + input$interval2
       final_chosen_interval$Volume <- input$interval3
       names(final_chosen_interval)[names(final_chosen_interval) == "top_cm"] <- "Top offset"
