@@ -1,6 +1,6 @@
 #GCR Sample Planning Applications
 #started: 23 January 2021
-#updated: 27 December 2021
+#updated: 14 January 2022
 #Laurel Childress; childress@iodp.tamu.edu
 
 ###############################################################################
@@ -33,10 +33,10 @@ if(!require(dplyr)){
   library(dplyr) #pipes
 }
 
-# if(!require(DT)){ #check if the package is installed and sourced
-#   install.packages("DT") #if not, install the package
-#   library(DT) #and source the package 
-# }
+if(!require(DT)){ #check if the package is installed and sourced
+  install.packages("DT") #if not, install the package
+  library(DT) #and source the package
+}
 
 ###############################################################################
 #Data needed for App1 and App2
