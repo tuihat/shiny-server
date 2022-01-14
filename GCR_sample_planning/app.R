@@ -1,6 +1,6 @@
 #GCR Sample Planning Applications
 #started: 23 January 2021
-#updated: 7 December 2021
+#updated: 27 December 2021
 #Laurel Childress; childress@iodp.tamu.edu
 
 ###############################################################################
@@ -13,9 +13,9 @@
 # and either a volume or mass and the alternative is returned.
 ###############################################################################
 
-if(!require(dplyr)){
-    install.packages("dplyr")
-    library(dplyr) #pipes
+if(!require(rhandsontable)){
+  install.packages("rhandsontable")
+  library(rhandsontable) #rhandsontable
 }
 
 if(!require(shiny)){
@@ -23,11 +23,21 @@ if(!require(shiny)){
     library(shiny) #shiny
 }
 
-
 if(!require(shinyjs)){
     install.packages("shinyjs")
     library(shinyjs) #shinyjs
 }
+
+if(!require(dplyr)){
+  install.packages("dplyr")
+  library(dplyr) #pipes
+}
+
+# if(!require(DT)){ #check if the package is installed and sourced
+#   install.packages("DT") #if not, install the package
+#   library(DT) #and source the package 
+# }
+
 ###############################################################################
 #Data needed for App1 and App2
 #read in DSDP, ODP, and IODP files - separated only due to GitHub file size 
@@ -37,6 +47,9 @@ import_ODP <- read.csv("Section Summary_ODP.csv", stringsAsFactors = FALSE)
 import_IODP <- read.csv("Section Summary_IODP.csv", stringsAsFactors = FALSE)
 section_summary <- do.call("rbind", list(import_DSDP, import_ODP, import_IODP))
 section_summary$Hole[section_summary$Hole == "*"] <- "NONE"
+#Data needed for App4
+table_template <- read.csv("table_template.csv", colClasses = c("character", "integer", "factor"))
+volumes <- read.csv("sample_volume.csv")
 ###############################################################################
 #user interface appearance and assets
 ui <- fluidPage(useShinyjs(), #to use shinyjs
@@ -126,8 +139,9 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                     br(), br(),
                                     DT::dataTableOutput("results2"), #display the results
                                     width = 10,
-                                    tags$i("These are not official IODP-JRSO applications 
-                                    and functionality is not guaranteed. User assumes all risk.")), #italic disclaimer
+                                    #tags$i("These are not official IODP-JRSO applications 
+                                    #and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
+                                    br(),br()),
                            tabPanel("Volume-Mass Calculator", #App 3
                                     h2("Determine mass from volume:"),
                                     numericInput("volume1", "Enter volume (cc):", value = 20),
@@ -146,6 +160,64 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                     h4(HTML(paste0("clay = 1.7 g/cm",tags$sup("3")))), br(),
                                     tags$i("These are not official IODP-JRSO applications 
                                     and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
+                           ),
+                           tabPanel("Volume by Sample Type", #App 4
+                                    h4("Choose whether to paste or hand-type a small number of samples,
+                                       or if you would rather upload a template with many samples."), br(),
+                                    tabsetPanel(
+                                    tabPanel("Small sample set",
+                                             fluidRow(
+                                               column(width = 4,
+                                                      h2("Paste your data in here."),
+                                                      h3("Examples are given in the first three rows.
+                                                      Non-integer values provided for sample length 
+                                                         will be truncated to integers."),
+                                                      wellPanel(
+                                                        rHandsontableOutput("table4"))
+                                               ),
+                                               column(width = 1),
+                                               column(width = 6,
+                                                      h2("Results are over here."),
+                                                      h3("SED applies to APC and XCB material 
+                                                      (F, H, X). RCB applies to RCB material (R)."), br(),
+                                                      DT::dataTableOutput("resultstable4"),
+                                                      downloadButton("download4.1", "Download results")),
+                                               column(width = 1)),
+                                             tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk.")),
+                                    tabPanel("Large sample set (batch processing)",
+                                             h6("1. Download the template and enter data for all columns."),
+                                             fluidRow( #user must comply with template use
+                                               column(2,
+                                                      downloadButton("downloadtemplate4", 
+                                                                     "Download samples template", 
+                                                                     style='padding:4px; font-size:80%'),
+                                                      br(),
+                                                      hr(), #user enters data then uploads template
+                                                      h6("2. Upload the template after data entry. Keep the file in .csv format."),
+                                                      fileInput("file4", "Upload your file",
+                                                                accept = c(
+                                                                  "text/csv",
+                                                                  "text/comma-separated-values,text/plain",
+                                                                  ".csv")),
+                                                      #same as above but for a batch; user can download table
+                                                      h6("3. Process the uploaded data."),
+                                                      actionButton("goButtonApp4", "Make my list!"),
+                                                      br(), br(),
+                                                      h6("4. Download the processed sample/tool table."),
+                                                      downloadButton("downloadapp4", "Download the goodies!"),
+                                               ),
+                                               column(10,
+                                                      DT::dataTableOutput("results_batch4.2") #display the results
+                                               )), br(), hr(),
+                                             h3("Instructions/Tips:"),
+                                             h4("1. Do not change the format of the template. ONLY add data."),
+                                             h4("2. Keep the template as a csv file."),
+                                             h4("3. This application only handles Types: CUBE, CYL, QRND, SHLF, WDGE, and WRND."),
+                                             h4("4. Sample lengths greater than 2 cm for types CUBE, CYL and WDGE will be
+                                                reduced to 2 cm in the results."),br(),
+                                    tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk."))) #italic disclaimer
                            )
 ))
 
@@ -393,6 +465,114 @@ server <- function(input, output, session) {
     #String output of desired Sample ID
     output$volume2 <- renderText({
         paste0("Volume = ", calc_vol(), " cc")
+    })
+########Application 4 - Volume Tool Thing#######################################
+#####----App4 Tab 1 ############################################################
+    df <- table_template
+    
+    datavalues<-reactiveValues(data=df)
+
+    output$table4 <- renderRHandsontable({
+      
+      mytab <- rhandsontable(datavalues$data, 
+                             colHeaders = c("Sample ID", "Sample Length (cm)", "Type"), 
+                             stretchH = "all")
+      return(mytab)
+    })
+    
+    do_data_stuff <- reactive({
+      tmp_df <- hot_to_r(input$table4)
+      tmp_list <- list()
+      for(i in 1:nrow(tmp_df)){
+        df_row <- tmp_df[i,]
+        tmp_vols <- subset(volumes, length_cm == as.integer(df_row$Sample.length..cm.))
+        tmp_vols2 <- tmp_vols[grepl(df_row$Type, names(tmp_vols))]
+        df_row$SED_cc <- as.character(tmp_vols2[1,1])
+        df_row$RCB_cc <- as.character(tmp_vols2[1,2])
+        if(df_row$Type == 'CUBE'){df_row$Sample.length..cm. <- 2}
+        if(df_row$Type == 'CYL' & df_row$Sample.length..cm. >2){df_row$Sample.length..cm. <- 2}
+        if(df_row$Type == 'WDGE' & df_row$Sample.length..cm. >2){df_row$Sample.length..cm. <- 2}
+        tmp_list[[i]] <- df_row
+      }
+      new_df <- do.call("rbind", tmp_list)
+      new_df
+    })
+    
+    output$resultstable4 <- DT::renderDataTable({
+      pretty_table <- do_data_stuff()
+      names(pretty_table)[1] <- "Sample ID"
+      names(pretty_table)[2] <- "Sample Length (cm)"
+      names(pretty_table)[3] <- "Type"
+      names(pretty_table)[4] <- "SED volume (cc)"
+      names(pretty_table)[5] <- "RCB volume (cc)"
+      DT::datatable(pretty_table, options = list(pageLength = 20, scrollX = TRUE,
+                                                 columnDefs = list(list(className = 'dt-center', targets = "_all"))), 
+                    rownames= FALSE) %>% 
+        formatRound(columns = c(4:5), digits = 1)
+    })
+    
+    #################################################
+    output$download1.1 <- downloadHandler( # Downloadable csv (single file) ----
+                                           filename = function() {
+                                             paste("volume_results", ".csv", sep = "")
+                                           },
+                                           content = function(file) {
+                                             write.csv(do_data_stuff(), file, row.names = FALSE)
+                                           })
+#####----App 4 Tab 2 ###########################################################
+    #GET the template file
+    output$downloadtemplate4 <- downloadHandler(
+      filename <- function() {
+        paste("table_template", "csv", sep=".")
+      },
+      
+      content <- function(file) {
+        file.copy("table_template.csv", file)
+      })
+    #UPLOAD their data & CHUG
+    yourbatch4 <- eventReactive(input$goButtonApp4, {
+      file4upload <- input$file4
+      req(file4upload)
+      file4.1 <- read.csv(file = file4upload$datapath, colClasses = c("character", "integer", "factor"))
+      
+      tmp_list <- list()
+      for(i in 1:nrow(file4.1)){
+        df_row <- file4.1[i,]
+        tmp_vols <- subset(volumes, length_cm == as.integer(df_row$Sample.length..cm.))
+        tmp_vols2 <- tmp_vols[grepl(df_row$Type, names(tmp_vols))]
+        df_row$SED_cc <- as.character(tmp_vols2[1,1])
+        df_row$RCB_cc <- as.character(tmp_vols2[1,2])
+        if(df_row$Type == 'CUBE'){df_row$Sample.length..cm. <- 2}
+        if(df_row$Type == 'CYL' & df_row$Sample.length..cm. >2){df_row$Sample.length..cm. <- 2}
+        if(df_row$Type == 'WDGE' & df_row$Sample.length..cm. >2){df_row$Sample.length..cm. <- 2}
+        tmp_list[[i]] <- df_row
+      }
+      new_df <- do.call("rbind", tmp_list)
+      new_df <- new_df[!with(new_df,is.na(Sample.length..cm.) & is.na(SED_cc)),]
+      new_df
+    })
+    
+    # Downloadable csv of batch dataset ----
+    output$downloadapp4 <- downloadHandler(
+      filename = function() {
+        paste("batched_tool_volume", ".csv", sep = "")
+      },
+      content = function(file) {
+        write.csv(yourbatch4(), file, row.names = FALSE)
+      })
+    
+    #Table output of results; not necessary but makes you feel good and see meters
+    output$results_batch4.2 <- DT::renderDataTable({ #print the table to feel successful
+      pretty_table <- yourbatch4()
+      names(pretty_table)[1] <- "Sample ID"
+      names(pretty_table)[2] <- "Sample Length (cm)"
+      names(pretty_table)[3] <- "Type"
+      names(pretty_table)[4] <- "SED volume (cc)"
+      names(pretty_table)[5] <- "RCB volume (cc)"
+      DT::datatable(pretty_table, options = list(pageLength = 5,
+                                                 columnDefs = list(list(className = 'dt-center', targets = "_all"))), 
+                    rownames= FALSE) %>% 
+        formatRound(columns = c(4:5), digits = 1)
     })
 }
 

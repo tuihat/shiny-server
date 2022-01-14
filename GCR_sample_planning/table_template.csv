@@ -1,0 +1,21 @@
+Sample_ID,Sample length (cm),Type
+341-U1417A-3R-1A,1,WRND
+Or you can use,2,SHLF
+any name you want.,3,QRND
+My_sample_cube,2,CUBE
+My_sample_cylinder,2,CYL
+My_sample_wedge,2,WDGE
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
+ ,,
