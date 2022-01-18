@@ -85,7 +85,7 @@ server <- function(input, output, session) {
     }
     df2 <- do.call("rbind", kwlist)
     df3 <- df2[,c(1,3:10)]
-    df3$YouTube.Link <- paste0("<a href='",df3$YouTube.Link,"'>",df3$YouTube.Link,"' target='_blank'</a>")
+    df3$YouTube.Link <- paste0("<a href='",df3$YouTube.Link,"'>",df3$YouTube.Link,"</a>")
     df4 <- df3[,c(8,1,4,5,2,3,6,7,9)]
     names(df4)[1] <- "Exp or Generic Type"
     names(df4)[3] <- "Duration (hh:mm:ss)"
@@ -114,13 +114,14 @@ server <- function(input, output, session) {
   
   # Downloadable csv of the entire dataset -----
   output$downloadtemplate1 <- downloadHandler(
-    filename <- function() {
+    filename = function() {
       paste("IODP-JR_movie_log", "xlsx", sep=".")
     },
-    
-    content <- function(file) {
-      file.copy("IODP-JR_movie_log.xlsx", file)
-    }) 
+    content = function(file) {
+      
+      file.copy(file.path(getwd(),'www','IODP-JR_movie_log.xlsx'), file,overwrite = TRUE)
+    },
+    contentType = "text/xlsx") 
    
 }
 
