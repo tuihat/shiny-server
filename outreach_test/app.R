@@ -113,7 +113,7 @@ server <- function(input, output, session) {
     })
   
   # Downloadable csv of the entire dataset -----
-  output$downloadtemplate1 <- downloadHandler(
+  output$downloadall <- downloadHandler(
     filename = function() {
       paste("IODP-JR_movie_log", "xlsx", sep=".")
     },
