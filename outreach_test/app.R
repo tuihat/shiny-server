@@ -114,14 +114,13 @@ server <- function(input, output, session) {
   
   # Downloadable csv of the entire dataset -----
   output$downloadall <- downloadHandler(
-    filename = function() {
+    filename <- function() {
       paste("IODP-JR_movie_log", "xlsx", sep=".")
     },
-    content = function(file) {
-      
-      file.copy(file.path(getwd(),'www','IODP-JR_movie_log.xlsx'), file,overwrite = TRUE)
-    },
-    contentType = "text/xlsx") 
+    
+    content <- function(file) {
+      file.copy("IODP-JR_movie_log.xlsx", file)
+    })
    
 }
 
