@@ -62,6 +62,50 @@ ui <- dashboardPage(
         )),
         ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
+        h4("Outreach Applications", style = 'font-weight: bold;'), #subset of applications
+        fluidRow(
+            userBox(
+                title = userDescription(
+                    title = "Ocean Drilling Movie Database",
+                    subtitle = "",
+                    image = "JR_icon.jpg"
+                ),
+                status = "maroon",
+                closable = FALSE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/outreach_videos/", 
+                       "Visit the application page.",
+                       target="_blank"), #another app link,
+                footer = "Search the ocean drilling movie database by expedition
+                and keywords/terms. Links to video content provided where available."
+            )),
+        ########################################################################
+        hr(style = "border-top: 1px solid #000000;"), #horizontal line
+        h4("GCR Applications", style = 'font-weight: bold;'), #subset of applications
+        fluidRow(
+            userBox(
+                title = userDescription(
+                    title = "GCR Sample Planning",
+                    subtitle = "",
+                    image = "GCR_app_image.jpg"
+                ),
+                status = "purple",
+                closable = FALSE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
+                       "Visit the application page.",
+                       target="_blank"), #another app link,
+                footer = "This application provides several tools for sample planning
+              purposes. (1) The user provides, singularly or in batch, sample
+              requests by 'mbsf' scale (m CSF-A) and the application returns a
+              samples list with appropriate sample IDs. (2) The user supplies a
+              range of cores and sample interval and the application returns a 
+              sample list of repetitive sampling. (3) The user provides a density
+              and either a volume or mass and the alternative is returned. (4) The
+              user provides samples by sample type and material volumes are provided."
+            )),
+        ########################################################################
+        hr(style = "border-top: 1px solid #000000;"), #horizontal line
         h4("At Sea Applications", style = 'font-weight: bold;'),
         fluidRow(
         userBox(
@@ -70,7 +114,7 @@ ui <- dashboardPage(
                 subtitle = "",
                 image = "JR_icon.jpg"
             ),
-            status = "maroon",
+            status = "orange",
             closable = FALSE,
             maximizable = TRUE,
             tags$a(href="https://shinylaurel.com/shiny/daily_report_maker/", 
@@ -86,7 +130,7 @@ ui <- dashboardPage(
                 subtitle = "",
                 image = "JR_icon.jpg"
             ),
-            status = "maroon",
+            status = "orange",
             closable = FALSE,
             maximizable = TRUE,
             tags$a(href="https://shinylaurel.com/shiny/JRhydrocarbon/", 
@@ -118,30 +162,6 @@ ui <- dashboardPage(
                        target="_blank"), #another app link,
                 footer = "Convert section summaries to tables with rows
            cm-by-cm. Add in splice and alternate depth scale information as desired."
-            )),
-        ########################################################################
-        hr(style = "border-top: 1px solid #000000;"), #horizontal line
-        h4("GCR Applications", style = 'font-weight: bold;'), #subset of applications
-        fluidRow(
-            userBox(
-                title = userDescription(
-                    title = "GCR Sample Planning",
-                    subtitle = "",
-                    image = "GCR_app_image.jpg"
-                ),
-                status = "purple",
-                closable = FALSE,
-                maximizable = TRUE,
-                tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
-                       "Visit the application page.",
-                       target="_blank"), #another app link,
-                footer = "This application provides several tools for sample planning
-              purposes. (1) The user provides, singularly or in batch, sample
-              requests by 'mbsf' scale (m CSF-A) and the application returns a
-              samples list with appropriate sample IDs. (2) The user supplies a
-              range of cores and sample interval and the application returns a 
-              sample list of repetitive sampling. (3) The user provides a density
-              and either a volume or mass and the alternative is returned."
             )),
         tags$head(tags$style(HTML('
         /* logo */
