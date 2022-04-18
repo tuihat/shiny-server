@@ -4,7 +4,7 @@ library(imager)
 library(leaflet)
 
 #load data
-jr_icon <- makeIcon("ship_icon.png", iconWidth = 100, iconHeight = 100)
+jr_icon <- makeIcon("ship_icon.jpg", iconWidth = 100, iconHeight = 100)
 jr_loc <- read.csv("JR_location.csv")
 jr_loc100 <- jr_loc[c(1:100),] #just the last 100 days
 jr_today <- jr_loc[1,]
