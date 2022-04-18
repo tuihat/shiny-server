@@ -78,6 +78,22 @@ ui <- dashboardPage(
                        target="_blank"), #another app link,
                 footer = "Search the ocean drilling movie database by expedition
                 and keywords/terms. Links to video content provided where available."
+            ),
+            userBox(
+                title = userDescription(
+                    title = "JOIDES Resolution Locator",
+                    subtitle = "",
+                    image = "map_app_image.jpg"
+                ),
+                status = "maroon",
+                closable = FALSE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/JRLocator/", 
+                       "Visit the application page.",
+                       target="_blank"), #another app link,
+                footer = "This application provides a visualization of the current
+                location of the JOIDES Resolution and the midnight position for 
+                the past 100 days."
             )),
         ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
