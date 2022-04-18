@@ -1,6 +1,6 @@
 library(shiny)
 library(shinythemes)
-library(imager)
+#library(imager)
 library(leaflet)
 
 #load data
