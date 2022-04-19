@@ -18,6 +18,7 @@ keywords <- unique(db$Keywords)
 keywords <- sort(keywords, decreasing = FALSE)
 
 ui <- dashboardPage(
+  title = "JR Outreach Videos", #website title
   header = dashboardHeader(title = "JR Outreach Videos"),
   sidebar = dashboardSidebar(width = "0px"),
   body = dashboardBody(
@@ -102,14 +103,42 @@ server <- function(input, output, session) {
                                                        columnDefs = list(list(className = 'dt-center', targets="_all"))), 
                   rownames= FALSE, escape = FALSE)
   })
-  
+  ########REACTIVE SEARCHED DATAFRAME - DOWNLOAD VERSION WITHOUT SPECIAL LINK ADDONS####################
+  chosen_Exp_keyword2 <- reactive({
+    validate(
+      need(input$input1 != "", "Please select expedition(s). If no specific expedition is desired, select all."),
+      need(input$input2 != "", "Please select keywords(s). If no specific keyword is desired, select all.")
+    )
+    df1 <- db[db$Exp.or.Group %in% input$input1,]
+    df1 <- df1[df1$Keywords %in% input$input2,]
+    kwlist <- list()
+    for(i in unique(df1$Title)){
+      temp <- subset(df1, Title == i)
+      all_keywords <- unique(temp$Keywords)
+      all_keywords2 <- paste(all_keywords, sep = ', ', collapse = ', ')
+      temp2 <- temp[1,]
+      temp2$KeywordGroup <- all_keywords2
+      kwlist[[i]] <- temp2
+    }
+    df2 <- do.call("rbind", kwlist)
+    df3 <- df2[,c(1,3:10)]
+    # df3$YouTube.Link <- paste0("<a href='",df3$YouTube.Link,"'>",df3$YouTube.Link,"</a>")
+    df4 <- df3[,c(8,1,4,5,2,3,6,7,9)]
+    names(df4)[1] <- "Exp or Generic Type"
+    names(df4)[3] <- "Duration (hh:mm:ss)"
+    names(df4)[4] <- "Special/Other video elements"
+    names(df4)[7] <- "YouTube Link"
+    names(df4)[8] <- "YouTube Channel"
+    names(df4)[9] <- "List of Keywords"
+    df4 <- df4[with(df4, order(`Exp or Generic Type`, Title)),]
+  })
   # Downloadable csv of searched dataset ----
   output$download1 <- downloadHandler(
     filename = function() {
       paste("searched_moviedb", ".csv", sep = "")
     },
     content = function(file) {
-      write.csv(chosen_Exp_keyword(), file, row.names = FALSE)
+      write.csv(chosen_Exp_keyword2(), file, row.names = FALSE)
     })
   
   # Downloadable csv of the entire dataset -----
