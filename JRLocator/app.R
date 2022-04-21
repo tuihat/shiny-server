@@ -37,7 +37,10 @@ server <- function(input, output, session) {
                                "Date:", jr_loc100$date, "<br>"), #if you click one, it will show the date
                  weight = 15, radius = 30, #size of the circles
                  color = pal(jr_loc100$status)) %>% #color of the circles
-      addMarkers(lng = jr_today$lon_DD, lat = jr_today$lat_DD, icon = jr_icon) %>%
+      addMarkers(lng = jr_today$lon_DD, lat = jr_today$lat_DD, icon = jr_icon,
+                 popup = paste("Expedition:", jr_today$exp, "<br>",
+                               "Date:", jr_today$date, "<br>",
+                               "Status:", jr_today$status)) %>%#if you click one, it will show the date
       addLegend("bottomright", pal = pal, values = jr_loc100$status,
                 title = "",
                 opacity = 1) %>%
