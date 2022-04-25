@@ -13,6 +13,16 @@ if(!require(rmarkdown)){
   library(rmarkdown) #rmarkdown
 }
 
+if(!require(ggplot2)){
+  install.packages("ggplot2")
+  library(ggplot2) #ggplot2
+}
+
+if(!require(tidyr)){
+  install.packages("tidyr")
+  library(tidyr) #tidyr
+}
+
 if(!require(leaflet)){ #check if the package is installed and sourced
   install.packages("leaflet") #if not, install the package
   library(leaflet) #and source the package 
@@ -58,6 +68,7 @@ DSDP_only <- c("1","2","3","4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
 ODP <- c("100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210")
 IODP <- c("301", "302", "303", "304", "305", "306", "307", "308", "309", "310", "311", "312", "320T", "320", "321", "323", "324", "317", "318", "327", "328", "329", "330", "334", "335", "336", "339", "340T", "340", "342", "344", "345", "341S", "341", "346", "349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362T", "364", "362", "363", "366", "367", "368", "371", "369", "372", "374", "375", "376", "368X", "379", "382", "383", "379T", "385", "378", "384", "390C", "395E", "395C", "396", "391","392")
 
+coretype_colors <- c("APC" = "mediumturquoise", "HLAPC" = "royalblue4", "XCB" = "palevioletred3", "RCB" = "orange")
 programs <- c("DSDP", "ODP", "IODP")
 #program colors
 pal <- colorFactor(
@@ -71,24 +82,59 @@ ui <- dashboardPage(
   sidebar = dashboardSidebar(width = "0px"),
   body = dashboardBody(
     tags$style(type = "text/css", "#mymap {height: calc(100vh - 400px) !important;}"),
+    #tags$style(".input2 .btn {height: 26.5px; min-height: 26.5px; padding: 0px;}"),
     fluidRow(
       box(width = 12,
           leafletOutput("mymap")
       )
     ),
     fluidRow(
-             box(width = 12,
-                 sliderTextInput(
-                   inputId = "chooseExps",
-                   label = "Choose a range of expeditions:", 
-                   choices = all_exp,
-                   selected = all_exp[c(1,length(all_exp))]
+             box(width = 2,
+                 pickerInput('input1', 'Program:', 
+                             choices = programs,
+                             selected = programs,
+                             options = list(`actions-box` = TRUE), 
+                             multiple = T)
+             ),
+             box(width = 2,
+                 pickerInput('input2', 'Expedition:', 
+                             choices = all_exp,
+                             selected = all_exp,
+                             options = pickerOptions(`actions-box` = TRUE, dropupAuto = FALSE),
+                             multiple = T)
+             ),
+             box(width = 3,
+                 column(width = 6, numericInput('input3', 'Water Depth Minimum:', 0)),
+                 column(width = 6, numericInput("input4", "Water Depth Maximum:", max(exp_coords$Water.depth..m.)))
+             ),
+             box(width = 3,
+                 column(width = 6, numericInput('input5', 'Penetration Minimum:', 0)),
+                 column(width = 6, numericInput("input6", "Penetration Maximum:", max(exp_coords$Penetration.DSF..m., na.rm = TRUE)))
+             ),
+             column(width = 1,
+                 h1(" "),
+                 actionBttn(inputId = "reset_all", label = "Reset", style = "bordered", color = "success", icon = icon("cog")
                  )
              )
     ),
       fluidRow(
         box(width = 12,
           DT::dataTableOutput("SiteHoleTable"))),
+    br(),
+    fluidRow(
+      box(width = 3,
+          plotOutput("plot_H2Odist")
+      ),
+      box(width = 3,
+          plotOutput("plot_Pendist")
+      ),
+      box(width = 3,
+          plotOutput("plot_TotalCoredist")
+      ),
+      box(width = 3,
+          plotOutput("plot_RecoveryPctdist")
+      )
+    ),
     br(),
     "Data is derived from LORE: ",
     tags$a(href="https://web.iodp.tamu.edu/LORE/", 
@@ -102,6 +148,7 @@ ui <- dashboardPage(
     br(),
     tags$i("These are not official IODP-JRSO applications and functionality is 
            not guaranteed. User assumes all risk."), #italic disclaimer
+    br(),
     tags$head(tags$style(HTML('
         /* logo */
         .skin-blue .main-header .logo {
@@ -129,12 +176,44 @@ ui <- dashboardPage(
 
 server <- function(input, output, session) {
 #########---Reactive Searched Dataframe---######################################
-  chosen_progs <- reactive({
-    exp_range <- match(c(input$chooseExps[1], input$chooseExps[2]), all_exp)
-    exp_range2 <- all_exp[exp_range[1]:exp_range[2]]
-    df2 <- exp_coords[exp_coords$Exp %in% exp_range2,]
-    df2
+  
+  observeEvent(input$reset_all, {
+    updatePickerInput(session, "input1", choices = programs, selected = programs)
+    updatePickerInput(session, "input2", choices = all_exp, selected = all_exp)
+    updateNumericInput(session, "input3", value = 0)
+    updateNumericInput(session, "input4", value = max(exp_coords$Water.depth..m.))
+    updateNumericInput(session, "input5", value = 0)
+    updateNumericInput(session, "input6", value = max(exp_coords$Penetration.DSF..m., na.rm = TRUE))
   })
+  
+  choose_program <- reactive({
+    exp_range <- subset(exp_coords, program %in% input$input1)
+    exp_range1 <- unique(exp_range$Exp)
+    sorted_exp <- exp_range1[order(match(exp_range1, all_exp))]
+  })
+  
+  observe({ #use Program to limit Exp choices
+    updatePickerInput(session, "input2", choices = choose_program(), selected = choose_program())
+  })
+  
+  chosen_progs <- reactive({
+    prog_range <- subset(exp_coords, program %in% input$input1) #narrow down to programs
+    exp_range <- subset(prog_range, Exp %in% input$input2) #narrow down to Exps
+    water_range <- subset(exp_range, Water.depth..m. <= input$input4 & Water.depth..m. >= input$input3) #narrow down to water depths
+    pen_range <- subset(water_range, Penetration.DSF..m. <= input$input6 & Penetration.DSF..m. >= input$input5) #narrow down to penetrations
+    pen_range
+  })
+  #####---Prep values for pie chart##############
+  core_pie <- reactive({
+    hm <- as.data.frame(t(colSums(chosen_progs()[,c(14:17)])))
+    hm2 <- gather(hm)
+    hm2[,1] <- c("APC", "HLAPC", "XCB","RCB")
+    hm2 <- subset(hm2, value > 0)
+    hm2$pct <- hm2$value/(sum(hm2$value))*100
+    hm2$pct <- round(hm2$pct, digits = 0)
+    hm2
+  })
+  
 #########---Output Map---#######################################################
   output$mymap <- renderLeaflet({
     leaflet(chosen_progs()) %>%
@@ -180,6 +259,49 @@ server <- function(input, output, session) {
     names(pretty_table)[23] <- "Program"
     DT::datatable(pretty_table, options = list(pageLength = 5, scrollX = TRUE), rownames= FALSE)%>% 
       formatRound(columns = c(4:5), digits = 4)
+  })
+#########---Output Graphs---#####################################################   
+  output$plot_H2Odist <- renderPlot({
+    ggplot() +
+      geom_histogram(data = chosen_progs(), aes(x = Water.depth..m.),
+                     binwidth = 0.01*max(chosen_progs()$Water.depth..m.), fill = "gold", color = "gray40") +
+      labs(x = "Water Depth (m)", subtitle = paste0("Water Depth Distribution, n = ", sum(!is.na(chosen_progs()$Water.depth..m.))))
+  })
+  ###################################
+  output$plot_Pendist <- renderPlot({
+    ggplot() +
+      geom_histogram(data = chosen_progs(), aes(x = Penetration.DSF..m.),
+                     binwidth = 0.01*max(chosen_progs()$Penetration.DSF..m.), fill = "gold", color = "gray40") +
+      labs(x = "Penetration (m)", subtitle = paste0("Seafloor Penetration Distribution, n = ", sum(!is.na(chosen_progs()$Penetration.DSF..m.))))
+  })
+  ###################################
+  output$plot_TotalCoredist <- renderPlot({
+    validate(
+      need(nrow(chosen_progs()) > 0, "No data for this selection.")
+    )
+    ggplot(core_pie(), aes(x="", y=value, fill=key)) +
+      geom_bar(stat="identity", width=1, color="white") +
+      coord_polar("y", start=0) +
+      theme_void() +
+      theme(legend.position="none") +
+      scale_fill_manual(values = coretype_colors) +
+      geom_label(aes(label = paste0(key,"\n",value,"\n","(",pct,"%)")), position = position_stack(vjust = 0.5), size = 5, alpha = 0.8, color = "white") +
+      # geom_text(aes(label = paste0(key,"\n",value)),
+      #           position = position_stack(vjust = 0.5), color = "white", size = 5) +
+      labs(title = "Coring Types", 
+           caption = "Note: Expeditions 341 and 346 used the HLAPC system, \n
+           however a letter designation did not yet exist for that coring type and are not represented here.")
+  })
+  ###################################
+  recovery_special <- reactive({
+    real_recovery <- subset(chosen_progs(), Recovery.... < 120)
+  })
+  output$plot_RecoveryPctdist <- renderPlot({
+    ggplot() +
+      geom_histogram(data = recovery_special(), aes(x = Recovery....),
+                     binwidth = 2, fill = "gold", color = "gray40") +
+      labs(x = "Recovery %", subtitle = paste0("Recovery % Distribution, n = ", sum(!is.na(recovery_special()$Recovery....)))) +
+      coord_cartesian(xlim = c(0,120))
   })
 }
 
