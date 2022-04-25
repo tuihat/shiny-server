@@ -56,9 +56,9 @@ ui <- dashboardPage(
                    target="_blank"), #another app link,
             footer = "This application provides a visualization of all ocean drilling
             sites for DSDP, ODP, and IODP. The map is interactive and holes can be
-            clicked on to learn further information. The map is subsettable by a
-            range of expeditions using the slider. A table is provided at the bottom
-            for additional reference."
+            clicked on to learn further information. The map is subsettable by drilling
+            program, expedition, water depth, and seafloor penetration. A table and severl
+            graphs are provided at the bottom for additional reference."
         )),
         ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
