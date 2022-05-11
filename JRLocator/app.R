@@ -1,3 +1,4 @@
+library(dplyr)
 library(shiny)
 library(shinythemes)
 #library(imager)
@@ -9,6 +10,18 @@ jr_loc <- read.csv("JR_location.csv")
 jr_loc100 <- jr_loc[c(1:100),] #just the last 100 days
 jr_today <- jr_loc[1,]
 
+##special on-site functions
+jr_onsite <- which(jr_loc100$site != dplyr::lag(jr_loc100$site))
+jr_onsite2 <- jr_loc100[jr_onsite[1]-1,]
+
+if(jr_onsite2$status == "on site"){
+  current_site <- paste0("Site: ", jr_onsite2$site)
+  site_since <- paste0("On site since: ",jr_onsite2$date)
+}
+if(jr_onsite2$status != "on site"){
+  current_site <- ""
+  site_since <- ""
+}
 
 #position colors
 pal <- colorFactor(
@@ -40,7 +53,9 @@ server <- function(input, output, session) {
       addMarkers(lng = jr_today$lon_DD, lat = jr_today$lat_DD, icon = jr_icon,
                  popup = paste("Expedition:", jr_today$exp, "<br>",
                                "Date:", jr_today$date, "<br>",
-                               "Status:", jr_today$status)) %>%#if you click one, it will show the date
+                               "Status:", jr_today$status, "<br>",
+                               current_site, "<br>",
+                               site_since)) %>%#if you click one, it will show the date
       addLegend("bottomright", pal = pal, values = jr_loc100$status,
                 title = "",
                 opacity = 1) %>%
