@@ -12,6 +12,11 @@
 # into cm by cm intervals.
 ###############################################################################
 
+if(!require(dplyr)){
+    install.packages("dplyr")
+    library(dplyr) #dplyr
+}
+
 if(!require(rmarkdown)){
     install.packages("rmarkdown")
     library(rmarkdown) #rmarkdown
@@ -42,10 +47,6 @@ if(!require(shinyFeedback)){
     library(shinyFeedback) #ocupado; come back later
 }
 
-if(!require(dplyr)){
-    install.packages("dplyr")
-    library(dplyr) #dplyr
-}
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(navbarPage("The Itsy Bitsy Interval", #App title
@@ -363,8 +364,8 @@ server <- function(input, output, session) {
         file2.2 <- input$file2.2 # get user section summary file
         req(file2.2) #section summary file is required for operation
         #read in section summary file from user chosen location
-        site <- input$siteName # get user section summary file
-        req(site) #section summary file is required for operation
+        site_name <- input$siteName # get user section summary file
+        req(site_name) #section summary file is required for operation
         #read in section summary file from user chosen location
         show_modal_progress_line(text = "Please be patient - higher recovery expeditions may take more time.") # show the modal window
         section_summary <- read.csv(file = file2.2$datapath, stringsAsFactors = FALSE)
