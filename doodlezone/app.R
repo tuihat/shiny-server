@@ -12,11 +12,6 @@
 # into cm by cm intervals.
 ###############################################################################
 
-if(!require(dplyr)){
-    install.packages("dplyr")
-    library(dplyr) #dplyr
-}
-
 if(!require(rmarkdown)){
     install.packages("rmarkdown")
     library(rmarkdown) #rmarkdown
@@ -45,6 +40,11 @@ if(!require(shinybusy)){
 if(!require(shinyFeedback)){
     install.packages("shinyFeedback")
     library(shinyFeedback) #ocupado; come back later
+}
+
+if(!require(dplyr)){
+    install.packages("dplyr")
+    library(dplyr) #dplyr
 }
 
 # Define UI for application that draws a histogram
