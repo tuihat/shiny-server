@@ -183,7 +183,7 @@ server <- function(input, output, session) {
     updatePickerInput(session, "input1", choices = programs, selected = programs)
     updatePickerInput(session, "input2", choices = all_exp, selected = all_exp)
     updateNumericInput(session, "input3", value = 0)
-    updateNumericInput(session, "input4", value = max(exp_coords$Water.depth..m.))
+    updateNumericInput(session, "input4", value = max(exp_coords$Water.depth..m., na.rm = TRUE))
     updateNumericInput(session, "input5", value = 0)
     updateNumericInput(session, "input6", value = max(exp_coords$Penetration.DSF..m., na.rm = TRUE))
   })
@@ -201,8 +201,8 @@ server <- function(input, output, session) {
   chosen_progs <- reactive({
     prog_range <- subset(exp_coords, program %in% input$input1) #narrow down to programs
     exp_range <- subset(prog_range, Exp %in% input$input2) #narrow down to Exps
-    water_range <- subset(exp_range, Water.depth..m. <= input$input4 & Water.depth..m. >= input$input3) #narrow down to water depths
-    pen_range <- subset(water_range, Penetration.DSF..m. <= input$input6 & Penetration.DSF..m. >= input$input5) #narrow down to penetrations
+    water_range <- subset(exp_range, Water.depth..m. <= input$input4 & Water.depth..m. >= input$input3 | is.na(Water.depth..m.)) #narrow down to water depths
+    pen_range <- subset(water_range, Penetration.DSF..m. <= input$input6 & Penetration.DSF..m. >= input$input5 | is.na(Penetration.DSF..m.)) #narrow down to penetrations
     pen_range
   })
   #####---Prep values for pie chart##############
