@@ -59,6 +59,22 @@ ui <- dashboardPage(
             clicked on to learn further information. The map is subsettable by drilling
             program, expedition, water depth, and seafloor penetration. A table and severl
             graphs are provided at the bottom for additional reference."
+        ),
+        userBox(
+          title = userDescription(
+            title = "JOIDES Resolution Drilling Stats",
+            subtitle = "",
+            image = "JR_drill_stat_image.jpg"
+          ),
+          status = "teal",
+          closable = FALSE,
+          maximizable = TRUE,
+          tags$a(href="https://shinylaurel.com/shiny/JR_drilling_stats/", 
+                 "Visit the application page.",
+                 target="_blank"), #another app link,
+          footer = "This application provides a visualization of some JOIDES
+            Resolution drilling statistics and offers several filters. The entire
+            database or the selected expeditions can be downloaded."
         )),
         ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
