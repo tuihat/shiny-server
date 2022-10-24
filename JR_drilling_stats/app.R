@@ -100,27 +100,30 @@ ui <- dashboardPage(
       ),
       box(width = 4, 
           br(),
+          textOutput("exp_output"),
+          tags$head(tags$style(HTML("#exp_output {font-size: 25px;}"))),
+          br(),br(),
           textOutput("sites_output"),
-          tags$head(tags$style(HTML("#sites_output {font-size: 30px;}"))),
+          tags$head(tags$style(HTML("#sites_output {font-size: 25px;}"))),
           br(),br(),
           textOutput("holes_output"),
-          tags$head(tags$style(HTML("#holes_output {font-size: 30px;}"))),
+          tags$head(tags$style(HTML("#holes_output {font-size: 25px;}"))),
           br(),br(),
           textOutput("cores_output"),
-          tags$head(tags$style(HTML("#cores_output {font-size: 30px;}"))),
+          tags$head(tags$style(HTML("#cores_output {font-size: 25px;}"))),
           br(),br(),
           textOutput("dist_output"),
-          tags$head(tags$style(HTML("#dist_output {font-size: 30px;}"))),
+          tags$head(tags$style(HTML("#dist_output {font-size: 25px;}"))),
           br(),br(),
           textOutput("recov_output"),
-          tags$head(tags$style(HTML("#recov_output {font-size: 30px;}"))),
+          tags$head(tags$style(HTML("#recov_output {font-size: 25px;}"))),
           br(),br(),
           textOutput("speed_output"),
-          tags$head(tags$style(HTML("#speed_output {font-size: 30px;}"))),
-          br(), br(),
-          h5("*Average transit speed not available prior to Expedition 349."),
-          h5("Coring = coring/drilling/tripping pipe; Logging = logging/downhole tools; Lost = weather/repairs."),
-          br()
+          tags$head(tags$style(HTML("#speed_output {font-size: 25px;}"))),
+          br(),
+          h6("*Includes transits with operations."),
+          h6("**Average transit speed not available prior to Expedition 349."),
+          h6("Coring = coring/drilling/tripping pipe; Logging = logging/downhole tools; Lost = weather/repairs.")
       )
     ), br(),
     fluidRow( #user must comply with template use
@@ -298,6 +301,11 @@ server <- function(input, output, session) {
   })
   ###################################
 #########---Output Textss---####################################################  
+  output$exp_output <- renderText({
+    tmp2 <- chosen_progs()
+    paste0("Expeditions*: ", nrow(tmp2))
+  }) 
+  
   output$sites_output <- renderText({
     tmp2 <- chosen_progs()
     paste0("Sites: ", sum(tmp2$Sites, na.rm = TRUE))
@@ -325,7 +333,7 @@ server <- function(input, output, session) {
   
   output$speed_output <- renderText({
     tmp2 <- chosen_progs()
-    paste0("Average transit speed (kts)*: ", round(mean(tmp2$Average.transit.speed..kn., na.rm = TRUE), digits = 1))
+    paste0("Average transit speed (kts)**: ", round(mean(tmp2$Average.transit.speed..kn., na.rm = TRUE), digits = 1))
   })
   
   ###################################
