@@ -24,7 +24,7 @@ ui <- dashboardPage(
         ########################################################################
         h4("General Applications", style = 'font-weight: bold;'), #subset of applications
         fluidRow(
-        userBox(
+        userBox(width = 4,
             title = userDescription(
                 title = "DSDP, ODP, IODP Coring Type Statistics",
                 subtitle = "",
@@ -34,7 +34,7 @@ ui <- dashboardPage(
             closable = FALSE,
             maximizable = TRUE,
             tags$a(href="https://shinylaurel.com/shiny/Ops_DrillTypes/", 
-                   "Visit the application page.",
+                   "Visit the app.",
                    target="_blank"), #another app link,
             footer = "This application provides a graphic summary of drilling types including 
             APC (advanced piston corer), HLAPC (half-length advanced piston corer), 
@@ -42,7 +42,7 @@ ui <- dashboardPage(
             are available by program and expedition. Recovery with depth is also 
             available by program and expedition. Scaled and unscaled graphs are available."
         ),
-        userBox(
+        userBox(width = 4,
             title = userDescription(
                 title = "Scientific Ocean Drilling Map",
                 subtitle = "",
@@ -52,7 +52,7 @@ ui <- dashboardPage(
             closable = FALSE,
             maximizable = TRUE,
             tags$a(href="https://shinylaurel.com/shiny/drilling_map/", 
-                   "Visit the application page.",
+                   "Visit the app.",
                    target="_blank"), #another app link,
             footer = "This application provides a visualization of all ocean drilling
             sites for DSDP, ODP, and IODP. The map is interactive and holes can be
@@ -60,7 +60,7 @@ ui <- dashboardPage(
             program, expedition, water depth, and seafloor penetration. A table and severl
             graphs are provided at the bottom for additional reference."
         ),
-        userBox(
+        userBox(width = 4,
           title = userDescription(
             title = "JOIDES Resolution Drilling Stats",
             subtitle = "",
@@ -70,10 +70,11 @@ ui <- dashboardPage(
           closable = FALSE,
           maximizable = TRUE,
           tags$a(href="https://shinylaurel.com/shiny/JR_drilling_stats/", 
-                 "Visit the application page.",
+                 "Visit the app.",
                  target="_blank"), #another app link,
           footer = "This application provides a visualization of some JOIDES
-            Resolution drilling statistics and offers several filters. The entire
+            Resolution drilling statistics and offers several filters for parameters
+            such as core recovery and water depth. The entire
             database or the selected expeditions can be downloaded."
         )),
         ########################################################################
@@ -90,7 +91,7 @@ ui <- dashboardPage(
                 closable = FALSE,
                 maximizable = TRUE,
                 tags$a(href="https://shinylaurel.com/shiny/outreach_videos/", 
-                       "Visit the application page.",
+                       "Visit the app.",
                        target="_blank"), #another app link,
                 footer = "Search the ocean drilling movie database by expedition
                 and keywords/terms. Links to video content provided where available."
@@ -105,7 +106,7 @@ ui <- dashboardPage(
                 closable = FALSE,
                 maximizable = TRUE,
                 tags$a(href="https://shinylaurel.com/shiny/JRLocator/", 
-                       "Visit the application page.",
+                       "Visit the app.",
                        target="_blank"), #another app link,
                 footer = "This application provides a visualization of the current
                 location of the JOIDES Resolution and the midnight position for 
@@ -125,7 +126,7 @@ ui <- dashboardPage(
                 closable = FALSE,
                 maximizable = TRUE,
                 tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
-                       "Visit the application page.",
+                       "Visit the app.",
                        target="_blank"), #another app link,
                 footer = "This application provides several tools for sample planning
               purposes. (1) The user provides, singularly or in batch, sample
@@ -150,7 +151,7 @@ ui <- dashboardPage(
             closable = FALSE,
             maximizable = TRUE,
             tags$a(href="https://shinylaurel.com/shiny/daily_report_maker/", 
-                   "Visit the application page.",
+                   "Visit the app.",
                    target="_blank"), #another app link,
             footer = "This application assists with the summary of coring information
               for the EPM daily report. While at sea it will be better to run
@@ -166,7 +167,7 @@ ui <- dashboardPage(
             closable = FALSE,
             maximizable = TRUE,
             tags$a(href="https://shinylaurel.com/shiny/JRhydrocarbon/", 
-                   "Visit the application page.",
+                   "Visit the app.",
                    target="_blank"), #another app link,
             footer = "This application provides two sub-applications to assist with
               hydrocarbon safety monitoring. One assists in the construction of
@@ -190,7 +191,7 @@ ui <- dashboardPage(
                 closable = FALSE,
                 maximizable = TRUE,
                 tags$a(href="https://web.iodp.tamu.edu/LORE/", 
-                       "Visit the application page.",
+                       "Visit the app.",
                        target="_blank"), #another app link,
                 footer = "Convert section summaries to tables with rows
            cm-by-cm. Add in splice and alternate depth scale information as desired."
