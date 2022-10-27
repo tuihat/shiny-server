@@ -201,6 +201,7 @@ server <- function(input, output, session) {
     hm2$ymax <- cumsum(hm2$pct) # Compute the cumulative percentages (top of each rectangle)
     hm2$ymin <- c(0, head(hm2$ymax, n=-1)) # Compute the bottom of each rectangle
     hm2$labelPosition <- (hm2$ymax + hm2$ymin) / 2 # Compute label position
+    hm2$value <- round(hm2$value, digits = 0)
     hm2$label <- paste0(hm2$key, "\n", hm2$value, " days") # Compute a good label
     hm2
   })
@@ -216,6 +217,7 @@ server <- function(input, output, session) {
     hm2$ymax <- cumsum(hm2$pct) # Compute the cumulative percentages (top of each rectangle)
     hm2$ymin <- c(0, head(hm2$ymax, n=-1)) # Compute the bottom of each rectangle
     hm2$labelPosition <- (hm2$ymax + hm2$ymin) / 2 # Compute label position
+    hm2$value <- round(hm2$value, digits = 0)
     hm2$label <- paste0(hm2$key, "\n", hm2$value, " days") # Compute a good label
     hm2
   })
