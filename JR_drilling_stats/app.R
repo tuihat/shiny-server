@@ -122,7 +122,6 @@ ui <- dashboardPage(
           tags$head(tags$style(HTML("#speed_output {font-size: 25px;}"))),
           br(),
           h6("*Includes transits with operations."),
-          h6("**Average transit speed not available prior to Expedition 349."),
           h6("Coring = coring/drilling/tripping pipe; Logging = logging/downhole tools; Lost = weather/repairs.")
       )
     ), br(),
@@ -335,7 +334,7 @@ server <- function(input, output, session) {
   
   output$speed_output <- renderText({
     tmp2 <- chosen_progs()
-    paste0("Average transit speed (kts)**: ", round(mean(tmp2$Average.transit.speed..kn., na.rm = TRUE), digits = 1))
+    paste0("Average transit speed (kts): ", round(mean(tmp2$Average.transit.speed..kn., na.rm = TRUE), digits = 1))
   })
   
   ###################################
