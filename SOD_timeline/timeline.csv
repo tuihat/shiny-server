@@ -12,8 +12,10 @@ id,content,start,end,group,className
 11,Fall of the Berlin Wall,11/9/1989 01:00,NA,interest,green_style
 12,Blake Nose K/Pg Core,2/2/1997 01:00,NA,science,red_style
 13,First YouTube video,4/24/2005 01:00,NA,interest,green_style
-14,First Tweet,3/21/2006 01:00,NA,interest,green_style
-15,SODV,1/1/2007 01:00,1/1/2009 01:00,SOD,blue_style
-16,Shatsky Rise - largest volcano on Earth (Exp 324),10/15/2009 01:00,NA,science,red_style
-17,JR Academy,2/12/2023 01:00,NA,SOD,blue_style
-18,School of Rock,2/25/2023 01:00,NA,SOD,blue_style
+14,Sharon boards the JR (SOR),10/31/2005 01:00,NA,SOD,blue_style
+15,First Tweet,3/21/2006 01:00,NA,interest,green_style
+16,SODV,1/1/2007 01:00,1/1/2009 01:00,SOD,blue_style
+17,Shatsky Rise - largest volcano on Earth (Exp 324),10/15/2009 01:00,NA,science,red_style
+18,Laurel boards the JR (Exp 341),5/29/2013 01:00,NA,SOD,blue_style
+19,JR Academy,2/12/2023 01:00,NA,SOD,blue_style
+20,School of Rock,2/25/2023 01:00,NA,SOD,blue_style
