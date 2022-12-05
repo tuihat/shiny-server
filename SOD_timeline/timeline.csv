@@ -1,0 +1,19 @@
+id,content,start,end,group,className
+1,Phase I of the Deep Sea Drilling Project (DSDP) begins,6/24/1966 01:00,NA,SOD,blue_style
+2,D/V Glomar Challenger launched,3/23/1968 01:00,NA,SOD,blue_style
+3,Confirmation of plate tectonics (Leg 3),1/15/1969 01:00,NA,science,red_style
+4,First human on the Moon,7/21/1969 01:00,NA,interest,green_style
+5,MTV launches,8/1/1981 01:00,NA,interest,green_style
+6,D/V Glomar Challenger docks for last time,11/8/1983 01:00,NA,SOD,blue_style
+7,JOIDES Resolution begins operations for ODP,1/11/1985 01:00,NA,SOD,blue_style
+8,PETM first identified (Leg 113),2/15/1987 01:00,NA,science,red_style
+9,"""Never Gonna Give You Up"" released by Rick Astley",7/27/1987 01:00,NA,interest,green_style
+10,Lisa boards the JR (Leg 127),7/19/1989 01:00,NA,SOD,blue_style
+11,Fall of the Berlin Wall,11/9/1989 01:00,NA,interest,green_style
+12,Blake Nose K/Pg Core,2/2/1997 01:00,NA,science,red_style
+13,First YouTube video,4/24/2005 01:00,NA,interest,green_style
+14,First Tweet,3/21/2006 01:00,NA,interest,green_style
+15,SODV,1/1/2007 01:00,1/1/2009 01:00,SOD,blue_style
+16,Shatsky Rise - largest volcano on Earth (Exp 324),10/15/2009 01:00,NA,science,red_style
+17,JR Academy,2/12/2023 01:00,NA,SOD,blue_style
+18,School of Rock,2/25/2023 01:00,NA,SOD,blue_style
