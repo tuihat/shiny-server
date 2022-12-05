@@ -18,7 +18,7 @@ if(!require(timevis)){ #check if the package is installed and sourced
   library(timevis) #and source the package
 }
 
-data <- read.csv("~/R_Studio/IODP-general/big_and_Shiny/25_SOD_timeline/timeline.csv")
+data <- read.csv("timeline.csv")
 
 timevisDataGroups <- data.frame(
   id = c("SOD", "science", "interest"),
