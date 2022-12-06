@@ -35,14 +35,41 @@ ui <- fluidPage(
                      .blue_style { border-color: blue; color: white; background-color: blue; }
                     "))
   ),
+  h3("More information about selected event:"),
+  h5("(click on an event to see more)"),
+  br(),
+  textOutput("eventsummary"),
+  uiOutput("keyfacts"),
+  tags$head(tags$style(HTML("#eventsummary {font-size: 20px;}"))),
+  hr(),
   tags$i("These are not official IODP-JRSO applications 
                                     and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
 )
 
 server <- function(input, output, session) {
   output$timeline <- renderTimevis({
-    timevis(data = data, groups = timevisDataGroups)
+    timevis(data = data, groups = timevisDataGroups, height = 600)
   })
+  
+  choose_program <- reactive({
+    event <- subset(data, id == input$timeline_selected)
+    event2 <- event$extra_info
+  })
+  
+  output$eventsummary <- renderText({
+    temp <- paste0(choose_program())
+    final <- temp
+  })
+  
+  output$keyfacts <- renderUI({
+    event <- subset(data, id == input$timeline_selected)
+    if (req(event$link_check) == "yes") {
+      url <- a(event$content, href = event$link)
+      tagList("URL link:", url) }
+    else {div()}
+  })
+    
+
 }
 
 shinyApp(ui = ui, server = server)
