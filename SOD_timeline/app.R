@@ -21,8 +21,8 @@ if(!require(timevis)){ #check if the package is installed and sourced
 data <- read.csv("timeline.csv")
 
 timevisDataGroups <- data.frame(
-  id = c("SOD", "science", "interest"),
-  content = c("Scientific Ocean Drilling", "Scientific Discoveries", "Human Interest")
+  id = c("SOD", "science", "tech", "space", "media", "interest"),
+  content = c("Scientific Ocean Drilling - General", "Scientific Discoveries", "Scientific Ocean Drilling Technology", "Space Exploration", "Media", "Human Interest")
 )
 
 ui <- fluidPage(
@@ -30,9 +30,12 @@ ui <- fluidPage(
   h4("(and some other stuff...)"),
   timevisOutput("timeline"),
   tags$head(
-    tags$style(HTML(".red_style   { border-color: red; color: white; background-color: red; }
-                     .green_style { border-color: green; color: white; background-color: green; }
-                     .blue_style { border-color: blue; color: white; background-color: blue; }
+    tags$style(HTML(".red_style   { border-color: #B79F00; color: white; background-color: #B79F00; }
+                     .green_style { border-color: #F564E3; color: white; background-color: #F564E3; }
+                     .blue_style { border-color: #F8766D; color: white; background-color: #F8766D; }
+                     .yellow_style   { border-color: #00BFC4; color: white; background-color: #00BFC4; }
+                     .purple_style { border-color: #619CFF; color: white; background-color: #619CFF; }
+                     .orange_style { border-color: #00BA38; color: white; background-color: #00BA38; }
                     "))
   ),
   h3("More information about selected event:"),
@@ -48,7 +51,7 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   output$timeline <- renderTimevis({
-    timevis(data = data, groups = timevisDataGroups, height = 600)
+    timevis(data = data, groups = timevisDataGroups, fit = TRUE, showZoom = TRUE)
   })
   
   choose_program <- reactive({
