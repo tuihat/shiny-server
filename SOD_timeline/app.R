@@ -26,14 +26,23 @@ timevisDataGroups <- data.frame(
 )
 
 ui <- fluidPage(
-  h2("History of Scientific Ocean Drilling"),
-  h4("(and some other stuff...)"),
-  # sliderInput("zoom", "Zoom by", min = 0, max = 1, value = 0.5, step = 0.1),
-  # checkboxInput("animate", "Animate?", TRUE),
-  # actionButton("zoomIn", "Zoom IN"),
-  # actionButton("zoomOut", "Zoom OUT"),
-  actionButton("btn", "Show all events in timeline"),
-  br(), br(),
+  fluidRow(
+    column(3,
+           h2("History of Scientific Ocean Drilling"),
+           h4("(and some other stuff...)")),
+    column(2),
+    column(3,
+           br(),
+           h5("hover on the timeline and scroll to change the timeframe"),
+           h5("click and drag to scroll along the timeline"),
+           h5("click on an event to learn more below")),
+    column(2),
+    column(2,
+           br(), br(),
+           actionButton("btn", "Show all events in timeline",
+                        style="color: #000; background-color: #edf8b1; border-color: #2e6da4"))
+  ),
+  br(),
   timevisOutput("timeline"),
   tags$head(
     tags$style(HTML(".red_style   { border-color: #B79F00; color: white; background-color: #B79F00; }
@@ -57,7 +66,7 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   output$timeline <- renderTimevis({
-    timevis(data = data, groups = timevisDataGroups)
+    timevis(data = data, groups = timevisDataGroups) 
   })
   
   choose_program <- reactive({
@@ -86,7 +95,7 @@ server <- function(input, output, session) {
   # })
   
   observeEvent(input$btn, {
-    setWindow("timeline", Sys.Date() - 25550, Sys.Date() + 1095)
+    setWindow("timeline", Sys.Date() - 24000, Sys.Date() + 750)
   })
   
   # observeEvent(input$btn, {
