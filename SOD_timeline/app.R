@@ -28,6 +28,12 @@ timevisDataGroups <- data.frame(
 ui <- fluidPage(
   h2("History of Scientific Ocean Drilling"),
   h4("(and some other stuff...)"),
+  # sliderInput("zoom", "Zoom by", min = 0, max = 1, value = 0.5, step = 0.1),
+  # checkboxInput("animate", "Animate?", TRUE),
+  # actionButton("zoomIn", "Zoom IN"),
+  # actionButton("zoomOut", "Zoom OUT"),
+  actionButton("btn", "Show all events in timeline"),
+  br(), br(),
   timevisOutput("timeline"),
   tags$head(
     tags$style(HTML(".red_style   { border-color: #B79F00; color: white; background-color: #B79F00; }
@@ -51,7 +57,7 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   output$timeline <- renderTimevis({
-    timevis(data = data, groups = timevisDataGroups, fit = TRUE, showZoom = TRUE)
+    timevis(data = data, groups = timevisDataGroups)
   })
   
   choose_program <- reactive({
@@ -71,7 +77,24 @@ server <- function(input, output, session) {
       tagList("URL link:", url) }
     else {div()}
   })
-    
+  
+  # observeEvent(input$zoomIn, {
+  #   zoomIn("timeline", percent = input$zoom, animation = input$animate)
+  # })
+  # observeEvent(input$zoomOut, {
+  #   zoomOut("timeline", percent = input$zoom, animation = input$animate)
+  # })
+  
+  observeEvent(input$btn, {
+    setWindow("timeline", Sys.Date() - 25550, Sys.Date() + 1095)
+  })
+  
+  # observeEvent(input$btn, {
+  #   fitWindow("timeline", list(animation = TRUE))
+  # })
+  # observeEvent(input$btn, {
+  #   centerTime("timeline", Sys.Date() - 365)
+  # })
 
 }
 
