@@ -35,7 +35,8 @@ server <- function(input, output, session) {
       addCircles(lng = bike$lon_DD, lat = bike$lat_DD, #add our bike rack points
                  popup = paste("Approx. # of spots:", bike$num_spots, "<br>",
                                "Type of spot:", bike$style, "<br>",
-                               "Date last confirmed:", bike$date_last_confirmed, "<br>"), #if you click one, it will show the date
+                               "Date last confirmed:", bike$date_last_confirmed, "<br>",
+                               "<img src = ", bike$image_link, ">"), #if you click one, it will show the date
                  weight = 15, radius = 20, #size of the circles
                  color = pal(bike$style)) %>% #color of the circles
       addLegend("bottomright", pal = pal, values = bike$style,
