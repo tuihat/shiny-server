@@ -12,7 +12,7 @@ last_update <- "11 January 2023"
 
 #position colors
 pal <- colorFactor(
-  palette = c('yellow', 'red'),
+  palette = c('yellow', 'blue'),
   domain = bike$style
 )
 
