@@ -3,6 +3,7 @@ library(shiny)
 library(shinythemes)
 #library(imager)
 library(leaflet)
+library(leaflet.extras)
 
 #load data
 # jr_icon <- makeIcon("ship_icon.jpg", iconWidth = 100, iconHeight = 100)
@@ -42,6 +43,9 @@ server <- function(input, output, session) {
       addLegend("bottomright", pal = pal, values = bike$style,
                 title = "",
                 opacity = 1) %>%
+      addControlGPS(options = gpsOptions(position = "topleft", activate = TRUE, 
+                                         autoCenter = TRUE, maxZoom = 60, 
+                                         setView = TRUE))  %>%
       fitBounds(
         lng1= min(bike$lon_DD), lat1= min(bike$lat_DD),
         lng2= max(bike$lon_DD), lat2= max(bike$lat_DD),
