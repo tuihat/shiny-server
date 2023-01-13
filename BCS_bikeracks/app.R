@@ -9,11 +9,11 @@ library(leaflet.extras)
 # jr_icon <- makeIcon("ship_icon.jpg", iconWidth = 100, iconHeight = 100)
 bike <- read.csv("bike_rack_db.csv")
 
-last_update <- "12 January 2023"
+last_update <- "13 January 2023"
 
 #position colors
 pal <- colorFactor(
-  palette = c('yellow', 'blue'),
+  palette = c('red', 'blue'),
   domain = bike$style
 )
 
