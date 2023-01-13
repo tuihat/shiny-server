@@ -34,11 +34,12 @@ server <- function(input, output, session) {
     leaflet() %>%
       addTiles() %>% #related to our background, can allow us to label
       addCircles(lng = bike$lon_DD, lat = bike$lat_DD, #add our bike rack points
-                 popup = paste("Approx. # of spots:", bike$num_spots, "<br>",
+                 popup = paste("General location:", bike$description, "<br>",
+                               "Approx. # of spots:", bike$num_spots, "<br>",
                                "Type of spot:", bike$style, "<br>",
                                "Date last confirmed:", bike$date_last_confirmed, "<br>",
                                "<img src = ", bike$image_link, ">"), #if you click one, it will show the date
-                 weight = 15, radius = 20, #size of the circles
+                 weight = 15, radius = 10, #size of the circles
                  color = pal(bike$style)) %>% #color of the circles
       addLegend("bottomright", pal = pal, values = bike$style,
                 title = "",
@@ -50,7 +51,7 @@ server <- function(input, output, session) {
         lng1= min(bike$lon_DD), lat1= min(bike$lat_DD),
         lng2= max(bike$lon_DD), lat2= max(bike$lat_DD),
         options = list(padding = c(20,20))) %>% #set the initial view
-      addProviderTiles("Esri.WorldImagery") #nice looking background
+      addProviderTiles("Esri.WorldStreetMap") #nice looking background
   })
   
 #String output of most recent position date

@@ -1,12 +1,12 @@
 rack_num,lat_DD,lon_DD,description,num_spots,date_last_confirmed,style,image_link
 1,30.60364959,-96.35407412,IODP,20,1/11/2023,regular rack,https://drive.google.com/uc?id=12u6nk4JBQHs769eSeKBXPzv7obD1l1Am
 2,30.60443965,-96.35128104,HCRB,10,1/11/2023,regular rack,https://drive.google.com/uc?id=1mrMVgavnJyOkl_5S7zWhipW83ofLG9ms
-3,30.60463842,-96.34901015,PEAP,10,1/11/2023,regular rack,
-4,30.60519026,-96.34742172,Reed,50,1/11/2023,regular rack,
-5,30.60502293,-96.34727488,Reed,50,1/11/2023,regular rack,
+3,30.60463842,-96.34901015,PEAP,60,1/11/2023,regular rack,https://drive.google.com/uc?id=1ZnI0zrovCXdyDGVeqdmIYFZKvuUMrqYM
+4,30.60519026,-96.34742172,Reed,50,1/11/2023,regular rack,https://drive.google.com/uc?id=1ZnI0zrovCXdyDGVeqdmIYFZKvuUMrqYM
+5,30.60502293,-96.34727488,Reed,50,1/11/2023,regular rack,https://drive.google.com/uc?id=1ZnI0zrovCXdyDGVeqdmIYFZKvuUMrqYM
 6,30.60215174,-96.34653724,Penberthy 1,16,1/11/2023,regular rack,https://drive.google.com/uc?id=1BBCSm15FKYwHo-tfRPAxoG2a1dpao9tD
 7,30.61236385,-96.31831568,H-E-B Texas,10,1/11/2023,regular rack,https://drive.google.com/uc?id=1FSn-FXxVcDd4jwY9beVv5RwiAlOA06IK
-8,30.62013998,-96.34372786,Shell,NA,1/11/2023,good pole(s),
+8,30.62013998,-96.34372786,Shell,NA,1/11/2023,good pole(s),https://drive.google.com/uc?id=1ZnI0zrovCXdyDGVeqdmIYFZKvuUMrqYM
 9,30.59340777,-96.33678765,John Crompton Park,6,1/12/2023,regular rack,https://drive.google.com/uc?id=1PQ8UCgp8muKp9x753HRIUA0Y_mxGV4uF
 10,30.61824448,-96.34522736,Post Office Houston St,16,1/12/2023,regular rack,https://drive.google.com/uc?id=13EhpjrDfpx6nEtuVvtGAPbQxCcGtCeml
 11,30.61674885,-96.34745503,Good Bull Icehouse,10,1/12/2023,regular rack,https://drive.google.com/uc?id=1Nj5ujMvcRVVTq4x9RabiOqHhFhc-evnl
@@ -24,3 +24,23 @@ rack_num,lat_DD,lon_DD,description,num_spots,date_last_confirmed,style,image_lin
 23,30.55955161,-96.26130782,H-E-B Tower Point,10,6/1/2018,regular rack,https://drive.google.com/uc?id=17l4vm25dGSu0z0wa6KvAd7nq-f3Bg3h1
 24,30.63522774,-96.32819525,Unknown Tarrow Building,4,7/1/2022,regular rack,https://drive.google.com/uc?id=1dApiGC1cEyd4oAYnHQozUUz0IDTe_kiN
 25,30.63379395,-96.32595149,Blue Baker University Ave,8,7/1/2022,regular rack,https://drive.google.com/uc?id=10wvM4JWk5_vxmD8Y4e4-UJSid1anEM-P
+26,30.60055969,-96.3428167,Brookshire Brothers,4,1/12/2023,regular rack,https://drive.google.com/uc?id=1ZnI0zrovCXdyDGVeqdmIYFZKvuUMrqYM
+27,30.60392335,-96.33957294,McDonald's George Bush,10,1/12/2023,regular rack,https://drive.google.com/uc?id=1ZnI0zrovCXdyDGVeqdmIYFZKvuUMrqYM
+28,30.64320561,-96.35225176,Marshall's,4,7/1/2022,regular rack,https://drive.google.com/uc?id=1p7VVaxzeJiP8Vv5AESQt--17a6MGyOxe
+29,30.64370009,-96.35133949,H-E-B Villa Maria,6,7/1/2022,regular rack,https://drive.google.com/uc?id=1OtUxnfW0mDM8JItUORpGzsJdB8GDPt24
+30,30.67371973,-96.37398406,Rx Pizza Bryan,6,8/1/2022,regular rack,https://drive.google.com/uc?id=1bVjiMeiPClFQ4kLmu6kGLdfvMLg0wGQy
+31,30.67464561,-96.3738613,Bryan Intersection,6,8/1/2022,regular rack,https://drive.google.com/uc?id=1TsnO2P0r6w1fv1Z6VAqsMzYhWtDn5HSS
+32,30.67639898,-96.3728384,Bryan Intersection,6,8/1/2022,regular rack,https://drive.google.com/uc?id=1Bg4sONOtxBluAAtzyMdKbzjVoVnHUS7J
+33,30.67736149,-96.37299764,Bryan Intersection,4,8/1/2022,regular rack,https://drive.google.com/uc?id=1swNPx1vybJ7iCmk_t4LZc5vyDoCXrzHX
+34,30.68002374,-96.3723319,Blackwater Draw,6,8/1/2022,regular rack,https://drive.google.com/uc?id=1wMJSXW9Q0EeJhKrwHeNwW5tGumVRccj3
+35,30.68015073,-96.37214418,Bryan Intersection,10,8/1/2022,regular rack,https://drive.google.com/uc?id=1H_6hFpHqVKXYwSCLYE-lBc6ti2KJoR18
+36,30.62395028,-96.33978065,Mo's Irish Pub,3,7/1/2022,regular rack,https://drive.google.com/uc?id=1ZnI0zrovCXdyDGVeqdmIYFZKvuUMrqYM
+37,30.62419697,-96.33950973,Piada,3,7/1/2022,regular rack,https://drive.google.com/uc?id=1edw8XGzhvRLVKZO6Hiz2f0Lhj4PAE0c1
+38,30.62496169,-96.33940586,Century Square,3,7/1/2022,regular rack,https://drive.google.com/uc?id=13jfqjGrWzXyr8W9fRv2_H86O2e__gA90
+39,30.62581517,-96.3383286,Century Square,3,7/1/2022,regular rack,https://drive.google.com/uc?id=1W5G3lWhDunPrQpGR_NZfskJ8EAdiXFKo
+40,30.62632136,-96.33816753,Century Square,3,7/1/2022,regular rack,https://drive.google.com/uc?id=1hooUJcAhzEvBs4SbDqhYy0mJF9lCxm56
+41,30.62532048,-96.3402016,Century Square,3,7/1/2022,regular rack,https://drive.google.com/uc?id=1aqCLRaqqPoajpHfj_Hji68GxSnVcu8X1
+42,30.62704922,-96.33603182,Moge Tee,4,7/1/2022,regular rack,https://drive.google.com/uc?id=17AS8qKJATKrJ-qkXGNZs7B-QqKaqATnQ
+43,30.62765463,-96.33531913,World of Beer,6,7/1/2022,regular rack,https://drive.google.com/uc?id=1AkdG2AZbh6hq6siDl1hrjeAjMwXhtdt-
+44,30.62928765,-96.33389698,Embassy Suites,4,7/1/2022,regular rack,https://drive.google.com/uc?id=1Lwn0fKdSuBwK-5QjmQj-yBiKaBPe_PAL
+45,30.62974825,-96.33341684,Burger Mojo,2,7/1/2022,regular rack,https://drive.google.com/uc?id=1LITlrhFjM8LqoHJKSe4Rq90m1wAY8VsI
