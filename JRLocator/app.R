@@ -23,6 +23,8 @@ if(jr_onsite2$status != "on site"){
   site_since <- ""
 }
 
+jr_loc100[jr_loc100 == ""] <- NA
+
 #position colors
 pal <- colorFactor(
   palette = c('yellow', 'red', 'purple'),
@@ -47,7 +49,8 @@ server <- function(input, output, session) {
       addTiles() %>% #related to our background, can allow us to label
       addCircles(lng = jr_loc100$lon_DD, lat = jr_loc100$lat_DD, #add our exp points
                  popup = paste("Expedition:", jr_loc100$exp, "<br>",
-                               "Date:", jr_loc100$date, "<br>"), #if you click one, it will show the date
+                               "Date:", jr_loc100$date, "<br>",
+                               "Site:", jr_loc100$site), #if you click one, it will show the date
                  weight = 15, radius = 30, #size of the circles
                  color = pal(jr_loc100$status)) %>% #color of the circles
       addMarkers(lng = jr_today$lon_DD, lat = jr_today$lat_DD, icon = jr_icon,
