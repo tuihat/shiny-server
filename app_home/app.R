@@ -24,7 +24,7 @@ ui <- dashboardPage(
         ########################################################################
         h4("General Applications", style = 'font-weight: bold;'), #subset of applications
         fluidRow(
-        userBox(width = 4,
+        userBox(width = 6,
             title = userDescription(
                 title = "DSDP, ODP, IODP Coring Type Statistics",
                 subtitle = "",
@@ -42,7 +42,7 @@ ui <- dashboardPage(
             are available by program and expedition. Recovery with depth is also 
             available by program and expedition. Scaled and unscaled graphs are available."
         ),
-        userBox(width = 4,
+        userBox(width = 6,
             title = userDescription(
                 title = "Scientific Ocean Drilling Map",
                 subtitle = "",
@@ -59,8 +59,9 @@ ui <- dashboardPage(
             clicked on to learn further information. The map is subsettable by drilling
             program, expedition, water depth, and seafloor penetration. A table and severl
             graphs are provided at the bottom for additional reference."
-        ),
-        userBox(width = 4,
+        )),
+        fluidRow(
+        userBox(width = 6,
           title = userDescription(
             title = "JOIDES Resolution Drilling Stats",
             subtitle = "",
@@ -75,7 +76,24 @@ ui <- dashboardPage(
           footer = "This application provides a visualization of some JOIDES
             Resolution drilling statistics and offers several filters for parameters
             such as core recovery and water depth. The entire
-            database or the selected expeditions can be downloaded."
+            database or the selected expeditions can be downloaded. Glomar Challenger
+            statistics are available as well but should be used with caution."
+        ),
+        userBox(width = 6,
+                title = userDescription(
+                  title = "Scientific Ocean Drilling Ages",
+                  subtitle = "",
+                  image = "timescale.jpg"
+                ),
+                status = "teal",
+                closable = FALSE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/SOD_ages/", 
+                       "Visit the app.",
+                       target="_blank"), #another app link,
+                footer = "This application provides epoch and period ages for
+                scientific ocean drilling sites of DSDP, ODP, and IODP. Data should
+                not be considered complete or exhaustive and is based on http://iodp.tamu.edu/database/ages_dsdp.html"
         )),
         ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
