@@ -276,6 +276,7 @@ server <- function(input, output, session) {
     # round(pretty_table$Latitude_DD, digits = 4)
     # round(pretty_table$Longitude_DD, digits = 4)
     # pretty_table <- pretty_table[,c(2:35)]
+    names(pretty_table)[1] <- "Expedition or Leg"
     names(pretty_table)[2] <- "Science program"
     names(pretty_table)[3] <- "Start date"
     names(pretty_table)[4] <- "Start port city"
