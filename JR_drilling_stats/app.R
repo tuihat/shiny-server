@@ -1,6 +1,6 @@
-#JOIDES Resolution Drilling Stats
+#JOIDES Resolution Drilling Stats - now with Glomar Challenger
 #started: 21 October 2022
-#updated: 21 October 2022
+#updated: 12 April 2023
 #Laurel Childress; childress@iodp.tamu.edu
 
 ###############################################################################
@@ -53,13 +53,28 @@ if(!require(shinydashboardPlus)){ #check if the package is installed and sourced
   library(shinydashboardPlus) #and source the package
 }
 
-import_stats <- read.csv("JOIDES_ship_drilling_stats.csv")
+import_stats <- read.csv("GLOMAR_JOIDES_ship_drilling_stats.csv")
 #######EXP LIST ORDERFOR USE BELOW#############################################
-all_exp <- c("100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "124E", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169S", "169", "170", "171A", "171B", "172", "173", "174A", "174B", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "301T", "303", "304", "305", "306", "307", "308", "309", "311", "312", "320T", "320", "321", "321T", "323", "324", "317", "318", "318T", "327", "328", "328T", "329", "330", "330T", "334", "335", "335T", "336", "339", "340T", "340", "342T", "342", "344T", "344", "345", "341T", "341S", "341", "346", "349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362", "363", "366", "367", "368", "371", "369", "372", "374", "375", "376", "368X", "379", "382", "383", "379T", "385T", "385", "378", "384", "390C", "395E", "395C", "396", "391", "392")
+JR_exp <- c("100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "124E", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169S", "169", "170", "171A", "171B", "172", "173", "174A", "174B", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "301T", "303", "304", "305", "306", "307", "308", "309", "311", "312", "320T", "320", "321", "321T", "323", "324", "317", "318", "318T", "327", "328", "328T", "329", "330", "330T", "334", "335", "335T", "336", "339", "340T", "340", "342T", "342", "344T", "344", "345", "341T", "341S", "341", "346", "349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362", "363", "366", "367", "368", "371", "369", "372", "374", "375", "376", "368X", "379", "382", "383", "379T", "385T", "385", "378", "384", "390C", "395E", "395C", "396", "391", "392")
+
+all_exp <- c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "11C", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23",
+"24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "44A", "45", "46", "47",
+"48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68 - Site 501", "68", "69",
+"70", "71", "72", "73", "74", "75", "76", "77", "78A", "78B", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", 
+"93", "94", "95", "96", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118",
+"119", "120", "121", "122", "123", "124", "124E", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139",
+"140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161",
+"162", "163", "164", "165", "166", "167", "168", "169S", "169", "170", "171A", "171B", "172", "173", "174A", "174B", "175", "176", "177", "178", "179",
+"180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", 
+"201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "301T", "303", "304", "305", "306", "307", "308", "309", "311", "312",
+"320T", "320", "321", "321T", "323", "324", "317", "318", "318T", "327", "328", "328T", "329", "330", "330T", "334", "335", "335T", "336", "339", "340T",
+"340", "342T", "342", "344T", "344", "345", "341T", "341S", "341", "346", "349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361",
+"362", "363", "366", "367", "368", "371", "369", "372", "374", "375", "376", "368X", "379", "382", "383", "379T", "385T", "385", "378", "384", "390C",
+"395E", "395C", "396", "391", "392")
 
 #maybe nicer if the more recent ones are at the top
+JR_exp <- rev(JR_exp)
 all_exp <- rev(all_exp)
-
 
 ui <- dashboardPage(
   title = "JOIDES Resolution Drilling Statistics", #website title
@@ -69,8 +84,8 @@ ui <- dashboardPage(
     fluidRow(
              box(width = 2,
                  pickerInput('inputmain', 'Expedition:', 
-                             choices = all_exp,
-                             selected = all_exp,
+                             choices = JR_exp,
+                             selected = JR_exp,
                              options = pickerOptions(`actions-box` = TRUE, dropupAuto = FALSE),
                              multiple = T)
              ),
@@ -129,17 +144,32 @@ ui <- dashboardPage(
       column(width = 1,
              downloadButton("downloadall", "Download all data", style='padding:4px; font-size:80%')),
       column(width = 1,
-             downloadButton("downloadsome", "Download selected data", style='padding:4px; font-size:80%'))),
+             downloadButton("downloadsome", "Download selected data", style='padding:4px; font-size:80%')),
+      column(width = 1,
+             textOutput("     ")),
+      column(width = 3,
+             switchInput(inputId = "GLOMAR", value = FALSE, label = "Glomar Challenger"))),
     br(),
       fluidRow(
         box(width = 12,
           DT::dataTableOutput("SiteHoleTable"))),
     br(),
     br(),
-    "Data derived from: ",
+    "JR Data derived from: ",
     tags$a(href="https://iodp.tamu.edu/publicinfo/ship_stats.html", 
            "JOIDES Resolution Coring Statistics",
            target="_blank"), #app link
+    br(),
+    "Glomar Challenger data derived primarily from DSDP Technical Reports: ",
+    tags$a(href="http://deepseadrilling.org/t_reports.htm", 
+           "DSDP Technical Reports",
+           target="_blank"), #app link
+    br(),
+    tags$i("DSDP Technical Reports and LIMS may differ as core recovered during
+           drill-down/wash/etc. was not categorized under current standards.
+           DSDP aged information should be approached with caution under the 
+           best circumstances; discrepencies between LIMS, Initial Report Volumes,
+           and the Technical Reports is common."), #italic disclaimer
     br(),
     tags$i("These are not official IODP-JRSO applications and functionality is 
            not guaranteed. User assumes all risk."), #italic disclaimer
@@ -173,20 +203,38 @@ server <- function(input, output, session) {
 #########---Reactive Searched Dataframe---######################################
   
   observeEvent(input$reset_all, {
-    updatePickerInput(session, "inputmain", choices = all_exp, selected = all_exp)
+    updatePickerInput(session, "inputmain", choices = JR_exp, selected = JR_exp)
     updateNumericInput(session, "input1", value = 0)
     updateNumericInput(session, "input2", value = max(import_stats$Core.recovered..m., na.rm = TRUE))
     updateNumericInput(session, "input3", value = 0)
     updateNumericInput(session, "input4", value = max(import_stats$Maximum.water.depth..m., na.rm = TRUE))
     updateNumericInput(session, "input5", value = 0)
     updateNumericInput(session, "input6", value = max(import_stats$Total.penetration..m., na.rm = TRUE))
+    updateSwitchInput(session, "GLOMAR", value = FALSE)
+  })
+  
+  chosen_boat <- reactive({
+    if(input$GLOMAR == "FALSE"){
+      subset(import_stats, Vessel == "JOIDES Resolution")
+    }else{
+      new_df <- import_stats
+    }
+  })
+  
+  observeEvent(input$GLOMAR, {
+    if(input$GLOMAR == "FALSE"){
+      updatePickerInput(session, "inputmain", choices = JR_exp, selected = JR_exp)
+    }else{
+      updatePickerInput(session, "inputmain", choices = all_exp, selected = all_exp)
+    }
   })
   
   chosen_progs <- reactive({
-    prog_range <- subset(import_stats, Expedition %in% input$inputmain) #narrow down to expeditions
+    prog_range <- subset(chosen_boat(), Expedition_Leg %in% input$inputmain) #narrow down to expeditions
     recov_range <- subset(prog_range, Core.recovered..m. <= input$input2 & Core.recovered..m. >= input$input1 | is.na(Core.recovered..m.))
     water_range <- subset(recov_range, Maximum.water.depth..m. <= input$input4 & Maximum.water.depth..m. >= input$input3 | is.na(Maximum.water.depth..m.)) #narrow down to water depths
     pen_range <- subset(water_range, Total.penetration..m. <= input$input6 & Total.penetration..m. >= input$input5 | is.na(Total.penetration..m.)) #narrow down to penetrations
+    pen_range <- pen_range[,-1]
     pen_range
   })
   #####---Prep values for pie chart days coring##############
@@ -227,6 +275,7 @@ server <- function(input, output, session) {
     # pretty_table <- pretty_table[,c(1:22,25,26)]
     # round(pretty_table$Latitude_DD, digits = 4)
     # round(pretty_table$Longitude_DD, digits = 4)
+    # pretty_table <- pretty_table[,c(2:35)]
     names(pretty_table)[2] <- "Science program"
     names(pretty_table)[3] <- "Start date"
     names(pretty_table)[4] <- "Start port city"
