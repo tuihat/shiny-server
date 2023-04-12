@@ -62,7 +62,11 @@ server <- function(input, output, session) {
       addLegend("bottomright", pal = pal, values = jr_loc100$status,
                 title = "",
                 opacity = 1) %>%
-      setView( lng = 0, lat = 0, zoom = 2.5 ) %>% #set the initial view
+      setView( lng = jr_today$lon_DD, jr_today$lat_DD, zoom = 6 ) %>% #set the initial view
+      # fitBounds(
+      #   lng1= min(jr_today$lon_DD), lat1= min(jr_today$lat_DD),
+      #   lng2= max(jr_today$lon_DD), lat2= max(jr_today$lat_DD),
+      #   options = list(padding = c(100,100))) %>% #set the initial view
       addProviderTiles("Esri.WorldImagery") #nice looking background
   })
   
