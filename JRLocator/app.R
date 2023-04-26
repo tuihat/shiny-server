@@ -62,6 +62,8 @@ server <- function(input, output, session) {
       addLegend("bottomright", pal = pal, values = jr_loc100$status,
                 title = "",
                 opacity = 1) %>%
+      addScaleBar(position = c("bottomleft"),
+        options = scaleBarOptions(maxWidth = 200, metric = TRUE, imperial = FALSE)) %>%
       setView( lng = jr_today$lon_DD, jr_today$lat_DD, zoom = 6 ) %>% #set the initial view
       # fitBounds(
       #   lng1= min(jr_today$lon_DD), lat1= min(jr_today$lat_DD),
