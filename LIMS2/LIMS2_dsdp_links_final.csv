@@ -1,0 +1,626 @@
+leg_exp,site,samples,core_comp_photo,core_closeup_img
+1,1,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=1&site=1,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=1&site=1,not available
+1,2,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=1&site=2,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=1&site=2,not available
+1,3,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=1&site=3,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=1&site=3,not available
+1,4,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=1&site=4,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=1&site=4,not available
+1,5,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=1&site=5,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=1&site=5,not available
+1,6,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=1&site=6,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=1&site=6,not available
+1,7,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=1&site=7,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=1&site=7,not available
+10,85,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=85,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=85,not available
+10,86,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=86,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=86,not available
+10,87,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=87,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=87,not available
+10,88,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=88,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=88,not available
+10,89,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=89,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=89,not available
+10,90,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=90,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=90,not available
+10,91,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=91,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=91,not available
+10,92,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=92,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=92,not available
+10,93,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=93,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=93,not available
+10,94,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=94,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=94,not available
+10,95,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=95,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=95,not available
+10,96,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=96,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=96,not available
+10,97,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=10&site=97,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=10&site=97,not available
+11,100,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=100,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=100,not available
+11,101,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=101,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=101,not available
+11,102,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=102,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=102,not available
+11,103,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=103,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=103,not available
+11,104,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=104,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=104,not available
+11,105,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=105,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=105,not available
+11,106,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=106,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=106,not available
+11,107,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=107,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=107,not available
+11,108,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=108,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=108,not available
+11,98,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=98,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=98,not available
+11,99,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=11&site=99,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=11&site=99,not available
+12,111,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=111,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=111,not available
+12,112,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=112,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=112,not available
+12,113,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=113,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=113,not available
+12,114,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=114,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=114,not available
+12,115,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=115,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=115,not available
+12,116,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=116,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=116,not available
+12,117,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=117,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=117,not available
+12,118,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=118,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=118,not available
+12,119,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=12&site=119,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=12&site=119,not available
+13,120,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=120,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=120,not available
+13,121,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=121,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=121,not available
+13,122,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=122,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=122,not available
+13,123,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=123,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=123,not available
+13,124,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=124,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=124,not available
+13,125,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=125,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=125,not available
+13,126,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=126,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=126,not available
+13,127,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=127,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=127,not available
+13,128,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=128,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=128,not available
+13,129,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=129,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=129,not available
+13,130,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=130,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=130,not available
+13,131,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=131,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=131,not available
+13,132,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=132,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=132,not available
+13,133,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=133,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=133,not available
+13,134,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=13&site=134,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=13&site=134,not available
+14,135,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=135,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=135,not available
+14,136,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=136,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=136,not available
+14,137,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=137,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=137,not available
+14,138,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=138,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=138,not available
+14,139,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=139,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=139,not available
+14,140,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=140,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=140,not available
+14,141,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=141,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=141,not available
+14,142,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=142,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=142,not available
+14,143,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=143,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=143,not available
+14,144,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=14&site=144,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=14&site=144,not available
+15,146,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=146,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=146,not available
+15,147,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=147,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=147,not available
+15,148,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=148,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=148,not available
+15,149,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=149,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=149,not available
+15,150,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=150,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=150,not available
+15,151,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=151,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=151,not available
+15,152,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=152,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=152,not available
+15,153,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=153,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=153,not available
+15,154,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=15&site=154,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=15&site=154,not available
+16,155,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=155,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=155,not available
+16,156,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=156,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=156,not available
+16,157,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=157,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=157,not available
+16,158,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=158,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=158,not available
+16,159,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=159,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=159,not available
+16,160,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=160,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=160,not available
+16,161,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=161,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=161,not available
+16,162,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=162,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=162,not available
+16,163,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=16&site=163,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=16&site=163,not available
+17,164,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=17&site=164,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=17&site=164,not available
+17,165,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=17&site=165,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=17&site=165,not available
+17,166,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=17&site=166,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=17&site=166,not available
+17,167,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=17&site=167,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=17&site=167,not available
+17,168,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=17&site=168,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=17&site=168,not available
+17,169,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=17&site=169,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=17&site=169,not available
+17,170,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=17&site=170,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=17&site=170,not available
+17,171,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=17&site=171,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=17&site=171,not available
+18,172,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=172,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=172,not available
+18,173,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=173,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=173,not available
+18,174,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=174,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=174,not available
+18,175,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=175,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=175,not available
+18,176,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=176,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=176,not available
+18,177,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=177,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=177,not available
+18,178,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=178,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=178,not available
+18,179,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=179,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=179,not available
+18,180,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=180,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=180,not available
+18,181,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=181,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=181,not available
+18,182,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=18&site=182,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=18&site=182,not available
+19,183,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=183,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=183,not available
+19,184,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=184,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=184,not available
+19,185,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=185,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=185,not available
+19,186,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=186,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=186,not available
+19,187,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=187,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=187,not available
+19,188,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=188,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=188,not available
+19,189,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=189,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=189,not available
+19,190,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=190,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=190,not available
+19,191,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=191,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=191,not available
+19,192,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=192,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=192,not available
+19,193,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=19&site=193,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=19&site=193,not available
+2,10,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=2&site=10,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=2&site=10,not available
+2,11,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=2&site=11,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=2&site=11,not available
+2,12,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=2&site=12,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=2&site=12,not available
+2,8,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=2&site=8,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=2&site=8,not available
+2,9,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=2&site=9,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=2&site=9,not available
+20,194,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=20&site=194,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=20&site=194,not available
+20,195,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=20&site=195,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=20&site=195,not available
+20,196,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=20&site=196,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=20&site=196,not available
+20,197,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=20&site=197,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=20&site=197,not available
+20,198,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=20&site=198,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=20&site=198,not available
+20,199,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=20&site=199,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=20&site=199,not available
+20,200,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=20&site=200,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=20&site=200,not available
+20,202,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=20&site=202,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=20&site=202,not available
+21,203,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=21&site=203,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=21&site=203,not available
+21,204,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=21&site=204,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=21&site=204,not available
+21,205,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=21&site=205,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=21&site=205,not available
+21,206,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=21&site=206,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=21&site=206,not available
+21,207,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=21&site=207,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=21&site=207,not available
+21,208,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=21&site=208,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=21&site=208,not available
+21,209,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=21&site=209,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=21&site=209,not available
+21,210,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=21&site=210,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=21&site=210,not available
+22,211,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=22&site=211,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=22&site=211,not available
+22,212,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=22&site=212,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=22&site=212,not available
+22,213,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=22&site=213,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=22&site=213,not available
+22,214,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=22&site=214,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=22&site=214,not available
+22,215,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=22&site=215,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=22&site=215,not available
+22,216,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=22&site=216,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=22&site=216,not available
+22,217,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=22&site=217,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=22&site=217,not available
+22,218,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=22&site=218,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=22&site=218,not available
+23,219,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=219,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=219,not available
+23,220,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=220,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=220,not available
+23,221,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=221,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=221,not available
+23,222,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=222,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=222,not available
+23,223,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=223,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=223,not available
+23,224,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=224,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=224,not available
+23,225,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=225,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=225,not available
+23,226,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=226,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=226,not available
+23,227,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=227,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=227,not available
+23,228,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=228,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=228,not available
+23,229,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=229,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=229,not available
+23,230,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=23&site=230,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=23&site=230,not available
+24,231,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=24&site=231,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=24&site=231,not available
+24,232,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=24&site=232,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=24&site=232,not available
+24,233,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=24&site=233,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=24&site=233,not available
+24,234,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=24&site=234,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=24&site=234,not available
+24,235,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=24&site=235,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=24&site=235,not available
+24,236,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=24&site=236,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=24&site=236,not available
+24,237,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=24&site=237,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=24&site=237,not available
+24,238,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=24&site=238,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=24&site=238,not available
+25,239,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=239,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=239,not available
+25,240,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=240,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=240,not available
+25,241,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=241,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=241,not available
+25,242,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=242,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=242,not available
+25,243,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=243,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=243,not available
+25,244,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=244,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=244,not available
+25,245,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=245,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=245,not available
+25,246,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=246,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=246,not available
+25,247,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=247,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=247,not available
+25,248,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=248,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=248,not available
+25,249,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=25&site=249,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=25&site=249,not available
+26,250,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=250,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=250,not available
+26,251,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=251,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=251,not available
+26,252,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=252,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=252,not available
+26,253,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=253,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=253,not available
+26,254,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=254,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=254,not available
+26,255,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=255,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=255,not available
+26,256,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=256,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=256,not available
+26,257,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=257,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=257,not available
+26,258,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=26&site=258,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=26&site=258,not available
+27,259,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=27&site=259,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=27&site=259,not available
+27,260,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=27&site=260,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=27&site=260,not available
+27,261,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=27&site=261,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=27&site=261,not available
+27,262,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=27&site=262,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=27&site=262,not available
+27,263,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=27&site=263,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=27&site=263,not available
+28,264,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=264,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=264,not available
+28,265,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=265,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=265,not available
+28,266,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=266,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=266,not available
+28,267,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=267,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=267,not available
+28,268,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=268,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=268,not available
+28,269,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=269,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=269,not available
+28,270,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=270,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=270,not available
+28,271,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=271,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=271,not available
+28,272,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=272,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=272,not available
+28,273,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=273,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=273,not available
+28,274,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=28&site=274,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=28&site=274,not available
+29,275,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=275,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=275,not available
+29,276,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=276,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=276,not available
+29,277,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=277,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=277,not available
+29,278,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=278,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=278,not available
+29,279,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=279,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=279,not available
+29,280,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=280,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=280,not available
+29,281,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=281,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=281,not available
+29,282,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=282,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=282,not available
+29,283,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=283,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=283,not available
+29,284,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=29&site=284,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=29&site=284,not available
+3,13,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=13,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=13,not available
+3,14,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=14,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=14,not available
+3,15,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=15,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=15,not available
+3,16,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=16,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=16,not available
+3,17,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=17,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=17,not available
+3,18,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=18,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=18,not available
+3,19,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=19,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=19,not available
+3,20,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=20,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=20,not available
+3,21,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=21,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=21,not available
+3,22,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=3&site=22,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=3&site=22,not available
+30,285,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=30&site=285,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=30&site=285,not available
+30,286,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=30&site=286,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=30&site=286,not available
+30,287,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=30&site=287,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=30&site=287,not available
+30,288,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=30&site=288,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=30&site=288,not available
+30,289,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=30&site=289,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=30&site=289,not available
+31,290,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=290,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=290,not available
+31,291,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=291,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=291,not available
+31,292,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=292,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=292,not available
+31,293,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=293,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=293,not available
+31,294,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=294,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=294,not available
+31,295,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=295,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=295,not available
+31,296,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=296,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=296,not available
+31,297,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=297,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=297,not available
+31,298,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=298,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=298,not available
+31,299,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=299,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=299,not available
+31,300,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=300,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=300,not available
+31,301,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=301,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=301,not available
+31,302,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=31&site=302,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=31&site=302,not available
+32,303,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=303,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=303,not available
+32,304,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=304,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=304,not available
+32,305,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=305,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=305,not available
+32,306,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=306,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=306,not available
+32,307,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=307,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=307,not available
+32,308,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=308,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=308,not available
+32,309,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=309,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=309,not available
+32,310,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=310,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=310,not available
+32,311,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=311,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=311,not available
+32,313,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=32&site=313,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=32&site=313,not available
+33,314,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=33&site=314,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=33&site=314,not available
+33,315,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=33&site=315,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=33&site=315,not available
+33,316,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=33&site=316,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=33&site=316,not available
+33,317,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=33&site=317,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=33&site=317,not available
+33,318,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=33&site=318,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=33&site=318,not available
+34,319,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=34&site=319,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=34&site=319,not available
+34,320,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=34&site=320,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=34&site=320,not available
+34,321,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=34&site=321,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=34&site=321,not available
+35,322,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=35&site=322,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=35&site=322,not available
+35,323,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=35&site=323,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=35&site=323,not available
+35,324,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=35&site=324,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=35&site=324,not available
+35,325,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=35&site=325,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=35&site=325,not available
+36,326,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=36&site=326,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=36&site=326,not available
+36,327,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=36&site=327,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=36&site=327,not available
+36,328,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=36&site=328,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=36&site=328,not available
+36,329,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=36&site=329,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=36&site=329,not available
+36,330,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=36&site=330,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=36&site=330,not available
+36,331,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=36&site=331,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=36&site=331,not available
+37,332,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=37&site=332,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=37&site=332,not available
+37,333,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=37&site=333,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=37&site=333,not available
+37,334,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=37&site=334,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=37&site=334,not available
+37,335,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=37&site=335,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=37&site=335,not available
+38,336,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=336,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=336,not available
+38,337,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=337,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=337,not available
+38,338,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=338,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=338,not available
+38,339,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=339,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=339,not available
+38,340,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=340,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=340,not available
+38,341,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=341,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=341,not available
+38,342,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=342,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=342,not available
+38,343,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=343,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=343,not available
+38,344,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=344,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=344,not available
+38,345,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=345,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=345,not available
+38,346,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=346,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=346,not available
+38,347,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=347,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=347,not available
+38,348,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=348,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=348,not available
+38,349,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=349,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=349,not available
+38,350,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=350,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=350,not available
+38,352,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=38&site=352,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=38&site=352,not available
+39,353,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=39&site=353,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=39&site=353,not available
+39,354,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=39&site=354,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=39&site=354,not available
+39,355,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=39&site=355,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=39&site=355,not available
+39,356,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=39&site=356,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=39&site=356,not available
+39,357,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=39&site=357,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=39&site=357,not available
+39,358,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=39&site=358,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=39&site=358,not available
+39,359,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=39&site=359,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=39&site=359,not available
+4,23,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=23,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=23,not available
+4,24,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=24,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=24,not available
+4,25,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=25,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=25,not available
+4,26,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=26,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=26,not available
+4,27,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=27,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=27,not available
+4,28,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=28,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=28,not available
+4,29,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=29,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=29,not available
+4,30,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=30,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=30,not available
+4,31,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=4&site=31,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=4&site=31,not available
+40,360,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=40&site=360,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=40&site=360,not available
+40,361,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=40&site=361,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=40&site=361,not available
+40,362,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=40&site=362,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=40&site=362,not available
+40,363,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=40&site=363,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=40&site=363,not available
+40,364,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=40&site=364,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=40&site=364,not available
+40,365,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=40&site=365,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=40&site=365,not available
+41,366,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=41&site=366,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=41&site=366,not available
+41,367,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=41&site=367,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=41&site=367,not available
+41,368,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=41&site=368,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=41&site=368,not available
+41,369,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=41&site=369,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=41&site=369,not available
+41,370,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=41&site=370,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=41&site=370,not available
+42,371,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=371,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=371,not available
+42,372,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=372,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=372,not available
+42,373,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=373,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=373,not available
+42,374,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=374,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=374,not available
+42,375,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=375,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=375,not available
+42,376,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=376,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=376,not available
+42,377,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=377,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=377,not available
+42,378,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=378,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=378,not available
+42,379,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=379,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=379,not available
+42,380,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=380,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=380,not available
+42,381,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=42&site=381,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=42&site=381,not available
+43,382,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=43&site=382,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=43&site=382,not available
+43,383,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=43&site=383,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=43&site=383,not available
+43,384,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=43&site=384,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=43&site=384,not available
+43,385,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=43&site=385,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=43&site=385,not available
+43,386,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=43&site=386,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=43&site=386,not available
+43,387,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=43&site=387,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=43&site=387,not available
+44,388,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=44&site=388,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=44&site=388,not available
+44,389,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=44&site=389,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=44&site=389,not available
+44,390,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=44&site=390,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=44&site=390,not available
+44,391,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=44&site=391,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=44&site=391,not available
+44,392,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=44&site=392,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=44&site=392,not available
+44,393,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=44&site=393,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=44&site=393,not available
+44,394,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=44&site=394,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=44&site=394,not available
+45,395,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=45&site=395,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=45&site=395,not available
+45,396,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=45&site=396,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=45&site=396,not available
+46,396,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=46&site=396,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=46&site=396,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=46&site=396
+47,397,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=47&site=397,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=47&site=397,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=47&site=397
+47,398,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=47&site=398,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=47&site=398,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=47&site=398
+48,399,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=48&site=399,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=48&site=399,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=48&site=399
+48,400,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=48&site=400,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=48&site=400,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=48&site=400
+48,401,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=48&site=401,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=48&site=401,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=48&site=401
+48,402,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=48&site=402,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=48&site=402,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=48&site=402
+48,403,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=48&site=403,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=48&site=403,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=48&site=403
+48,404,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=48&site=404,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=48&site=404,not available
+48,405,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=48&site=405,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=48&site=405,not available
+48,406,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=48&site=406,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=48&site=406,not available
+49,407,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=49&site=407,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=49&site=407,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=49&site=407
+49,408,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=49&site=408,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=49&site=408,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=49&site=408
+49,409,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=49&site=409,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=49&site=409,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=49&site=409
+49,410,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=49&site=410,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=49&site=410,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=49&site=410
+49,411,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=49&site=411,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=49&site=411,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=49&site=411
+49,412,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=49&site=412,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=49&site=412,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=49&site=412
+49,413,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=49&site=413,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=49&site=413,not available
+5,32,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=32,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=32,not available
+5,33,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=33,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=33,not available
+5,34,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=34,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=34,not available
+5,35,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=35,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=35,not available
+5,36,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=36,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=36,not available
+5,37,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=37,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=37,not available
+5,38,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=38,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=38,not available
+5,39,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=39,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=39,not available
+5,40,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=40,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=40,not available
+5,41,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=41,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=41,not available
+5,42,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=42,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=42,not available
+5,43,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=5&site=43,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=5&site=43,not available
+50,415,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=50&site=415,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=50&site=415,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=50&site=415
+50,416,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=50&site=416,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=50&site=416,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=50&site=416
+51,417,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=51&site=417,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=51&site=417,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=51&site=417
+52,417,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=52&site=417,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=52&site=417,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=52&site=417
+52,418,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=52&site=418,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=52&site=418,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=52&site=418
+53,418,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=53&site=418,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=53&site=418,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=53&site=418
+54,419,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=419,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=419,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=54&site=419
+54,420,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=420,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=420,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=54&site=420
+54,421,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=421,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=421,not available
+54,422,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=422,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=422,not available
+54,423,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=423,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=423,not available
+54,424,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=424,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=424,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=54&site=424
+54,425,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=425,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=425,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=54&site=425
+54,427,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=427,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=427,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=54&site=427
+54,428,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=428,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=428,not available
+54,429,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=54&site=429,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=54&site=429,not available
+55,430,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=55&site=430,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=55&site=430,not available
+55,431,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=55&site=431,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=55&site=431,not available
+55,432,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=55&site=432,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=55&site=432,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=55&site=432
+55,433,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=55&site=433,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=55&site=433,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=55&site=433
+56,434,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=56&site=434,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=56&site=434,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=56&site=434
+56,435,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=56&site=435,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=56&site=435,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=56&site=435
+56,436,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=56&site=436,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=56&site=436,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=56&site=436
+56,437,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=56&site=437,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=56&site=437,not available
+57,438,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=57&site=438,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=57&site=438,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=57&site=438
+57,439,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=57&site=439,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=57&site=439,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=57&site=439
+57,440,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=57&site=440,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=57&site=440,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=57&site=440
+57,441,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=57&site=441,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=57&site=441,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=57&site=441
+58,442,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=58&site=442,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=58&site=442,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=58&site=442
+58,443,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=58&site=443,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=58&site=443,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=58&site=443
+58,444,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=58&site=444,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=58&site=444,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=58&site=444
+58,445,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=58&site=445,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=58&site=445,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=58&site=445
+58,446,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=58&site=446,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=58&site=446,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=58&site=446
+59,447,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=59&site=447,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=59&site=447,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=59&site=447
+59,448,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=59&site=448,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=59&site=448,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=59&site=448
+59,449,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=59&site=449,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=59&site=449,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=59&site=449
+59,450,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=59&site=450,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=59&site=450,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=59&site=450
+59,451,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=59&site=451,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=59&site=451,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=59&site=451
+6,44,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=44,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=44,not available
+6,45,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=45,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=45,not available
+6,46,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=46,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=46,not available
+6,47,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=47,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=47,not available
+6,48,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=48,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=48,not available
+6,49,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=49,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=49,not available
+6,50,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=50,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=50,not available
+6,51,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=51,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=51,not available
+6,52,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=52,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=52,not available
+6,53,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=53,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=53,not available
+6,54,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=54,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=54,not available
+6,55,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=55,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=55,not available
+6,56,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=56,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=56,not available
+6,57,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=57,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=57,not available
+6,58,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=58,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=58,not available
+6,59,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=59,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=59,not available
+6,60,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=6&site=60,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=6&site=60,not available
+60,452,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=452,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=452,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=60&site=452
+60,453,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=453,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=453,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=60&site=453
+60,454,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=454,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=454,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=60&site=454
+60,455,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=455,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=455,not available
+60,456,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=456,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=456,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=60&site=456
+60,457,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=457,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=457,not available
+60,458,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=458,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=458,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=60&site=458
+60,459,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=459,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=459,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=60&site=459
+60,460,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=460,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=460,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=60&site=460
+60,461,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=60&site=461,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=60&site=461,not available
+61,462,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=61&site=462,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=61&site=462,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=61&site=462
+62,463,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=62&site=463,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=62&site=463,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=62&site=463
+62,464,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=62&site=464,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=62&site=464,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=62&site=464
+62,465,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=62&site=465,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=62&site=465,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=62&site=465
+62,466,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=62&site=466,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=62&site=466,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=62&site=466
+63,467,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=63&site=467,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=63&site=467,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=63&site=467
+63,468,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=63&site=468,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=63&site=468,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=63&site=468
+63,469,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=63&site=469,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=63&site=469,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=63&site=469
+63,470,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=63&site=470,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=63&site=470,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=63&site=470
+63,471,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=63&site=471,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=63&site=471,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=63&site=471
+63,472,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=63&site=472,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=63&site=472,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=63&site=472
+63,473,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=63&site=473,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=63&site=473,not available
+64,474,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=64&site=474,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=64&site=474,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=64&site=474
+64,475,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=64&site=475,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=64&site=475,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=64&site=475
+64,476,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=64&site=476,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=64&site=476,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=64&site=476
+64,477,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=64&site=477,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=64&site=477,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=64&site=477
+64,478,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=64&site=478,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=64&site=478,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=64&site=478
+64,479,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=64&site=479,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=64&site=479,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=64&site=479
+64,480,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=64&site=480,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=64&site=480,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=64&site=480
+64,481,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=64&site=481,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=64&site=481,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=64&site=481
+65,482,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=65&site=482,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=65&site=482,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=65&site=482
+65,483,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=65&site=483,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=65&site=483,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=65&site=483
+65,484,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=65&site=484,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=65&site=484,not available
+65,485,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=65&site=485,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=65&site=485,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=65&site=485
+66,486,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=66&site=486,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=66&site=486,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=66&site=486
+66,487,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=66&site=487,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=66&site=487,not available
+66,488,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=66&site=488,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=66&site=488,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=66&site=488
+66,489,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=66&site=489,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=66&site=489,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=66&site=489
+66,490,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=66&site=490,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=66&site=490,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=66&site=490
+66,491,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=66&site=491,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=66&site=491,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=66&site=491
+66,492,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=66&site=492,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=66&site=492,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=66&site=492
+66,493,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=66&site=493,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=66&site=493,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=66&site=493
+67,494,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=67&site=494,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=67&site=494,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=67&site=494
+67,495,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=67&site=495,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=67&site=495,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=67&site=495
+67,496,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=67&site=496,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=67&site=496,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=67&site=496
+67,497,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=67&site=497,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=67&site=497,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=67&site=497
+67,498,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=67&site=498,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=67&site=498,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=67&site=498
+67,499,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=67&site=499,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=67&site=499,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=67&site=499
+67,500,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=67&site=500,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=67&site=500,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=67&site=500
+68,501,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=68&site=501,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=68&site=501,not available
+68,502,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=68&site=502,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=68&site=502,not available
+68,503,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=68&site=503,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=68&site=503,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=68&site=503
+69,504,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=69&site=504,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=69&site=504,not available
+69,505,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=69&site=505,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=69&site=505,not available
+7,61,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=7&site=61,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=7&site=61,not available
+7,62,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=7&site=62,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=7&site=62,not available
+7,63,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=7&site=63,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=7&site=63,not available
+7,64,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=7&site=64,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=7&site=64,not available
+7,65,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=7&site=65,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=7&site=65,not available
+7,66,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=7&site=66,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=7&site=66,not available
+7,67,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=7&site=67,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=7&site=67,not available
+70,504,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=70&site=504,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=70&site=504,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=70&site=504
+70,506,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=70&site=506,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=70&site=506,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=70&site=506
+70,507,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=70&site=507,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=70&site=507,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=70&site=507
+70,508,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=70&site=508,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=70&site=508,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=70&site=508
+70,509,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=70&site=509,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=70&site=509,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=70&site=509
+70,510,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=70&site=510,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=70&site=510,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=70&site=510
+71,511,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=71&site=511,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=71&site=511,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=71&site=511
+71,512,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=71&site=512,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=71&site=512,not available
+71,513,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=71&site=513,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=71&site=513,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=71&site=513
+71,514,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=71&site=514,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=71&site=514,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=71&site=514
+72,515,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=72&site=515,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=72&site=515,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=72&site=515
+72,516,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=72&site=516,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=72&site=516,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=72&site=516
+72,517,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=72&site=517,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=72&site=517,not available
+72,518,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=72&site=518,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=72&site=518,not available
+73,519,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=73&site=519,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=73&site=519,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=73&site=519
+73,520,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=73&site=520,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=73&site=520,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=73&site=520
+73,521,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=73&site=521,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=73&site=521,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=73&site=521
+73,522,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=73&site=522,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=73&site=522,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=73&site=522
+73,523,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=73&site=523,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=73&site=523,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=73&site=523
+73,524,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=73&site=524,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=73&site=524,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=73&site=524
+74,525,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=74&site=525,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=74&site=525,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=74&site=525
+74,526,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=74&site=526,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=74&site=526,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=74&site=526
+74,527,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=74&site=527,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=74&site=527,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=74&site=527
+74,528,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=74&site=528,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=74&site=528,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=74&site=528
+74,529,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=74&site=529,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=74&site=529,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=74&site=529
+75,530,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=75&site=530,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=75&site=530,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=75&site=530
+75,531,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=75&site=531,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=75&site=531,not available
+75,532,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=75&site=532,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=75&site=532,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=75&site=532
+76,533,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=76&site=533,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=76&site=533,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=76&site=533
+76,534,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=76&site=534,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=76&site=534,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=76&site=534
+77,535,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=77&site=535,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=77&site=535,not available
+77,536,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=77&site=536,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=77&site=536,not available
+77,537,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=77&site=537,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=77&site=537,not available
+77,538,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=77&site=538,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=77&site=538,not available
+77,539,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=77&site=539,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=77&site=539,not available
+77,540,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=77&site=540,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=77&site=540,not available
+78,541,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=78&site=541,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=78&site=541,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=78&site=541
+78,542,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=78&site=542,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=78&site=542,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=78&site=542
+78,543,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=78&site=543,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=78&site=543,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=78&site=543
+79,544,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=79&site=544,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=79&site=544,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=79&site=544
+79,545,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=79&site=545,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=79&site=545,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=79&site=545
+79,546,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=79&site=546,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=79&site=546,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=79&site=546
+79,547,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=79&site=547,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=79&site=547,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=79&site=547
+8,68,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=8&site=68,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=8&site=68,not available
+8,69,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=8&site=69,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=8&site=69,not available
+8,70,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=8&site=70,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=8&site=70,not available
+8,71,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=8&site=71,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=8&site=71,not available
+8,72,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=8&site=72,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=8&site=72,not available
+8,73,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=8&site=73,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=8&site=73,not available
+8,74,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=8&site=74,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=8&site=74,not available
+8,75,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=8&site=75,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=8&site=75,not available
+80,548,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=80&site=548,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=80&site=548,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=80&site=548
+80,549,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=80&site=549,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=80&site=549,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=80&site=549
+80,550,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=80&site=550,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=80&site=550,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=80&site=550
+80,551,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=80&site=551,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=80&site=551,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=80&site=551
+81,552,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=81&site=552,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=81&site=552,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=81&site=552
+81,553,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=81&site=553,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=81&site=553,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=81&site=553
+81,554,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=81&site=554,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=81&site=554,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=81&site=554
+81,555,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=81&site=555,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=81&site=555,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=81&site=555
+82,556,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=556,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=556,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=82&site=556
+82,557,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=557,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=557,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=82&site=557
+82,558,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=558,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=558,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=82&site=558
+82,559,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=559,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=559,not available
+82,560,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=560,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=560,not available
+82,561,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=561,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=561,not available
+82,562,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=562,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=562,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=82&site=562
+82,563,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=563,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=563,not available
+82,564,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=82&site=564,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=82&site=564,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=82&site=564
+83,504,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=83&site=504,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=83&site=504,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=83&site=504
+84,565,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=84&site=565,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=84&site=565,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=84&site=565
+84,566,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=84&site=566,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=84&site=566,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=84&site=566
+84,567,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=84&site=567,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=84&site=567,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=84&site=567
+84,568,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=84&site=568,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=84&site=568,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=84&site=568
+84,569,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=84&site=569,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=84&site=569,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=84&site=569
+84,570,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=84&site=570,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=84&site=570,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=84&site=570
+85,571,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=85&site=571,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=85&site=571,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=85&site=571
+85,572,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=85&site=572,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=85&site=572,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=85&site=572
+85,573,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=85&site=573,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=85&site=573,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=85&site=573
+85,574,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=85&site=574,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=85&site=574,not available
+85,575,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=85&site=575,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=85&site=575,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=85&site=575
+86,576,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=86&site=576,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=86&site=576,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=86&site=576
+86,577,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=86&site=577,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=86&site=577,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=86&site=577
+86,578,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=86&site=578,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=86&site=578,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=86&site=578
+86,579,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=86&site=579,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=86&site=579,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=86&site=579
+86,580,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=86&site=580,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=86&site=580,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=86&site=580
+86,581,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=86&site=581,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=86&site=581,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=86&site=581
+87,582,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=87&site=582,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=87&site=582,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=87&site=582
+87,583,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=87&site=583,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=87&site=583,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=87&site=583
+87,584,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=87&site=584,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=87&site=584,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=87&site=584
+88,581,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=88&site=581,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=88&site=581,not available
+89,462,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=89&site=462,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=89&site=462,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=89&site=462
+89,585,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=89&site=585,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=89&site=585,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=89&site=585
+89,586,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=89&site=586,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=89&site=586,not available
+9,76,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=76,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=76,not available
+9,77,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=77,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=77,not available
+9,78,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=78,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=78,not available
+9,79,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=79,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=79,not available
+9,80,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=80,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=80,not available
+9,81,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=81,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=81,not available
+9,82,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=82,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=82,not available
+9,83,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=83,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=83,not available
+9,84,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=9&site=84,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=9&site=84,not available
+90,587,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=90&site=587,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=90&site=587,not available
+90,588,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=90&site=588,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=90&site=588,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=90&site=588
+90,589,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=90&site=589,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=90&site=589,not available
+90,590,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=90&site=590,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=90&site=590,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=90&site=590
+90,591,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=90&site=591,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=90&site=591,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=90&site=591
+90,592,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=90&site=592,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=90&site=592,not available
+90,593,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=90&site=593,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=90&site=593,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=90&site=593
+90,594,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=90&site=594,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=90&site=594,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=90&site=594
+91,595,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=91&site=595,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=91&site=595,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=91&site=595
+91,596,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=91&site=596,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=91&site=596,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=91&site=596
+92,504,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=92&site=504,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=92&site=504,not available
+92,597,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=92&site=597,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=92&site=597,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=92&site=597
+92,598,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=92&site=598,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=92&site=598,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=92&site=598
+92,599,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=92&site=599,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=92&site=599,not available
+92,600,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=92&site=600,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=92&site=600,not available
+92,601,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=92&site=601,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=92&site=601,not available
+92,602,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=92&site=602,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=92&site=602,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=92&site=602
+93,603,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=93&site=603,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=93&site=603,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=93&site=603
+93,604,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=93&site=604,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=93&site=604,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=93&site=604
+93,605,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=93&site=605,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=93&site=605,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=93&site=605
+94,606,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=94&site=606,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=94&site=606,not available
+94,607,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=94&site=607,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=94&site=607,not available
+94,608,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=94&site=608,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=94&site=608,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=94&site=608
+94,609,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=94&site=609,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=94&site=609,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=94&site=609
+94,610,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=94&site=610,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=94&site=610,not available
+94,611,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=94&site=611,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=94&site=611,not available
+95,603,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=95&site=603,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=95&site=603,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=95&site=603
+95,612,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=95&site=612,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=95&site=612,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=95&site=612
+95,613,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=95&site=613,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=95&site=613,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=95&site=613
+96,614,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=614,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=614,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=614
+96,615,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=615,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=615,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=615
+96,616,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=616,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=616,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=616
+96,617,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=617,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=617,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=617
+96,618,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=618,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=618,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=618
+96,619,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=619,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=619,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=619
+96,620,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=620,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=620,not available
+96,621,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=621,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=621,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=621
+96,622,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=622,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=622,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=622
+96,623,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=623,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=623,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=623
+96,624,https://web.iodp.tamu.edu/janusweb/sample/sample.cgi?leg=96&site=624,https://web.iodp.tamu.edu/janusweb/imaging/photo.cgi?leg=96&site=624,https://web.iodp.tamu.edu/janusweb/imaging/closeup.cgi?reporttype=I&leg=96&site=624
