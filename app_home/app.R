@@ -132,7 +132,7 @@ ui <- dashboardPage(
             )),
         ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
-        h4("GCR Applications", style = 'font-weight: bold;'), #subset of applications
+        h4("GCR & Data Access Applications", style = 'font-weight: bold;'), #subset of applications
         fluidRow(
             userBox(
                 title = userDescription(
@@ -153,7 +153,25 @@ ui <- dashboardPage(
               range of cores and sample interval and the application returns a 
               sample list of repetitive sampling. (3) The user provides a density
               and either a volume or mass and the alternative is returned. (4) The
-              user provides samples by sample type and material volumes are provided."
+              user provides samples by sample type and material volumes are provided."),
+            userBox(
+              title = userDescription(
+                title = "LIMS2 - Electric Boogaloo",
+                subtitle = "",
+                image = "LIMS2_disco_ball.jpg"
+              ),
+              status = "purple",
+              closable = FALSE,
+              maximizable = TRUE,
+              tags$a(href="https://shinylaurel.com/shiny/LIMS2/", 
+                     "Visit the app.",
+                     target="_blank"), #another app link,
+              footer = "This application provides quick access to data from the Deep 
+              Sea Drilling Project (DSDP), the Ocean Drilling Program (ODP), and beyond 
+              that is not stored in the Laboratory Information Management System (LIMS).
+              DSDP (Deep Sea Drilling Project) and ODP (Ocean Drilling Program) data are 
+              stored at the NOAA National Centers for Environmental Information (NCEI) 
+              formerly known as NGDC (National Geophysical Data Center)."
             )),
         ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
