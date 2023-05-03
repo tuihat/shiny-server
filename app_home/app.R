@@ -248,8 +248,7 @@ ui <- dashboardPage(
                               background-color: #f4b943;margin-left: 400px;
                               }'))),
         tags$script("document.getElementsByClassName('sidebar-toggle')[0].style.visibility = 'hidden';") 
-    ),
-    tags$head(includeHTML(("google_analytics.html")))
+    )
 
 )
 
