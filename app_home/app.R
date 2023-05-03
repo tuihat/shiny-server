@@ -14,11 +14,11 @@ library(shinydashboardPlus)
 
 # Define UI for application that draws a histogram
 ui <- dashboardPage(
-  tags$head(includeHTML(("google_analytics.html"))),
     title = "R Shiny Applications for Ocean Drilling", #website title
     header = dashboardHeader(title = "R Shiny Applications for Ocean Drilling"),
     sidebar = dashboardSidebar(width = "0px"),
     body = dashboardBody(
+      tags$head(includeHTML(("google_analytics.html"))),
         tags$i("These are not official IODP-JRSO applications and functionality is 
          not guaranteed. User assumes all risk."), #italic disclaimer
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
