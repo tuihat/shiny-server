@@ -18,7 +18,6 @@ ui <- dashboardPage(
     header = dashboardHeader(title = "R Shiny Applications for Ocean Drilling"),
     sidebar = dashboardSidebar(width = "0px"),
     body = dashboardBody(
-      tags$head(includeHTML(("google_analytics.html"))),
         tags$i("These are not official IODP-JRSO applications and functionality is 
          not guaranteed. User assumes all risk."), #italic disclaimer
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
@@ -249,8 +248,8 @@ ui <- dashboardPage(
                               background-color: #f4b943;margin-left: 400px;
                               }'))),
         tags$script("document.getElementsByClassName('sidebar-toggle')[0].style.visibility = 'hidden';") 
-    )
-    
+    ),
+    tags$head(includeHTML(("google_analytics.html")))
 
 )
 
