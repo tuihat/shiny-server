@@ -14,6 +14,7 @@ library(shinydashboardPlus)
 
 # Define UI for application that draws a histogram
 ui <- dashboardPage(
+  tags$head(includeHTML(("google_analytics.html"))),
     title = "R Shiny Applications for Ocean Drilling", #website title
     header = dashboardHeader(title = "R Shiny Applications for Ocean Drilling"),
     sidebar = dashboardSidebar(width = "0px"),
