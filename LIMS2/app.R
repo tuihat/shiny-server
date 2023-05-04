@@ -446,7 +446,7 @@ server <- function(input, output, session) {
     for(i in 1:nrow(new_df2)) {# for-loop over columns
       for(j in 1:ncol(new_df2)){
         if (new_df2[i,j] != "not available") {
-          new_df2[i,j] <- paste0("<a href='",new_df2[i,j],"'>",rownames(new_df2)[i],"</a>")}
+          new_df2[i,j] <- paste0("<a href='",new_df2[i,j],"' target='_blank'>",rownames(new_df2)[i],"</a>")}
         else{}
       }}
     new_df2
@@ -559,7 +559,7 @@ server <- function(input, output, session) {
   ODP_select <- reactive({ #link to specific dataset
     df <- choose_ODP_data()
     link2 <- paste0(df$ngdc_link)
-    url <- a(link2, href=link2)
+    url <- a(link2, href=link2, target = "_blank")
     })
 
   output$ODP_link <- renderUI({ #link to specific dataset
@@ -568,7 +568,7 @@ server <- function(input, output, session) {
   
   ODP_select2 <- reactive({ #see the entire expedition
     link2 <- paste0("https://www.ngdc.noaa.gov/mgg/geology/data/joides_resolution/", input$input2.1)
-    url <- a(link2, href=link2)
+    url <- a(link2, href=link2, target = "_blank")
   })
   
   output$ODP_link2 <- renderUI({ #see the entire expedition
@@ -589,7 +589,7 @@ server <- function(input, output, session) {
     for(i in 1:nrow(new_df2)) {# for-loop over columns
       for(j in 1:ncol(new_df2)){
         if (new_df2[i,j] != "no data available") {
-          new_df2[i,j] <- paste0("<a href='",new_df2[i,j],"'>",rownames(new_df2)[i],"</a>")}
+          new_df2[i,j] <- paste0("<a href='",new_df2[i,j],"' target='_blank'>",rownames(new_df2)[i],"</a>")}
         else{}
       }}
     new_df2
@@ -666,7 +666,7 @@ server <- function(input, output, session) {
   IODP_NGDC_select <- reactive({ #link to specific dataset
     df <- choose_IODP_data()
     link2 <- paste0(df$ngdc_link)
-    url <- a(link2, href=link2)
+    url <- a(link2, href=link2, target = "_blank")
   })
   
   output$IODP_NGDC_link <- renderUI({ #link to specific dataset
@@ -675,7 +675,7 @@ server <- function(input, output, session) {
   
   IODP_select2 <- reactive({ #see the entire expedition
     link2 <- paste0("https://www.ngdc.noaa.gov/mgg/geology/data/joides_resolution/", input$input4.1)
-    url <- a(link2, href=link2)
+    url <- a(link2, href=link2, target = "_blank")
   })
   
   output$IODP_link2 <- renderUI({ #see the entire expedition
@@ -696,7 +696,7 @@ server <- function(input, output, session) {
     for(i in 1:nrow(new_df2)) {# for-loop over columns
       for(j in 1:ncol(new_df2)){
         if (new_df2[i,j] != "no data available") {
-          new_df2[i,j] <- paste0("<a href='",new_df2[i,j],"'>",rownames(new_df2)[i],"</a>")}
+          new_df2[i,j] <- paste0("<a href='",new_df2[i,j],"' target='_blank'>",rownames(new_df2)[i],"</a>")}
         else{}
       }}
     new_df2
@@ -726,7 +726,7 @@ server <- function(input, output, session) {
     for(i in 1:nrow(IODP_result2)) {# for-loop over columns
       for(j in 1:ncol(IODP_result2)){
         if (IODP_result2[i,j] != "not published" & IODP_result2[i,j] != "no data available") {
-          IODP_result2[i,j] <- paste0("<a href='",IODP_result2[i,j],"'>",colnames(IODP_result2)[j],"</a>")}
+          IODP_result2[i,j] <- paste0("<a href='",IODP_result2[i,j],"' target='_blank'>",colnames(IODP_result2)[j],"</a>")}
         else{}
       }}
     IODP_result2 <- cbind(IODP_result2, data_headers_ZENODO)
