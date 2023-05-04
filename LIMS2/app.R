@@ -384,6 +384,7 @@ ui <- fluidPage(theme = shinytheme("spacelab"),
                                        LIMS, 'not published' indicates that data exists but was not published in Zenodo. For
                                        other data types (ex. - DATA1) it is unknown whether this data exists."))),
                 br(), br(),
+                tags$head(includeHTML(("google_analytics.html"))),
                 tags$style(type="text/css",
                            ".shiny-output-error { visibility: hidden; }",
                            ".shiny-output-error:before { visibility: hidden; }"
