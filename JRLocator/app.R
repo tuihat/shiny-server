@@ -32,7 +32,7 @@ pal <- colorFactor(
 )
 
 ui <- fluidPage(theme = shinytheme("slate"),
-                tags$head(includeHTML(("google-analytics.html"))),
+                tags$head(includeHTML(("google_analytics.html"))),
                 title = "JOIDES Resolution Locator Map", #website title
                 titlePanel("JOIDES Resolution Locator Map - Previous 100 Days"),
                 tags$style(type = "text/css", "#mymap {height: calc(100vh - 100px) !important;}"),
