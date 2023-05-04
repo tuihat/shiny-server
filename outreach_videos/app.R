@@ -3,6 +3,7 @@ if(!require(DT)){ #check if the package is installed and sourced
   install.packages("DT") #if not, install the package
   library(DT) #and source the package 
 }
+
 library(shiny)
 library(shinyjs)
 library(shinyWidgets)
@@ -61,7 +62,7 @@ ui <- dashboardPage(
                               background-color: #325669;
                               }
          .box-header{ display: none}
-                           '))),
+               google_analytics.html'))),
     tags$script("document.getElementsByClassName('sidebar-toggle')[0].style.visibility = 'hidden';")
   )
 )
