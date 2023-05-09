@@ -1,6 +1,6 @@
 #Data Mining - DSDP, ODP, IODP Coring Stats; Glomar Challenger & JR
 #started:  25 March 2020
-#updated: 13 October 2022
+#updated: 21 April 2023
 #Laurel Childress; childress@iodp.tamu.edu
 
 library(ggplot2)
@@ -11,12 +11,12 @@ library(shinyWidgets)
 
 exp_stats <- read.csv("DSDP-ODP-IODP_core_summaries_HLAPCcorrected.csv", stringsAsFactors = FALSE)
 #######EXP LIST ORDERFOR USE BELOW#############################################
-all_exp <- c("1","2","3","4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "100", "101", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "303", "304", "305", "306", "307", "308", "309", "311", "312", "320T", "320", "321", "323", "324", "317", "318", "327", "328", "329", "330", "334", "335", "336", "339", "340T", "340", "342", "344", "345", "341", "346", "349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362T", "362", "363", "366", "367", "368", "371", "369", "372", "374", "375", "376", "368X", "379", "382", "383", "379T", "385", "378", "384", "390C", "395E", "395C", "396","391","392", "390", "393")
+all_exp <- c("1","2","3","4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "100", "101", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "303", "304", "305", "306", "307", "308", "309", "311", "312", "320T", "320", "321", "323", "324", "317", "318", "327", "328", "329", "330", "334", "335", "336", "339", "340T", "340", "342", "344", "345", "341", "346", "349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362T", "362", "363", "366", "367", "368", "371", "369", "372", "374", "375", "376", "368X", "379", "382", "383", "379T", "385", "378", "384", "390C", "395E", "395C", "396","391","392", "390", "393", "397T", "397", "398")
 DSDP_only <- c("1","2","3","4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96")
-JOIDES_only <- c("100", "101", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "303", "304", "305", "306", "307", "308", "309", "311", "312", "317", "318", "320", "320T", "321", "323", "324", "327", "328", "329", "330", "334", "335", "336", "339", "340", "340T", "341", "342", "344", "345", "346", "349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362", "362T", "363", "366", "367", "368", "368X", "369", "371", "372", "374", "375", "376", "378", "379", "379T", "382", "383", "384", "385", "390C", "395C", "395E", "396","391","392", "390", "393")
+JOIDES_only <- c("100", "101", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "303", "304", "305", "306", "307", "308", "309", "311", "312", "317", "318", "320", "320T", "321", "323", "324", "327", "328", "329", "330", "334", "335", "336", "339", "340", "340T", "341", "342", "344", "345", "346", "349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362", "362T", "363", "366", "367", "368", "368X", "369", "371", "372", "374", "375", "376", "378", "379", "379T", "382", "383", "384", "385", "390C", "395C", "395E", "396","391","392", "390", "393", "397T", "397", "398")
 ODP <- c("100", "101", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210")
 IODP_1 <- c("301", "303", "304", "305", "306", "307", "308", "309", "311", "312", "320T", "320", "321", "323", "324", "317", "318", "327", "328", "329", "330", "334", "335", "336", "339", "340T", "340", "342", "344", "345", "341", "346")
-IODP_2 <- c("349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362T", "362", "363", "366", "367", "368", "371", "369", "372", "374", "375", "376", "368X", "379", "382", "383", "379T", "385", "378", "384", "390C", "395E", "395C", "396","391","392", "390", "393")
+IODP_2 <- c("349", "350", "351", "352", "353", "354", "355", "356", "359", "360", "361", "362T", "362", "363", "366", "367", "368", "371", "369", "372", "374", "375", "376", "368X", "379", "382", "383", "379T", "385", "378", "384", "390C", "395E", "395C", "396","391","392", "390", "393", "397T", "397", "398")
 
 ###############################################################################
 
@@ -103,7 +103,9 @@ ui <- fluidPage(tags$head(tags$style(HTML("
                                                  plotOutput("depthPlotExp", width = 1400, height = 800))))
                 ),
                 tags$i("These are not official IODP-JRSO applications and functionality is 
-         not guaranteed. User assumes all risk.") #italic disclaimer
+         not guaranteed. User assumes all risk."), #italic disclaimer
+                br(),
+                tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")
                 )
 
 server <- function(input, output, session) {
@@ -361,7 +363,7 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "mediumturquoise", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("APC; n = ", nrow(APC1))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
@@ -376,7 +378,7 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "royalblue4", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("HLAPC; n = ", nrow(HLAPC1))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
@@ -391,7 +393,7 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "palevioletred3", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("XCB; n = ", nrow(XCB1))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
@@ -406,7 +408,7 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "orange", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(RCB1))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
@@ -426,7 +428,7 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "mediumturquoise", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("APC; n = ", nrow(APC1))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
@@ -441,7 +443,7 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "royalblue4", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("HLAPC; n = ", nrow(HLAPC1))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
@@ -456,7 +458,7 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "palevioletred3", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("XCB; n = ", nrow(XCB1))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
@@ -471,7 +473,7 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "orange", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(RCB1))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
@@ -487,20 +489,20 @@ server <- function(input, output, session) {
                      binwidth = 2, fill = "orange", color = "gray40") +
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(fake_legend))) +
       theme(axis.text=element_text(size=12),
             axis.ticks.length = unit(0.25, "cm"),
             axis.title=element_text(size=15,face="bold"),
             plot.margin = margin(20, 50, 20, 20))
     
-    t2_p1 <- t2_p1 + scale_y_continuous(expand = c(0,0),
+    t2_p1 <- t2_p1 + scale_y_continuous(expand = FALSE,
                                         limits=c(0,max(ggplot_build(empty1)$data[[1]]$count)*1.01))
-    t2_p2 <- t2_p2 + scale_y_continuous(expand = c(0,0),
+    t2_p2 <- t2_p2 + scale_y_continuous(expand = FALSE,
                                         limits=c(0,max(ggplot_build(empty1)$data[[1]]$count)*1.01))
-    t2_p3 <- t2_p3 + scale_y_continuous(expand = c(0,0),
+    t2_p3 <- t2_p3 + scale_y_continuous(expand = FALSE,
                                         limits=c(0,max(ggplot_build(empty1)$data[[1]]$count)*1.01))
-    t2_p4 <- t2_p4 + scale_y_continuous(expand = c(0,0),
+    t2_p4 <- t2_p4 + scale_y_continuous(expand = FALSE,
                                         limits=c(0,max(ggplot_build(empty1)$data[[1]]$count)*1.01))
 
     
@@ -519,7 +521,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("APC; n = ", nrow(APC1))) +
       theme(legend.position = "none",
             axis.text=element_text(size=12),
@@ -536,7 +538,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("HLAPC; n = ", nrow(HLAPC1))) +
       theme(legend.position = "none",
             axis.text=element_text(size=12),
@@ -553,7 +555,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("XCB; n = ", nrow(XCB1))) +
       theme(legend.position = "none",
             axis.text=element_text(size=12),
@@ -570,7 +572,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(RCB1))) +
       theme(legend.position = "none",
             axis.text=element_text(size=12),
@@ -590,7 +592,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors, breaks = c("DSDP", "ODP", "IODP-1", "IODP-2")) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(fake_legend))) +
       theme(legend.position = "bottom",
             legend.title = element_blank(),
@@ -620,7 +622,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("APC; n = ", nrow(APC1))) +
       theme(legend.position = "none",
             axis.text=element_text(size=12),
@@ -637,7 +639,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("HLAPC; n = ", nrow(HLAPC1))) +
       theme(legend.position = "none",
             axis.text=element_text(size=12),
@@ -654,7 +656,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("XCB; n = ", nrow(XCB1))) +
       theme(legend.position = "none",
             axis.text=element_text(size=12),
@@ -671,7 +673,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(RCB1))) +
       theme(legend.position = "none",
             axis.text=element_text(size=12),
@@ -689,7 +691,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors, breaks = c("DSDP", "ODP", "IODP-1", "IODP-2")) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(fake_legend))) +
       theme(legend.position = "bottom",
             legend.title = element_blank(),
@@ -706,7 +708,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_fill_manual(values = program_colors, breaks = c("DSDP", "ODP", "IODP-1", "IODP-2")) +
       scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-      coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(fake_legend))) +
       theme(legend.position = "bottom",
             legend.title = element_blank(),
@@ -715,13 +717,13 @@ server <- function(input, output, session) {
             axis.title=element_text(size=15,face="bold"),
             plot.margin = margin(20, 50, 20, 20))
     
-    t2_p1 <- t2_p1 + scale_y_continuous(expand = c(0,0),
+    t2_p1 <- t2_p1 + scale_y_continuous(expand = FALSE,
                                         limits=c(0,max(ggplot_build(empty3)$data[[1]]$count)*1.01))
-    t2_p2 <- t2_p2 + scale_y_continuous(expand = c(0,0),
+    t2_p2 <- t2_p2 + scale_y_continuous(expand = FALSE,
                                         limits=c(0,max(ggplot_build(empty3)$data[[1]]$count)*1.01))
-    t2_p3 <- t2_p3 + scale_y_continuous(expand = c(0,0),
+    t2_p3 <- t2_p3 + scale_y_continuous(expand = FALSE,
                                         limits=c(0,max(ggplot_build(empty3)$data[[1]]$count)*1.01))
-    t2_p4 <- t2_p4 + scale_y_continuous(expand = c(0,0),
+    t2_p4 <- t2_p4 + scale_y_continuous(expand = FALSE,
                                         limits=c(0,max(ggplot_build(empty3)$data[[1]]$count)*1.01))
     
     temp_rec2 <- plot_grid(t2_p1, t2_p2, t2_p3, t2_p4, nrow = 2)
@@ -755,7 +757,7 @@ server <- function(input, output, session) {
     theme_classic() +
     scale_fill_manual(values = temp_colors1) +
     scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-    coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+    coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
     labs(x = "recovery (%)", y = "Count", title = paste0("APC; n = ", nrow(APC1))) +
     theme(legend.position = "none",
           axis.text=element_text(size=12),
@@ -772,7 +774,7 @@ server <- function(input, output, session) {
     theme_classic() +
     scale_fill_manual(values = temp_colors1) +
     scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-    coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+    coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
     labs(x = "recovery (%)", y = "Count", title = paste0("HLAPC; n = ", nrow(HLAPC1))) +
     theme(legend.position = "none",
           axis.text=element_text(size=12),
@@ -789,7 +791,7 @@ server <- function(input, output, session) {
     theme_classic() +
     scale_fill_manual(values = temp_colors1) +
     scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-    coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+    coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
     labs(x = "recovery (%)", y = "Count", title = paste0("XCB; n = ", nrow(XCB1))) +
     theme(legend.position = "none",
           axis.text=element_text(size=12),
@@ -806,7 +808,7 @@ server <- function(input, output, session) {
     theme_classic() +
     scale_fill_manual(values = temp_colors1) +
     scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-    coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+    coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
     labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(RCB1))) +
     theme(legend.position = "none",
           axis.text=element_text(size=12),
@@ -825,7 +827,7 @@ server <- function(input, output, session) {
     theme_classic() +
     scale_fill_manual(values = temp_colors1) +
     scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-    coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+    coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
     labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(fake_legend))) +
     theme(legend.position = "bottom",
           legend.title = element_blank(),
@@ -865,7 +867,7 @@ server <- function(input, output, session) {
         theme_classic() +
         scale_fill_manual(values = temp_colors1) +
         scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-        coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "Count", title = paste0("APC; n = ", nrow(APC1))) +
         theme(legend.position = "none",
               axis.text=element_text(size=12),
@@ -882,7 +884,7 @@ server <- function(input, output, session) {
         theme_classic() +
         scale_fill_manual(values = temp_colors1) +
         scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-        coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "Count", title = paste0("HLAPC; n = ", nrow(HLAPC1))) +
         theme(legend.position = "none",
               axis.text=element_text(size=12),
@@ -899,7 +901,7 @@ server <- function(input, output, session) {
         theme_classic() +
         scale_fill_manual(values = temp_colors1) +
         scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-        coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "Count", title = paste0("XCB; n = ", nrow(XCB1))) +
         theme(legend.position = "none",
               axis.text=element_text(size=12),
@@ -916,7 +918,7 @@ server <- function(input, output, session) {
         theme_classic() +
         scale_fill_manual(values = temp_colors1) +
         scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-        coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(RCB1))) +
         theme(legend.position = "none",
               axis.text=element_text(size=12),
@@ -935,7 +937,7 @@ server <- function(input, output, session) {
         theme_classic() +
         scale_fill_manual(values = temp_colors1) +
         scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-        coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(fake_legend))) +
         theme(legend.position = "bottom",
               legend.title = element_blank(),
@@ -955,7 +957,7 @@ server <- function(input, output, session) {
         theme_classic() +
         scale_fill_manual(values = temp_colors1) +
         scale_x_continuous(breaks = seq(0, 150, by = 20)) +
-        coord_cartesian(expand = c(0,0), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "Count", title = paste0("RCB; n = ", nrow(fake_legend))) +
         theme(legend.position = "bottom",
               legend.title = element_blank(),
@@ -969,13 +971,13 @@ server <- function(input, output, session) {
           guides(fill = guide_legend(nrow = 2)) +
           theme(legend.position = "bottom"))
       
-      t2_p1 <- t2_p1 + scale_y_continuous(expand = c(0,0),
+      t2_p1 <- t2_p1 + scale_y_continuous(expand = FALSE,
                                           limits=c(0,max(ggplot_build(empty4)$data[[1]]$count)*1.01))
-      t2_p2 <- t2_p2 + scale_y_continuous(expand = c(0,0),
+      t2_p2 <- t2_p2 + scale_y_continuous(expand = FALSE,
                                           limits=c(0,max(ggplot_build(empty4)$data[[1]]$count)*1.01))
-      t2_p3 <- t2_p3 + scale_y_continuous(expand = c(0,0),
+      t2_p3 <- t2_p3 + scale_y_continuous(expand = FALSE,
                                           limits=c(0,max(ggplot_build(empty4)$data[[1]]$count)*1.01))
-      t2_p4 <- t2_p4 + scale_y_continuous(expand = c(0,0),
+      t2_p4 <- t2_p4 + scale_y_continuous(expand = FALSE,
                                           limits=c(0,max(ggplot_build(empty4)$data[[1]]$count)*1.01))
       
       temp_rec3 <- plot_grid(t2_p1, t2_p2, t2_p3, t2_p4, nrow = 2)
@@ -995,7 +997,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 25)) +
       scale_y_reverse() +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "APC") +
       annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                label = paste0("max = ", max(APC1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1014,7 +1016,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 25)) +
       scale_y_reverse() +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "HLAPC") +
       annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                label = paste0("max = ", max(HLAPC1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1033,7 +1035,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 25)) +
       scale_y_reverse() +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "XCB") +
       annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                label = paste0("max = ", max(XCB1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1052,7 +1054,7 @@ server <- function(input, output, session) {
       theme_classic() +
       scale_x_continuous(breaks = seq(0, 150, by = 25)) +
       scale_y_reverse() +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "RCB") +
       annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                label = paste0("max = ", max(RCB1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1080,7 +1082,7 @@ server <- function(input, output, session) {
       scale_shape_manual(values = program_shapes) +
       scale_x_continuous(breaks = seq(0, 150, by = 25)) +
       scale_y_reverse() +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "APC") +
       annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                label = paste0("max = ", max(APC1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1101,7 +1103,7 @@ server <- function(input, output, session) {
       scale_shape_manual(values = program_shapes) +
       scale_x_continuous(breaks = seq(0, 150, by = 25)) +
       scale_y_reverse() +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "HLAPC") +
       annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                label = paste0("max = ", max(HLAPC1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1122,7 +1124,7 @@ server <- function(input, output, session) {
       scale_shape_manual(values = program_shapes) +
       scale_x_continuous(breaks = seq(0, 150, by = 25)) +
       scale_y_reverse() +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "XCB") +
       annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                label = paste0("max = ", max(XCB1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1143,7 +1145,7 @@ server <- function(input, output, session) {
       scale_shape_manual(values = program_shapes) +
       scale_x_continuous(breaks = seq(0, 150, by = 25)) +
       scale_y_reverse() +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "RCB") +
       annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                label = paste0("max = ", max(RCB1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1167,7 +1169,7 @@ server <- function(input, output, session) {
       scale_y_reverse() +
       scale_fill_manual(values = program_colors, breaks = c("DSDP", "ODP", "IODP-1", "IODP-2")) +
       scale_shape_manual(values = program_shapes, breaks = c("DSDP", "ODP", "IODP-1", "IODP-2")) +
-      coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+      coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
       labs(x = "recovery (%)", y = "mbsf", title = "RCB") +
       theme(legend.position = "bottom",
             legend.title = element_blank(),
@@ -1211,7 +1213,7 @@ server <- function(input, output, session) {
         scale_shape_manual(values = temp_shapes1) +
         scale_x_continuous(breaks = seq(0, 150, by = 25)) +
         scale_y_reverse() +
-        coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "mbsf", title = "APC") +
         annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                  label = paste0("max = ", max(APC1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1232,7 +1234,7 @@ server <- function(input, output, session) {
         scale_shape_manual(values = temp_shapes1) +
         scale_x_continuous(breaks = seq(0, 150, by = 25)) +
         scale_y_reverse() +
-        coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "mbsf", title = "HLAPC") +
         annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                  label = paste0("max = ", max(HLAPC1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1253,7 +1255,7 @@ server <- function(input, output, session) {
         scale_shape_manual(values = temp_shapes1) +
         scale_x_continuous(breaks = seq(0, 150, by = 25)) +
         scale_y_reverse() +
-        coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "mbsf", title = "XCB") +
         annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                  label = paste0("max = ", max(XCB1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1274,7 +1276,7 @@ server <- function(input, output, session) {
         scale_shape_manual(values = temp_shapes1) +
         scale_x_continuous(breaks = seq(0, 150, by = 25)) +
         scale_y_reverse() +
-        coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "mbsf", title = "RCB") +
         annotate("text", x = 70, y = max(chosen_exps()$Bottom.depth.recovered..m.) - 20, 
                  label = paste0("max = ", max(RCB1$Bottom.depth.recovered..m.)), hjust = 0, vjust = 1) +
@@ -1298,7 +1300,7 @@ server <- function(input, output, session) {
         scale_y_reverse() +
         scale_fill_manual(values = temp_colors1) +
         scale_shape_manual(values = temp_shapes1) +
-        coord_cartesian(expand = c(0,0), ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
+        coord_cartesian(expand = FALSE, ylim = c(max(chosen_exps()$Bottom.depth.recovered..m.) + 20, -20), xlim = c(-5, 125)) +
         labs(x = "recovery (%)", y = "mbsf", title = "RCB") +
         theme(legend.position = "bottom",
               legend.title = element_blank(),
