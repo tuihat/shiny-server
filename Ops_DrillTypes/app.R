@@ -103,7 +103,9 @@ ui <- fluidPage(tags$head(tags$style(HTML("
                                                  plotOutput("depthPlotExp", width = 1400, height = 800))))
                 ),
                 tags$i("These are not official IODP-JRSO applications and functionality is 
-         not guaranteed. User assumes all risk.") #italic disclaimer
+         not guaranteed. User assumes all risk."), #italic disclaimer
+                br(),
+                tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")
                 )
 
 server <- function(input, output, session) {
