@@ -27,7 +27,7 @@ ui <- fluidPage(theme = shinytheme("slate"),
                                     and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
                 br(),
                 tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
-                tags$head(includeHTML(("google_analytics.html"))),
+                tags$head(includeHTML(("google_analytics.html")))
   
 )
 
