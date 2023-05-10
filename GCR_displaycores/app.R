@@ -3,12 +3,12 @@ library(shinydashboard)
 
 
 ui <- dashboardPage(
-  tags$head(includeHTML(("google_analytics.html"))),
   title = "GCR Display Cores", #website title
   header = dashboardHeader(title = "GCR Display Cores"),
   dashboardSidebar(disable = TRUE),
   # sidebar = dashboardSidebar(width = "0px"),
   body = dashboardBody(
+    tags$head(includeHTML(("google_analytics.html"))),
     fluidRow( #row 1
       box(width = 6,
         title = "Leg 1, Site 2, Core 5R, Section 2",
