@@ -42,6 +42,8 @@ ui <- dashboardPage(
     downloadButton("downloadall", "Download entire database"), br(), br(),
     tags$i("These are not official IODP-JRSO applications and functionality is 
            not guaranteed. User assumes all risk."), #italic disclaimer
+    br(),
+    tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
     tags$head(tags$style(HTML('
         /* logo */
         .skin-blue .main-header .logo {
