@@ -232,6 +232,8 @@ ui <- dashboardPage(
                 footer = "Convert section summaries to tables with rows
            cm-by-cm. Add in splice and alternate depth scale information as desired."
             )),
+        br(),
+        tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
         tags$head(tags$style(HTML('
         /* logo */
         .skin-blue .main-header .logo {
