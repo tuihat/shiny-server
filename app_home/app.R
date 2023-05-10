@@ -134,7 +134,7 @@ ui <- dashboardPage(
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
         h4("GCR & Data Access Applications", style = 'font-weight: bold;'), #subset of applications
         fluidRow(
-            userBox(
+            userBox(width = 4,
                 title = userDescription(
                     title = "GCR Sample Planning",
                     subtitle = "",
@@ -154,7 +154,24 @@ ui <- dashboardPage(
               sample list of repetitive sampling. (3) The user provides a density
               and either a volume or mass and the alternative is returned. (4) The
               user provides samples by sample type and material volumes are provided."),
-            userBox(
+            userBox(width = 4,
+              title = userDescription(
+                title = "GCR Display Cores",
+                subtitle = "",
+                image = "GCR_app_image.jpg"
+              ),
+              status = "purple",
+              closable = FALSE,
+              maximizable = TRUE,
+              tags$a(href="https://shinylaurel.com/shiny/GCR_displaycores/", 
+                     "Visit the app.",
+                     target="_blank"), #another app link,
+              footer = "This site previews core sections in the GCR that ready for quick 
+              display to students, visitors, and scientists. A preview image is provided, as
+              well as a brief overview of the location, science, and age of the material. Links
+              to the digital core image, the Initial Report/Proceedings Volume, and the visual core description (VCD)
+              are also provided."),
+            userBox(width = 4,
               title = userDescription(
                 title = "LIMS2 - Electric Boogaloo",
                 subtitle = "",
