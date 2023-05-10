@@ -112,7 +112,11 @@ ui <- fluidPage(navbarPage("JR Safety Monitoring",
                                                              numericInput("initializeA", "a:", value = 5),
                                                              numericInput("initializeB", "b:", value = 0.16)
                                                              ))
-                           ))),
+                           )),
+                           tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
+                           br(),
+                           tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")),
                            
                            tabPanel("Plotting Hydrocarbon",
                                 titlePanel("Plotting Hydrocarbon"),
@@ -180,7 +184,7 @@ server <- function(input, output) {
                         method="nls",formula =  y~a*exp(x*b),method.args=list(start=c(a=a,b=b)),se=F,color="blue")+
             scale_y_reverse(breaks = c(seq(1000, 0, by = -50))) +
             scale_x_continuous(position = "top") +
-            coord_cartesian(expand = c(0,0), xlim = c(0, 40), ylim = c(1000,0)) +
+            coord_cartesian(expand = FALSE, xlim = c(0, 40), ylim = c(1000,0)) +
             theme_classic() +
             labs(x = "temperature (C)", y = "mbsf") +
             theme(axis.ticks.length = unit(0.18, "cm"),
@@ -251,7 +255,7 @@ server <- function(input, output) {
             annotate("text", x=800, y=45, size = 5, label= "Normal") +
             annotate("text", x=40, y=75, size = 5, angle = 70, label= "High TOC (2%)") +
             annotate("text", x=450, y=80, size = 5, angle = 72, label= "Low TOC (0.5%)") +
-            coord_cartesian(expand = c(0,0), xlim = c(10, 100000), ylim = c(100,0)) +
+            coord_cartesian(expand = FALSE, xlim = c(10, 100000), ylim = c(100,0)) +
             theme_classic() +
             labs(x = "Methane/Ethane (C1/C2)", y = "temperature (C)") +
             theme(axis.ticks.length = unit(0.18, "cm"),
