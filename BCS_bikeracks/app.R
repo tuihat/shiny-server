@@ -9,11 +9,11 @@ library(leaflet.extras)
 # jr_icon <- makeIcon("ship_icon.jpg", iconWidth = 100, iconHeight = 100)
 bike <- read.csv("bike_rack_db.csv")
 
-last_update <- "21 January 2023"
+last_update <- "7 May 2023"
 
 #position colors
 pal <- colorFactor(
-  palette = c('red', 'blue'),
+  palette = c('red', 'blue', 'darkslategray3'),
   domain = bike$style
 )
 
@@ -24,7 +24,10 @@ ui <- fluidPage(theme = shinytheme("slate"),
                 fluidRow(width = 12, leafletOutput("mymap")),
                 fluidRow(width = 12, textOutput("lastdate")),
                 tags$i("This is not an official City of Collge Station or Bryan application 
-                                    and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
+                                    and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
+                br(),
+                tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
+                tags$head(includeHTML(("google_analytics.html"))),
   
 )
 
