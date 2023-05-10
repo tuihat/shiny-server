@@ -390,7 +390,9 @@ ui <- fluidPage(theme = shinytheme("spacelab"),
                            ".shiny-output-error:before { visibility: hidden; }"
                 ),
                 tags$i("These are not official IODP-JRSO applications 
-                                    and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
+                                    and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
+                br(),
+                tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")
   
 )
 
