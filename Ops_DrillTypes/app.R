@@ -30,7 +30,7 @@ ui <- fluidPage(tags$head(tags$style(HTML("
                                    -moz-column-fill: auto;
                                    -column-fill: auto;
                                  } 
-                                 "))),
+                                 google_analytics.html"))),
                 titlePanel("DSDP, ODP, IODP Coring Type Stats"),
                 sidebarLayout(
                   sidebarPanel(
@@ -105,8 +105,7 @@ ui <- fluidPage(tags$head(tags$style(HTML("
                 tags$i("These are not official IODP-JRSO applications and functionality is 
          not guaranteed. User assumes all risk."), #italic disclaimer
                 br(),
-                tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
-                tags$head(includeHTML(("google_analytics.html"))),
+                tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")
                 )
 
 server <- function(input, output, session) {
