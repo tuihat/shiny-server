@@ -173,7 +173,7 @@ ui <- dashboardPage(
               are also provided."),
             userBox(width = 4,
               title = userDescription(
-                title = "LIMS2 - Electric Boogaloo",
+                title = "LIMS2 - A Database of Databases",
                 subtitle = "",
                 image = "LIMS2_disco_ball.jpg"
               ),
