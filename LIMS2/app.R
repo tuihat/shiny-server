@@ -141,7 +141,7 @@ data_headers_ZENODO <- c("Operations", "Operations", "Operations", "Operations",
 
 
 ui <- fluidPage(theme = shinytheme("spacelab"),
-                navbarPage("LIMS2 - Electric Boogaloo", #title of the whole app
+                navbarPage("LIMS2 - A Database of Databases", #title of the whole app
                            tabPanel(title = HTML(paste("<center>About", "the App</center>", sep = "<br/>")), #Tab - App Intro
                                     h2("Welcome to LIMS2"),
                                     h4("This is an application for easier and faster access to
