@@ -26,11 +26,11 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher - Downhole"),
                         br()),
                       mainPanel(fluidRow(
                         column(2, numericInput("scalex1", "Change x-axis max", value = 100000)),
-                        column(2, numericInput("scalex2", "Change x-axis max", value = 500)),
-                        column(2, numericInput("scalex3", "Change x-axis max", value = 500)),
-                        column(2, numericInput("scalex4", "Change x-axis max", value = 500)),
-                        column(2, numericInput("scalex5", "Change x-axis max", value = 500)),
-                        column(2, numericInput("scalex6", "Change x-axis max", value = 500))),
+                        column(2, numericInput("scalex2", "Change x-axis max", value = 800)),
+                        column(2, numericInput("scalex3", "Change x-axis max", value = 800)),
+                        column(2, numericInput("scalex4", "Change x-axis max", value = 150)),
+                        column(2, numericInput("scalex5", "Change x-axis max", value = 100)),
+                        column(2, numericInput("scalex6", "Change x-axis max", value = 80))),
                         fluidRow(
                           column(width = 2, plotOutput("coolplot")),
                           column(width = 2, plotOutput("coolplot2")),
@@ -138,7 +138,7 @@ server <- function(input, output, session) {
       geom_path() +
       geom_point(shape = 21, color = "black", fill = "steelblue", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
-      scale_x_continuous(breaks = c(seq(0,xtop5, by = round_any(xtop5*0.25,25)))) +
+      scale_x_continuous(breaks = c(seq(0,xtop5, by = round_any(xtop5*0.25,20)))) +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop5), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "n-butane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -154,7 +154,7 @@ server <- function(input, output, session) {
       geom_path() +
       geom_point(shape = 21, color = "black", fill = "seagreen", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
-      scale_x_continuous(breaks = c(seq(0,xtop6, by = round_any(xtop6*0.25,25)))) +
+      scale_x_continuous(breaks = c(seq(0,xtop6, by = round_any(xtop6*0.25,10)))) +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop6), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "isopentane (ppmv, NGA-FID)", y = "depth (m)") +
