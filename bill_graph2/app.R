@@ -29,7 +29,7 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher - Downhole"),
                         column(2, numericInput("scalex2", "Change x-axis max", value = 800)),
                         column(2, numericInput("scalex3", "Change x-axis max", value = 800)),
                         column(2, numericInput("scalex4", "Change x-axis max", value = 150)),
-                        column(2, numericInput("scalex5", "Change x-axis max", value = 100)),
+                        column(2, numericInput("scalex5", "Change x-axis max", value = 115)),
                         column(2, numericInput("scalex6", "Change x-axis max", value = 80))),
                         fluidRow(
                           column(width = 2, plotOutput("coolplot")),
@@ -75,6 +75,8 @@ server <- function(input, output, session) {
       geom_point(shape = 21, color = "black", fill = "goldenrod4", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
       scale_x_continuous(breaks = c(seq(0,xtop1, by = round_any(xtop1*0.25,100))), labels = scales::comma) +
+      geom_vline(aes(xintercept = 92000),
+                 size = 1, linetype = 2, alpha=0.3, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop1), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "Methane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -91,6 +93,8 @@ server <- function(input, output, session) {
       geom_point(shape = 21, color = "black", fill = "orange2", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
       scale_x_continuous(breaks = c(seq(0,xtop2, by = round_any(xtop2*0.25,25)))) +
+      geom_vline(aes(xintercept = 400),
+                 size = 1, linetype = 2, alpha=0.3, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop2), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "Ethane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -107,6 +111,10 @@ server <- function(input, output, session) {
       geom_point(shape = 21, color = "black", fill = "magenta", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
       scale_x_continuous(breaks = c(seq(0,xtop3, by = round_any(xtop3*0.25,25)))) +
+      geom_vline(aes(xintercept = 400),
+                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+      geom_vline(aes(xintercept = 600),
+                 size = 1, linetype = 2, alpha=0.8, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop3), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "Propane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -123,6 +131,10 @@ server <- function(input, output, session) {
       geom_point(shape = 21, color = "black", fill = "darkseagreen3", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
       scale_x_continuous(breaks = c(seq(0,xtop4, by = round_any(xtop4*0.25,25)))) +
+      geom_vline(aes(xintercept = 80),
+                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+      geom_vline(aes(xintercept = 140),
+                 size = 1, linetype = 2, alpha=0.8, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop4), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "isobutane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -139,6 +151,10 @@ server <- function(input, output, session) {
       geom_point(shape = 21, color = "black", fill = "steelblue", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
       scale_x_continuous(breaks = c(seq(0,xtop5, by = round_any(xtop5*0.25,20)))) +
+      geom_vline(aes(xintercept = 45),
+                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+      geom_vline(aes(xintercept = 95),
+                 size = 1, linetype = 2, alpha=0.8, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop5), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "n-butane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -155,6 +171,10 @@ server <- function(input, output, session) {
       geom_point(shape = 21, color = "black", fill = "seagreen", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
       scale_x_continuous(breaks = c(seq(0,xtop6, by = round_any(xtop6*0.25,10)))) +
+      geom_vline(aes(xintercept = 35),
+                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+      geom_vline(aes(xintercept = 60),
+                 size = 1, linetype = 2, alpha=0.8, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop6), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "isopentane (ppmv, NGA-FID)", y = "depth (m)") +
