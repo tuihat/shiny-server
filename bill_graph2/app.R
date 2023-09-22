@@ -28,7 +28,7 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher - Downhole"),
                         column(2, numericInput("scalex1", "Change x-axis max", value = 100000)),
                         column(2, numericInput("scalex2", "Change x-axis max", value = 800)),
                         column(2, numericInput("scalex3", "Change x-axis max", value = 800)),
-                        column(2, numericInput("scalex4", "Change x-axis max", value = 150)),
+                        column(2, numericInput("scalex4", "Change x-axis max", value = 190)),
                         column(2, numericInput("scalex5", "Change x-axis max", value = 115)),
                         column(2, numericInput("scalex6", "Change x-axis max", value = 80))),
                         fluidRow(
@@ -81,7 +81,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "Methane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(15,15,15,15))
+            plot.margin = margin(1,50,15,0)) #(top, right, bottom, left)
   }, height = 900, width = 250)
   
   output$coolplot2 <- renderPlot({
@@ -99,7 +99,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "Ethane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(15,15,15,15))
+            plot.margin = margin(1,50,15,0))
   }, height = 900, width = 250)
   
   output$coolplot3 <- renderPlot({
@@ -119,7 +119,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "Propane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(15,15,15,15))
+            plot.margin = margin(1,50,15,0))
   }, height = 900, width = 250)
     
   output$coolplot4 <- renderPlot({
@@ -139,7 +139,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "isobutane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(15,15,15,15))
+            plot.margin = margin(1,50,15,0))
   }, height = 900, width = 250)
     
   output$coolplot5 <- renderPlot({
@@ -159,7 +159,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "n-butane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(15,15,15,15))
+            plot.margin = margin(1,50,15,0))
   }, height = 900, width = 250)
   
   output$coolplot6 <- renderPlot({
@@ -179,7 +179,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "isopentane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(15,15,15,15))
+            plot.margin = margin(1,50,15,0))
   }, height = 900, width = 250)
     # 
     # xtop7 <- input$scalex7
