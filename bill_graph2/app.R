@@ -25,7 +25,7 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher - Downhole"),
                         actionButton("goButton1", "Make my graphs!"),
                         br()),
                       mainPanel(fluidRow(
-                        column(2, numericInput("scalex1", "Change x-axis max", value = 100000)),
+                        column(2, numericInput("scalex1", "Change x-axis max", value = 120000)),
                         column(2, numericInput("scalex2", "Change x-axis max", value = 800)),
                         column(2, numericInput("scalex3", "Change x-axis max", value = 800)),
                         column(2, numericInput("scalex4", "Change x-axis max", value = 190)),
@@ -75,12 +75,13 @@ server <- function(input, output, session) {
       geom_point(shape = 21, color = "black", fill = "goldenrod4", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
       scale_x_continuous(breaks = c(seq(0,xtop1, by = round_any(xtop1*0.25,100))), labels = scales::comma) +
-      geom_vline(aes(xintercept = 92000),
+      geom_vline(aes(xintercept = 100000),
                  size = 1, linetype = 2, alpha=0.3, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop1), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "Methane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
+            axis.text.x = element_text(size = 7),
             plot.margin = margin(1,50,15,0)) #(top, right, bottom, left)
   }, height = 900, width = 250)
   
@@ -99,6 +100,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "Ethane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
+            axis.text.x = element_text(size = 7),
             plot.margin = margin(1,50,15,0))
   }, height = 900, width = 250)
   
@@ -119,6 +121,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "Propane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
+            axis.text.x = element_text(size = 7),
             plot.margin = margin(1,50,15,0))
   }, height = 900, width = 250)
     
