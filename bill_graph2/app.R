@@ -24,6 +24,8 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher - Downhole"),
                         #same as above but for a batch; user can download table
                         actionButton("goButton1", "Make my graphs!"),
                         br(), br(),
+                        checkboxInput("labelCore", "Show core numbers", FALSE),
+                        br(), br(),
                         tags$i("These are not official IODP-JRSO applications 
                                     and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
                         ),
@@ -73,19 +75,43 @@ server <- function(input, output, session) {
     gasmonitor <- yesterday()
     ybottom <- ybottom()
     xtop1 <- input$scalex1
-    ggplot(data = gasmonitor, aes(x = Methane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+    p <- ggplot(data = gasmonitor, aes(x = Methane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
       geom_path() +
-      geom_point(shape = 21, color = "black", fill = "goldenrod4", size = 2.5, stroke = 0.5) +
+      geom_point(shape = 21, color = "black", fill = "goldenrod2", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
       scale_x_continuous(breaks = c(seq(0,xtop1, by = round_any(xtop1*0.25,100))), labels = scales::comma) +
       geom_vline(aes(xintercept = 100000),
-                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop1), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "Methane (ppmv, NGA-FID)", y = "depth (m)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
             axis.text.x = element_text(size = 7),
             plot.margin = margin(1,50,15,0)) #(top, right, bottom, left)
+    
+    if(input$labelCore == FALSE){
+      p
+    }
+    
+    else if(input$labelCore == TRUE){
+      
+      ggplot(data = gasmonitor, aes(x = Methane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        # geom_path() +
+        geom_point(shape = 16, color = "goldenrod2", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
+        geom_text(aes(label = Core), size = 4) +
+        scale_x_continuous(breaks = c(seq(0,xtop1, by = round_any(xtop1*0.25,100))), labels = scales::comma) +
+        geom_vline(aes(xintercept = 100000),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop1), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "Methane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              axis.text.x = element_text(size = 7),
+              plot.margin = margin(1,50,15,0)) #(top, right, bottom, left)
+    }
+    
+    else{NULL}
   }, height = 900, width = 250)
   
   output$coolplot2 <- renderPlot({
@@ -97,8 +123,8 @@ server <- function(input, output, session) {
       geom_point(shape = 21, color = "black", fill = "orange2", size = 2.5, stroke = 0.5) +
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
       scale_x_continuous(breaks = c(seq(0,xtop2, by = round_any(xtop2*0.25,25)))) +
-      geom_vline(aes(xintercept = 400),
-                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+      geom_vline(aes(xintercept = 600),
+                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop2), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "Ethane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -117,9 +143,9 @@ server <- function(input, output, session) {
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
       scale_x_continuous(breaks = c(seq(0,xtop3, by = round_any(xtop3*0.25,25)))) +
       geom_vline(aes(xintercept = 400),
-                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
       geom_vline(aes(xintercept = 600),
-                 size = 1, linetype = 2, alpha=0.8, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop3), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "Propane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -138,9 +164,9 @@ server <- function(input, output, session) {
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
       scale_x_continuous(breaks = c(seq(0,xtop4, by = round_any(xtop4*0.25,25)))) +
       geom_vline(aes(xintercept = 80),
-                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
       geom_vline(aes(xintercept = 140),
-                 size = 1, linetype = 2, alpha=0.8, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop4), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "isobutane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -158,9 +184,9 @@ server <- function(input, output, session) {
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
       scale_x_continuous(breaks = c(seq(0,xtop5, by = round_any(xtop5*0.25,20)))) +
       geom_vline(aes(xintercept = 45),
-                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
       geom_vline(aes(xintercept = 95),
-                 size = 1, linetype = 2, alpha=0.8, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop5), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "n-butane (ppmv, NGA-FID)", y = "depth (m)") +
@@ -178,9 +204,9 @@ server <- function(input, output, session) {
       scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
       scale_x_continuous(breaks = c(seq(0,xtop6, by = round_any(xtop6*0.25,10)))) +
       geom_vline(aes(xintercept = 35),
-                 size = 1, linetype = 2, alpha=0.3, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
       geom_vline(aes(xintercept = 60),
-                 size = 1, linetype = 2, alpha=0.8, color = "red") +
+                 linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
       coord_cartesian(expand = FALSE, xlim = c(-10, xtop6), ylim = c(ybottom,ytop)) +
       theme_classic() +
       labs(x = "isopentane (ppmv, NGA-FID)", y = "depth (m)") +
