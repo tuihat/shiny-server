@@ -37,7 +37,9 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher - Downhole"),
                           column(width = 2, plotOutput("coolplot3")),
                           column(width = 2, plotOutput("coolplot4")),
                           column(width = 2, plotOutput("coolplot5")),
-                          column(width = 2, plotOutput("coolplot6")))
+                          column(width = 2, plotOutput("coolplot6"))),
+                        tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
                       )
                       ))
 
