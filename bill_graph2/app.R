@@ -23,7 +23,10 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher - Downhole"),
                                     ".csv")),
                         #same as above but for a batch; user can download table
                         actionButton("goButton1", "Make my graphs!"),
-                        br()),
+                        br(), br(),
+                        tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
+                        ),
                       mainPanel(fluidRow(
                         column(2, numericInput("scalex1", "Change x-axis max", value = 120000)),
                         column(2, numericInput("scalex2", "Change x-axis max", value = 800)),
@@ -37,9 +40,7 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher - Downhole"),
                           column(width = 2, plotOutput("coolplot3")),
                           column(width = 2, plotOutput("coolplot4")),
                           column(width = 2, plotOutput("coolplot5")),
-                          column(width = 2, plotOutput("coolplot6"))),
-                        tags$i("These are not official IODP-JRSO applications 
-                                    and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
+                          column(width = 2, plotOutput("coolplot6")))
                       )
                       ))
 
