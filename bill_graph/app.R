@@ -24,10 +24,11 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher"),
                                 ".csv")),
                     #same as above but for a batch; user can download table
                     actionButton("goButton1", "Make my graphs!"),
-                    br()),
-                  mainPanel(plotOutput("coolplot"),
-                            tags$i("These are not official IODP-JRSO applications 
+                    br(), br(),
+                    tags$i("These are not official IODP-JRSO applications 
                                     and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
+                    ),
+                  mainPanel(plotOutput("coolplot")
                 )))
 
 server <- function(input, output, session) {
