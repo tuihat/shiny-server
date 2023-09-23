@@ -25,7 +25,9 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher"),
                     #same as above but for a batch; user can download table
                     actionButton("goButton1", "Make my graphs!"),
                     br()),
-                  mainPanel(plotOutput("coolplot")
+                  mainPanel(plotOutput("coolplot"),
+                            tags$i("These are not official IODP-JRSO applications 
+                                    and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
                 )))
 
 server <- function(input, output, session) {
@@ -47,11 +49,11 @@ server <- function(input, output, session) {
       geom_area(data = technote30, aes(x = anom_C1.C2, y = temp_C),
                 fill = "grey80") +
       geom_path(data = technote_normal, aes(x = dashed_x, y = dashed_y),
-                size = 0.5, color = "gray20", linetype = 2) +
+                linewidth = 0.5, color = "gray20", linetype = 2) +
       geom_path(data = technote_normal, aes(x = left_norm_x, y = left_norm_y),
-                size = 0.5, color = "gray20") +
+                linewidth = 0.5, color = "gray20") +
       geom_path(data = technote_normal, aes(x = right_norm_x, y = right_norm_y),
-                size = 0.5, color = "gray20") +
+                linewidth = 0.5, color = "gray20") +
       geom_polygon(data=technote_normal,
                    aes(x = shade_x, y = shade_y), fill="blue", alpha=0.2) +
       geom_point(data = yesterday(), aes(x = c1_c2_nga...NGA.FID, y = temp),
