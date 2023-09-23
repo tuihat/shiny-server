@@ -70,27 +70,25 @@ server <- function(input, output, session) {
     updateNumericInput(session, 'scalex6')
     #updateNumericInput(session, 'scalex7')
   })
-  
+################################################################################  
   output$coolplot <- renderPlot({
     gasmonitor <- yesterday()
     ybottom <- ybottom()
     xtop1 <- input$scalex1
-    p <- ggplot(data = gasmonitor, aes(x = Methane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
-      geom_path() +
-      geom_point(shape = 21, color = "black", fill = "goldenrod2", size = 2.5, stroke = 0.5) +
-      scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
-      scale_x_continuous(breaks = c(seq(0,xtop1, by = round_any(xtop1*0.25,100))), labels = scales::comma) +
-      geom_vline(aes(xintercept = 100000),
-                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
-      coord_cartesian(expand = FALSE, xlim = c(-10, xtop1), ylim = c(ybottom,ytop)) +
-      theme_classic() +
-      labs(x = "Methane (ppmv, NGA-FID)", y = "depth (m)") +
-      theme(axis.ticks.length = unit(0.18, "cm"),
-            axis.text.x = element_text(size = 7),
-            plot.margin = margin(1,50,15,0)) #(top, right, bottom, left)
-    
     if(input$labelCore == FALSE){
-      p
+      ggplot(data = gasmonitor, aes(x = Methane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_path() +
+        geom_point(shape = 21, color = "black", fill = "goldenrod2", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
+        scale_x_continuous(breaks = c(seq(0,xtop1, by = round_any(xtop1*0.25,100))), labels = scales::comma) +
+        geom_vline(aes(xintercept = 100000),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop1), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "Methane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              axis.text.x = element_text(size = 7),
+              plot.margin = margin(1,50,15,0)) #(top, right, bottom, left)
     }
     
     else if(input$labelCore == TRUE){
@@ -113,121 +111,221 @@ server <- function(input, output, session) {
     
     else{NULL}
   }, height = 900, width = 250)
-  
+################################################################################    
   output$coolplot2 <- renderPlot({
     gasmonitor <- yesterday()
     ybottom <- ybottom()
     xtop2 <- input$scalex2
-    ggplot(data = gasmonitor, aes(x = Ethane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
-      geom_path() +
-      geom_point(shape = 21, color = "black", fill = "orange2", size = 2.5, stroke = 0.5) +
-      scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
-      scale_x_continuous(breaks = c(seq(0,xtop2, by = round_any(xtop2*0.25,25)))) +
-      geom_vline(aes(xintercept = 600),
-                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
-      coord_cartesian(expand = FALSE, xlim = c(-10, xtop2), ylim = c(ybottom,ytop)) +
-      theme_classic() +
-      labs(x = "Ethane (ppmv, NGA-FID)", y = "depth (m)") +
-      theme(axis.ticks.length = unit(0.18, "cm"),
-            axis.text.x = element_text(size = 7),
-            plot.margin = margin(1,50,15,0))
+    if(input$labelCore == FALSE){
+      ggplot(data = gasmonitor, aes(x = Ethane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_path() +
+        geom_point(shape = 21, color = "black", fill = "orange2", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
+        scale_x_continuous(breaks = c(seq(0,xtop2, by = round_any(xtop2*0.25,25)))) +
+        geom_vline(aes(xintercept = 600),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop2), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "Ethane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              axis.text.x = element_text(size = 7),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else if(input$labelCore == TRUE){
+      
+      ggplot(data = gasmonitor, aes(x = Ethane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_point(shape = 16, color = "orange2", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
+        geom_text(aes(label = Core), size = 4) +
+        scale_x_continuous(breaks = c(seq(0,xtop2, by = round_any(xtop2*0.25,25)))) +
+        geom_vline(aes(xintercept = 600),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop2), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "Ethane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              axis.text.x = element_text(size = 7),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else{NULL}
   }, height = 900, width = 250)
-  
+################################################################################    
   output$coolplot3 <- renderPlot({
     gasmonitor <- yesterday()
     ybottom <- ybottom()
     xtop3 <- input$scalex3
-    ggplot(data = gasmonitor, aes(x = Propane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
-      geom_path() +
-      geom_point(shape = 21, color = "black", fill = "magenta", size = 2.5, stroke = 0.5) +
-      scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
-      scale_x_continuous(breaks = c(seq(0,xtop3, by = round_any(xtop3*0.25,25)))) +
-      geom_vline(aes(xintercept = 400),
-                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
-      geom_vline(aes(xintercept = 600),
-                 linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
-      coord_cartesian(expand = FALSE, xlim = c(-10, xtop3), ylim = c(ybottom,ytop)) +
-      theme_classic() +
-      labs(x = "Propane (ppmv, NGA-FID)", y = "depth (m)") +
-      theme(axis.ticks.length = unit(0.18, "cm"),
-            axis.text.x = element_text(size = 7),
-            plot.margin = margin(1,50,15,0))
-  }, height = 900, width = 250)
+    if(input$labelCore == FALSE){
+      ggplot(data = gasmonitor, aes(x = Propane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_path() +
+        geom_point(shape = 21, color = "black", fill = "magenta", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
+        scale_x_continuous(breaks = c(seq(0,xtop3, by = round_any(xtop3*0.25,25)))) +
+        geom_vline(aes(xintercept = 400),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        geom_vline(aes(xintercept = 600),
+                   linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop3), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "Propane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              axis.text.x = element_text(size = 7),
+              plot.margin = margin(1,50,15,0))
+    }
     
+    else if(input$labelCore == TRUE){
+      
+      ggplot(data = gasmonitor, aes(x = Propane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_point(shape = 16, color = "magenta", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -10))) +
+        geom_text(aes(label = Core), size = 4) +
+        scale_x_continuous(breaks = c(seq(0,xtop3, by = round_any(xtop3*0.25,25)))) +
+        geom_vline(aes(xintercept = 400),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        geom_vline(aes(xintercept = 600),
+                   linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop3), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "Propane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              axis.text.x = element_text(size = 7),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else{NULL}
+  }, height = 900, width = 250)
+################################################################################    
   output$coolplot4 <- renderPlot({
     gasmonitor <- yesterday()
     ybottom <- ybottom()
     xtop4 <- input$scalex4
-    ggplot(data = gasmonitor, aes(x = iso.Butane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
-      geom_path() +
-      geom_point(shape = 21, color = "black", fill = "darkseagreen3", size = 2.5, stroke = 0.5) +
-      scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
-      scale_x_continuous(breaks = c(seq(0,xtop4, by = round_any(xtop4*0.25,25)))) +
-      geom_vline(aes(xintercept = 80),
-                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
-      geom_vline(aes(xintercept = 140),
-                 linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
-      coord_cartesian(expand = FALSE, xlim = c(-10, xtop4), ylim = c(ybottom,ytop)) +
-      theme_classic() +
-      labs(x = "isobutane (ppmv, NGA-FID)", y = "depth (m)") +
-      theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(1,50,15,0))
-  }, height = 900, width = 250)
     
+    if(input$labelCore == FALSE){
+      ggplot(data = gasmonitor, aes(x = iso.Butane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_path() +
+        geom_point(shape = 21, color = "black", fill = "darkseagreen3", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
+        scale_x_continuous(breaks = c(seq(0,xtop4, by = round_any(xtop4*0.25,25)))) +
+        geom_vline(aes(xintercept = 80),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        geom_vline(aes(xintercept = 140),
+                   linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop4), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "isobutane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else if(input$labelCore == TRUE){
+      
+      ggplot(data = gasmonitor, aes(x = iso.Butane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_point(shape = 16, color = "darkseagreen3", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
+        geom_text(aes(label = Core), size = 4) +
+        scale_x_continuous(breaks = c(seq(0,xtop4, by = round_any(xtop4*0.25,25)))) +
+        geom_vline(aes(xintercept = 80),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        geom_vline(aes(xintercept = 140),
+                   linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop4), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "isobutane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else{NULL}
+  }, height = 900, width = 250)
+################################################################################   
   output$coolplot5 <- renderPlot({
     gasmonitor <- yesterday()
     ybottom <- ybottom()
     xtop5 <- input$scalex5
-    ggplot(data = gasmonitor, aes(x = n.Butane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
-      geom_path() +
-      geom_point(shape = 21, color = "black", fill = "steelblue", size = 2.5, stroke = 0.5) +
-      scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
-      scale_x_continuous(breaks = c(seq(0,xtop5, by = round_any(xtop5*0.25,20)))) +
-      geom_vline(aes(xintercept = 45),
-                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
-      geom_vline(aes(xintercept = 95),
-                 linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
-      coord_cartesian(expand = FALSE, xlim = c(-10, xtop5), ylim = c(ybottom,ytop)) +
-      theme_classic() +
-      labs(x = "n-butane (ppmv, NGA-FID)", y = "depth (m)") +
-      theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(1,50,15,0))
+    
+    if(input$labelCore == FALSE){
+      ggplot(data = gasmonitor, aes(x = n.Butane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_path() +
+        geom_point(shape = 21, color = "black", fill = "steelblue", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
+        scale_x_continuous(breaks = c(seq(0,xtop5, by = round_any(xtop5*0.25,20)))) +
+        geom_vline(aes(xintercept = 45),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        geom_vline(aes(xintercept = 95),
+                   linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop5), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "n-butane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else if(input$labelCore == TRUE){
+      
+      ggplot(data = gasmonitor, aes(x = n.Butane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_point(shape = 16, color = "steelblue", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
+        geom_text(aes(label = Core), size = 4) +
+        scale_x_continuous(breaks = c(seq(0,xtop5, by = round_any(xtop5*0.25,20)))) +
+        geom_vline(aes(xintercept = 45),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        geom_vline(aes(xintercept = 95),
+                   linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop5), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "n-butane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else{NULL}
   }, height = 900, width = 250)
-  
+################################################################################   
   output$coolplot6 <- renderPlot({
     gasmonitor <- yesterday()
     ybottom <- ybottom()
     xtop6 <- input$scalex6
-    ggplot(data = gasmonitor, aes(x = iso.pentane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
-      geom_path() +
-      geom_point(shape = 21, color = "black", fill = "seagreen", size = 2.5, stroke = 0.5) +
-      scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
-      scale_x_continuous(breaks = c(seq(0,xtop6, by = round_any(xtop6*0.25,10)))) +
-      geom_vline(aes(xintercept = 35),
-                 linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
-      geom_vline(aes(xintercept = 60),
-                 linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
-      coord_cartesian(expand = FALSE, xlim = c(-10, xtop6), ylim = c(ybottom,ytop)) +
-      theme_classic() +
-      labs(x = "isopentane (ppmv, NGA-FID)", y = "depth (m)") +
-      theme(axis.ticks.length = unit(0.18, "cm"),
-            plot.margin = margin(1,50,15,0))
+    
+    
+    if(input$labelCore == FALSE){
+      ggplot(data = gasmonitor, aes(x = iso.pentane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_path() +
+        geom_point(shape = 21, color = "black", fill = "seagreen", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
+        scale_x_continuous(breaks = c(seq(0,xtop6, by = round_any(xtop6*0.25,10)))) +
+        geom_vline(aes(xintercept = 35),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        geom_vline(aes(xintercept = 60),
+                   linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop6), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "isopentane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else if(input$labelCore == TRUE){
+      
+      ggplot(data = gasmonitor, aes(x = iso.pentane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
+        geom_point(shape = 16, color = "seagreen", size = 2.5, stroke = 0.5) +
+        scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
+        geom_text(aes(label = Core), size = 4) +
+        scale_x_continuous(breaks = c(seq(0,xtop6, by = round_any(xtop6*0.25,10)))) +
+        geom_vline(aes(xintercept = 35),
+                   linewidth = 1, linetype = 2, alpha=0.3, color = "red") +
+        geom_vline(aes(xintercept = 60),
+                   linewidth = 1, linetype = 2, alpha=0.8, color = "red") +
+        coord_cartesian(expand = FALSE, xlim = c(-10, xtop6), ylim = c(ybottom,ytop)) +
+        theme_classic() +
+        labs(x = "isopentane (ppmv, NGA-FID)", y = "depth (m)") +
+        theme(axis.ticks.length = unit(0.18, "cm"),
+              plot.margin = margin(1,50,15,0))
+    }
+    
+    else{NULL}
   }, height = 900, width = 250)
-    # 
-    # xtop7 <- input$scalex7
-    # p7 <- ggplot(data = gasmonitor, aes(x = n.pentane..ppmv..NGA.FID, y = X.Top.depth.CSF.A..m.)) +
-    #   geom_path() +
-    #   geom_point(shape = 21, color = "black", fill = "darkseagreen1", size = 2.5, stroke = 0.5) +
-    #   scale_y_reverse(breaks = c(seq(ybottom,ytop, by = -20))) +
-    #   scale_x_continuous(breaks = c(seq(0,xtop7, by = round_any(xtop6*0.25,25)))) +
-    #   coord_cartesian(expand = FALSE, xlim = c(-10, xtop7), ylim = c(ybottom,ytop)) +
-    #   theme_classic() +
-    #   labs(x = "n-pentane (ppmv, NGA-FID)", y = "depth (m)") +
-    #   theme(axis.ticks.length = unit(0.18, "cm"),
-    #         plot.margin = margin(6,6,6,6))
-    # 
-    # plot_grid(p1, p2, p3, p4, p5, p6, p7, nrow=1)
-  # })#, height = 900, width = 2100)
+
 }
 
 shinyApp(ui = ui, server = server)
