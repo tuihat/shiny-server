@@ -5,6 +5,7 @@
 
 library(ggplot2)
 library(dplyr)
+library(readxl)
 library(shiny)
 
 technote30 <- read.csv("anomalous_gradient.csv", #LIMS file
@@ -17,11 +18,8 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher"),
                 sidebarLayout(
                   sidebarPanel(
                     h6("Add the column with temperatures to the gas report. Keep the file in .csv format."),
-                    fileInput("file", "Upload your file",
-                              accept = c(
-                                "text/csv",
-                                "text/comma-separated-values,text/plain",
-                                ".csv")),
+                    fileInput("file", "Upload your Excel file with the 'temp' column.",
+                              accept = c(".xlsx")),
                     #same as above but for a batch; user can download table
                     actionButton("goButton1", "Make my graphs!"),
                     br(), br(),
@@ -33,9 +31,9 @@ ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher"),
 
 server <- function(input, output, session) {
   yesterday <- eventReactive(input$goButton1, { #when user clicks Go Button
+    req(input$file) #core summary file is required for operation
     getBillfile <- input$file
-    req(getBillfile) #core summary file is required for operation
-    file1 <- read.csv(file = getBillfile$datapath, stringsAsFactors = FALSE)
+    thefile <- read_excel(getBillfile$datapath, 1)
   })
   
   lastwins <- reactive({
@@ -57,9 +55,9 @@ server <- function(input, output, session) {
                 linewidth = 0.5, color = "gray20") +
       geom_polygon(data=technote_normal,
                    aes(x = shade_x, y = shade_y), fill="blue", alpha=0.2) +
-      geom_point(data = yesterday(), aes(x = c1_c2_nga...NGA.FID, y = temp),
+      geom_point(data = yesterday(), aes(x = `c1_c2_nga % NGA-FID`, y = temp),
                  shape = 24, color = "black", fill = "red", size = 5, stroke = 1) +
-      geom_point(data = lastwins(), aes(x = c1_c2_nga...NGA.FID, y = temp),
+      geom_point(data = lastwins(), aes(x = `c1_c2_nga % NGA-FID`, y = temp),
                  shape = 24, color = "black", fill = "blue", size = 5, stroke = 1) +
       scale_y_reverse(breaks = c(seq(100, 0, by = -5))) +
       scale_x_log10(position = "top", labels = function(x) format(x, scientific = FALSE)) +
@@ -74,7 +72,7 @@ server <- function(input, output, session) {
       theme_classic() +
       labs(x = "Methane/Ethane (C1/C2)", y = "temperature (C)") +
       theme(axis.ticks.length = unit(0.18, "cm"),
-            panel.border = element_rect(colour = "black", fill=NA, size=2),
+            panel.border = element_rect(colour = "black", fill=NA, linewidth=2),
             axis.line = element_blank(),
             axis.text = element_text(size = 14),
             axis.title = element_text(size = 16),
