@@ -17,7 +17,7 @@ technote30 <- technote30[order(technote30$temp_C),]
 ui <- fluidPage(titlePanel("Bill's Quick Gas Grapher"),
                 sidebarLayout(
                   sidebarPanel(
-                    h6("Add the column with temperatures to the gas report. Keep the file in .csv format."),
+                    h6("Add a column called 'temp' at the front of the gas report. Fill in your temperatures."),
                     fileInput("file", "Upload your Excel file with the 'temp' column.",
                               accept = c(".xlsx")),
                     #same as above but for a batch; user can download table
