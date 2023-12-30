@@ -111,6 +111,9 @@ ui <- dashboardPage(
                  column(width = 6, numericInput('input5', 'Penetration Minimum:', 0)),
                  column(width = 6, numericInput("input6", "Penetration Maximum:", max(exp_coords$Penetration.DSF..m., na.rm = TRUE)))
              ),
+             box(width = 1,
+                 column(width = 12, textInput("input7", "Site search:"))
+             ),
              column(width = 1,
                  h1(" "),
                  actionBttn(inputId = "reset_all", label = "Reset", style = "bordered", color = "success", icon = icon("cog")
@@ -189,6 +192,7 @@ server <- function(input, output, session) {
     updateNumericInput(session, "input4", value = max(exp_coords$Water.depth..m., na.rm = TRUE))
     updateNumericInput(session, "input5", value = 0)
     updateNumericInput(session, "input6", value = max(exp_coords$Penetration.DSF..m., na.rm = TRUE))
+    updateTextInput(session, "input7", value="")
   })
   
   choose_program <- reactive({
@@ -206,7 +210,12 @@ server <- function(input, output, session) {
     exp_range <- subset(prog_range, Exp %in% input$input2) #narrow down to Exps
     water_range <- subset(exp_range, Water.depth..m. <= input$input4 & Water.depth..m. >= input$input3 | is.na(Water.depth..m.)) #narrow down to water depths
     pen_range <- subset(water_range, Penetration.DSF..m. <= input$input6 & Penetration.DSF..m. >= input$input5 | is.na(Penetration.DSF..m.)) #narrow down to penetrations
-    pen_range
+    if (input$input7 != "") {
+      site_pick <- subset(pen_range, Site == input$input7) #site searcher
+    } else {
+      site_pick <- pen_range
+    }
+    site_pick
   })
   #####---Prep values for pie chart##############
   core_pie <- reactive({
@@ -263,7 +272,7 @@ server <- function(input, output, session) {
     names(pretty_table)[22] <- "Comments"
     names(pretty_table)[23] <- "Program"
     names(pretty_table)[24] <- "Repository*"
-    DT::datatable(pretty_table, options = list(pageLength = 5, scrollX = TRUE), rownames= FALSE)%>% 
+    DT::datatable(pretty_table, options = list(pageLength = 10, scrollX = TRUE), rownames= FALSE)%>% 
       formatRound(columns = c(4:5), digits = 4)
   })
 #########---Output Graphs---#####################################################   
