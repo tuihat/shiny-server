@@ -22,16 +22,55 @@ ui <- dashboardPage(
          not guaranteed. User assumes all risk."), #italic disclaimer
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
         ########################################################################
-        h4("General Applications", style = 'font-weight: bold;'), #subset of applications
         fluidRow(
-        userBox(width = 6,
+          column(width = 3,
+        h4("General Applications", style = 'font-weight: bold;'), #subset of applications
+        userBox(width = 12,
+                title = userDescription(
+                  title = h4("Scientific Ocean Drilling Map"),
+                  subtitle = "",
+                  image = "map_app_image.jpg"
+                ),
+                status = "teal",
+                closable = FALSE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/drilling_map/", 
+                       "Visit the app.",
+                       target="_blank"), #another app link,
+                footer = "This application provides a visualization of all ocean drilling
+            sites for DSDP, ODP, and IODP. The map is interactive and holes can be
+            clicked on to learn further information. The map is subsettable by drilling
+            program, expedition, water depth, and seafloor penetration. A table and severl
+            graphs are provided at the bottom for additional reference."
+        ),
+        userBox(width = 12,
+                title = userDescription(
+                  title = h4("JOIDES Resolution Drilling Stats"),
+                  subtitle = "",
+                  image = "JR_drill_stat_image.jpg"
+                ),
+                status = "teal",
+                closable = FALSE,
+                collapsed = TRUE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/JR_drilling_stats/", 
+                       "Visit the app.",
+                       target="_blank"), #another app link,
+                footer = "This application provides a visualization of some JOIDES
+            Resolution drilling statistics and offers several filters for parameters
+            such as core recovery and water depth. The entire
+            database or the selected expeditions can be downloaded. Glomar Challenger
+            statistics are available as well but should be used with caution."
+        ),
+        userBox(width = 12,
             title = userDescription(
-                title = "DSDP, ODP, IODP Coring Type Statistics",
+                title = h4("Coring Type Statistics"),
                 subtitle = "",
                 image = "ops_app_image.jpg"
             ),
             status = "teal",
             closable = FALSE,
+            collapsed = TRUE,
             maximizable = TRUE,
             tags$a(href="https://shinylaurel.com/shiny/Ops_DrillTypes/", 
                    "Visit the app.",
@@ -42,51 +81,15 @@ ui <- dashboardPage(
             are available by program and expedition. Recovery with depth is also 
             available by program and expedition. Scaled and unscaled graphs are available."
         ),
-        userBox(width = 6,
-            title = userDescription(
-                title = "Scientific Ocean Drilling Map",
-                subtitle = "",
-                image = "map_app_image.jpg"
-            ),
-            status = "teal",
-            closable = FALSE,
-            maximizable = TRUE,
-            tags$a(href="https://shinylaurel.com/shiny/drilling_map/", 
-                   "Visit the app.",
-                   target="_blank"), #another app link,
-            footer = "This application provides a visualization of all ocean drilling
-            sites for DSDP, ODP, and IODP. The map is interactive and holes can be
-            clicked on to learn further information. The map is subsettable by drilling
-            program, expedition, water depth, and seafloor penetration. A table and severl
-            graphs are provided at the bottom for additional reference."
-        )),
-        fluidRow(
-        userBox(width = 6,
-          title = userDescription(
-            title = "JOIDES Resolution Drilling Stats",
-            subtitle = "",
-            image = "JR_drill_stat_image.jpg"
-          ),
-          status = "teal",
-          closable = FALSE,
-          maximizable = TRUE,
-          tags$a(href="https://shinylaurel.com/shiny/JR_drilling_stats/", 
-                 "Visit the app.",
-                 target="_blank"), #another app link,
-          footer = "This application provides a visualization of some JOIDES
-            Resolution drilling statistics and offers several filters for parameters
-            such as core recovery and water depth. The entire
-            database or the selected expeditions can be downloaded. Glomar Challenger
-            statistics are available as well but should be used with caution."
-        ),
-        userBox(width = 6,
+        userBox(width = 12,
                 title = userDescription(
-                  title = "Scientific Ocean Drilling Ages",
+                  title = h4("Scientific Ocean Drilling Ages"),
                   subtitle = "",
                   image = "timescale.jpg"
                 ),
                 status = "teal",
                 closable = FALSE,
+                collapsed = TRUE,
                 maximizable = TRUE,
                 tags$a(href="https://shinylaurel.com/shiny/SOD_ages/", 
                        "Visit the app.",
@@ -96,12 +99,12 @@ ui <- dashboardPage(
                 not be considered complete or exhaustive and is based on http://iodp.tamu.edu/database/ages_dsdp.html"
         )),
         ########################################################################
-        hr(style = "border-top: 1px solid #000000;"), #horizontal line
-        h4("Outreach Applications", style = 'font-weight: bold;'), #subset of applications
-        fluidRow(
-            userBox(
+        # hr(style = "border-top: 1px solid #000000;"), #horizontal line
+          column(width = 3,
+            h4("Outreach Applications", style = 'font-weight: bold;'), #subset of applications
+            userBox(width = 12,
                 title = userDescription(
-                    title = "Ocean Drilling Movie Database",
+                    title = h4("Ocean Drilling Movie Database"),
                     subtitle = "",
                     image = "JR_icon.jpg"
                 ),
@@ -114,9 +117,9 @@ ui <- dashboardPage(
                 footer = "Search the ocean drilling movie database by expedition
                 and keywords/terms. Links to video content provided where available."
             ),
-            userBox(
+            userBox(width = 12,
                 title = userDescription(
-                    title = "JOIDES Resolution Locator",
+                    title = h4("JOIDES Resolution Locator"),
                     subtitle = "",
                     image = "map_app_image.jpg"
                 ),
@@ -129,19 +132,79 @@ ui <- dashboardPage(
                 footer = "This application provides a visualization of the current
                 location of the JOIDES Resolution and the midnight position for 
                 the past 100 days."
-            )),
+            ),
+            #############################
+            hr(), br(), br(),
+                   h4("At Sea Applications", style = 'font-weight: bold;'),
+                   userBox(width = 12,
+                     title = userDescription(
+                       title = h4("EPM Daily Report"),
+                       subtitle = "",
+                       image = "JR_icon.jpg"
+                     ),
+                     status = "orange",
+                     closable = FALSE,
+                     collapsed = TRUE,
+                     maximizable = TRUE,
+                     tags$a(href="https://shinylaurel.com/shiny/daily_report_maker/", 
+                            "Visit the app.",
+                            target="_blank"), #another app link,
+                     footer = "This application assists with the summary of coring information
+              for the EPM daily report. While at sea it will be better to run
+              this application locally, however you may preview it here."
+                   ),
+                   userBox(width = 12,
+                     title = userDescription(
+                       title = h4("Hydrocarbon Safety Monitoring"),
+                       subtitle = "",
+                       image = "JR_icon.jpg"
+                     ),
+                     status = "orange",
+                     closable = FALSE,
+                     collapsed = TRUE,
+                     maximizable = TRUE,
+                     tags$a(href="https://shinylaurel.com/shiny/JRhydrocarbon/", 
+                            "Visit the app.",
+                            target="_blank"), #another app link,
+                     footer = "This application provides two sub-applications to assist with
+              hydrocarbon safety monitoring. One assists in the construction of
+              a thermal gradient. The other provides a graphic summary of 
+              hydrocarbon and temperature data, with guides for anomalous and
+              normal measurements. This application is not a replacement for 
+              geochemical knowledge or approval from appropriate drilling panels.
+              This application will also work better at sea if run locally."
+                   )),
         ########################################################################
-        hr(style = "border-top: 1px solid #000000;"), #horizontal line
-        h4("GCR & Data Access Applications", style = 'font-weight: bold;'), #subset of applications
-        fluidRow(
-            userBox(width = 4,
+        # hr(style = "border-top: 1px solid #000000;"), #horizontal line
+          column(width = 3,
+          h4("GCR & Data Access Applications", style = 'font-weight: bold;'), #subset of applications
+          userBox(width = 12,
+                  title = userDescription(
+                    title = h4("LIMS2 - A Database of Databases"),
+                    subtitle = "",
+                    image = "LIMS2_disco_ball.jpg"
+                  ),
+                  status = "purple",
+                  closable = FALSE,
+                  maximizable = TRUE,
+                  tags$a(href="https://shinylaurel.com/shiny/LIMS2/", 
+                         "Visit the app.",
+                         target="_blank"), #another app link,
+                  footer = "This application provides quick access to data from the Deep 
+              Sea Drilling Project (DSDP), the Ocean Drilling Program (ODP), and beyond 
+              that is not stored in the Laboratory Information Management System (LIMS).
+              DSDP (Deep Sea Drilling Project) and ODP (Ocean Drilling Program) data are 
+              stored at the NOAA National Centers for Environmental Information (NCEI) 
+              formerly known as NGDC (National Geophysical Data Center)."),  
+          userBox(width = 12,
                 title = userDescription(
-                    title = "GCR Sample Planning",
+                    title = h4("GCR Sample Planning"),
                     subtitle = "",
                     image = "GCR_app_image.jpg"
                 ),
                 status = "purple",
                 closable = FALSE,
+                collapsed = TRUE,
                 maximizable = TRUE,
                 tags$a(href="https://shinylaurel.com/shiny/GCR_sample_planning/", 
                        "Visit the app.",
@@ -154,14 +217,15 @@ ui <- dashboardPage(
               sample list of repetitive sampling. (3) The user provides a density
               and either a volume or mass and the alternative is returned. (4) The
               user provides samples by sample type and material volumes are provided."),
-            userBox(width = 4,
+            userBox(width = 12,
               title = userDescription(
-                title = "GCR Display Cores",
+                title = h4("GCR Display Cores"),
                 subtitle = "",
                 image = "GCR_app_image.jpg"
               ),
               status = "purple",
               closable = FALSE,
+              collapsed = TRUE,
               maximizable = TRUE,
               tags$a(href="https://shinylaurel.com/shiny/GCR_displaycores/", 
                      "Visit the app.",
@@ -170,85 +234,44 @@ ui <- dashboardPage(
               display to students, visitors, and scientists. A preview image is provided, as
               well as a brief overview of the location, science, and age of the material. Links
               to the digital core image, the Initial Report/Proceedings Volume, and the visual core description (VCD)
-              are also provided."),
-            userBox(width = 4,
-              title = userDescription(
-                title = "LIMS2 - A Database of Databases",
-                subtitle = "",
-                image = "LIMS2_disco_ball.jpg"
-              ),
-              status = "purple",
-              closable = FALSE,
-              maximizable = TRUE,
-              tags$a(href="https://shinylaurel.com/shiny/LIMS2/", 
-                     "Visit the app.",
-                     target="_blank"), #another app link,
-              footer = "This application provides quick access to data from the Deep 
-              Sea Drilling Project (DSDP), the Ocean Drilling Program (ODP), and beyond 
-              that is not stored in the Laboratory Information Management System (LIMS).
-              DSDP (Deep Sea Drilling Project) and ODP (Ocean Drilling Program) data are 
-              stored at the NOAA National Centers for Environmental Information (NCEI) 
-              formerly known as NGDC (National Geophysical Data Center)."
-            )),
+              are also provided.")
+            ),
         ########################################################################
-        hr(style = "border-top: 1px solid #000000;"), #horizontal line
-        h4("At Sea Applications", style = 'font-weight: bold;'),
-        fluidRow(
-        userBox(
+        # hr(style = "border-top: 1px solid #000000;"), #horizontal line
+        column(width = 3,
+        h4("LILY Applications (coming soon)", style = 'font-weight: bold;'),
+        userBox(width = 12,
             title = userDescription(
-                title = "EPM Daily Report",
+                title = h4("Lithology Search"),
                 subtitle = "",
-                image = "JR_icon.jpg"
+                image = "LILY_logo.jpg"
             ),
             status = "orange",
             closable = FALSE,
+            collapsed = TRUE,
             maximizable = TRUE,
-            tags$a(href="https://shinylaurel.com/shiny/daily_report_maker/", 
-                   "Visit the app.",
-                   target="_blank"), #another app link,
-            footer = "This application assists with the summary of coring information
-              for the EPM daily report. While at sea it will be better to run
-              this application locally, however you may preview it here."
+            # tags$a(href="https://shinylaurel.com/shiny/daily_report_maker/", 
+            #        "Visit the app.",
+            #        target="_blank"), #another app link,
+            footer = "This application searches LILY based on text entry."
         ),
-        userBox(
+        userBox(width = 12,
             title = userDescription(
-                title = "Hydrocarbon Safety Monitoring",
+                title = h4("Lithology/Coring Type"),
                 subtitle = "",
-                image = "JR_icon.jpg"
+                image = "LILY_logo.jpg"
             ),
             status = "orange",
             closable = FALSE,
+            collapsed = TRUE,
             maximizable = TRUE,
-            tags$a(href="https://shinylaurel.com/shiny/JRhydrocarbon/", 
-                   "Visit the app.",
-                   target="_blank"), #another app link,
-            footer = "This application provides two sub-applications to assist with
-              hydrocarbon safety monitoring. One assists in the construction of
-              a thermal gradient. The other provides a graphic summary of 
-              hydrocarbon and temperature data, with guides for anomalous and
-              normal measurements. This application is not a replacement for 
-              geochemical knowledge or approval from appropriate drilling panels.
-              This application will also work better at sea if run locally."
-        )),
+            # tags$a(href="https://shinylaurel.com/shiny/JRhydrocarbon/", 
+            #        "Visit the app.",
+            #        target="_blank"), #another app link,
+            footer = "This application graphs core recovery in relation to 
+            lithology."
+        ))),
         ########################################################################
-        hr(style = "border-top: 1px solid #000000;"), #horizontal line
-        h4("Post-Expedition Applications", style = 'font-weight: bold;'), #subset of applications
-        fluidRow(
-            userBox(
-                title = userDescription(
-                    title = "The 'cm-by-cm' Tool",
-                    subtitle = "",
-                    image = "coming_soon.jpg"
-                ),
-                status = "navy",
-                closable = FALSE,
-                maximizable = TRUE,
-                tags$a(href="https://web.iodp.tamu.edu/LORE/", 
-                       "Visit the app.",
-                       target="_blank"), #another app link,
-                footer = "Convert section summaries to tables with rows
-           cm-by-cm. Add in splice and alternate depth scale information as desired."
-            )),
         br(),
         tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
         tags$head(tags$style(HTML('
