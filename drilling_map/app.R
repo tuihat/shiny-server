@@ -249,6 +249,7 @@ server <- function(input, output, session) {
   output$SiteHoleTable <- DT::renderDataTable({
     pretty_table <- chosen_progs()
     pretty_table <- pretty_table[,c(1:22,25,26)]
+    pretty_table <- pretty_table[order(factor(pretty_table$Exp, levels=unique(all_exp)), pretty_table$Site, pretty_table$Hole),]
     round(pretty_table$Latitude_DD, digits = 4)
     round(pretty_table$Longitude_DD, digits = 4)
     names(pretty_table)[4] <- "Latitude"
