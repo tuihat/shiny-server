@@ -1,7 +1,27 @@
-library(shiny)
-library(shinydashboard)
+#GCR Display Cores
+#started: 11 January 2023
+#updated: 2 November 2023
+#Laurel Childress; childress@iodp.tamu.edu
 
+###############################################################################
+# This site previews core sections in the GCR that ready for quick display to 
+#...students, visitors, and scientists. A preview image is provided, as well as 
+#...a brief overview of the location, science, and age of the material. Links 
+#...to the digital core image, the Initial Report/Proceedings Volume, and the 
+#...visual core description (VCD) are also provided.
+###############################################################################
 
+#Packages
+if(!require(shiny)){ #check if the package is installed and sourced
+  install.packages("shiny") #if not, install the package
+  library(shiny) #and source the package 
+}
+
+if(!require(shinydashboard)){ #check if the package is installed and sourced
+  install.packages("shinydashboard") #if not, install the package
+  library(shinydashboard) #and source the package
+}
+###############################################################################
 ui <- dashboardPage(
   title = "GCR Display Cores", #website title
   header = dashboardHeader(title = "GCR Display Cores"),
