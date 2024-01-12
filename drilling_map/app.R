@@ -4,23 +4,29 @@
 #Laurel Childress; childress@iodp.tamu.edu
 
 ###############################################################################
-# A very basic map leaflet of expedition holes.
+# A very basic map leaflet of scientific ocean drilling expedition holes.
+
+# This application provides a visualization of all ocean drilling
+#...sites for DSDP, ODP, and IODP. The map is interactive and holes can be
+#...clicked on to learn further information. The map is subsetted by drilling
+#...program, expedition, water depth, and seafloor penetration. A table and several
+#...graphs are provided at the bottom for additional reference.
 ###############################################################################
 
 #Packages
-if(!require(rmarkdown)){
-  install.packages("rmarkdown")
-  library(rmarkdown) #rmarkdown
+if(!require(rmarkdown)){ #check if the package is installed and sourced
+  install.packages("rmarkdown") #if not, install the package
+  library(rmarkdown) #and source the package 
 }
 
-if(!require(ggplot2)){
-  install.packages("ggplot2")
-  library(ggplot2) #ggplot2
+if(!require(ggplot2)){ #check if the package is installed and sourced
+  install.packages("ggplot2") #if not, install the package
+  library(ggplot2) #and source the package 
 }
 
-if(!require(tidyr)){
-  install.packages("tidyr")
-  library(tidyr) #tidyr
+if(!require(tidyr)){ #check if the package is installed and sourced
+  install.packages("tidyr") #if not, install the package
+  library(tidyr) #and source the package 
 }
 
 if(!require(leaflet)){ #check if the package is installed and sourced
@@ -58,7 +64,7 @@ if(!require(shinydashboardPlus)){ #check if the package is installed and sourced
   library(shinydashboardPlus) #and source the package
 }
 
-exp_coords <- read.csv("DSDP_ODP_IODP_coords_LIMS.csv")
+exp_coords <- read.csv("DSDP_ODP_IODP_coords_LIMS.csv") #import main data
 exp_coords$program <- factor(exp_coords$program,
                                 levels = c("DSDP", "ODP", "IODP"),
                                 ordered = TRUE)
