@@ -1,10 +1,43 @@
-library(dplyr)
-library(data.table)
-library(shiny)
-library(shinythemes)
-library(shinyWidgets)
+#LIMS2 - A Database of Databases
+#started: 1 December 2022
+#updated: 2 November 2023
+#Laurel Childress; childress@iodp.tamu.edu
 
+###############################################################################
+# This application provides quick access to data from the Deep Sea Drilling 
+#...Project (DSDP), the Ocean Drilling Program (ODP), and beyond that is not 
+#...stored in the Laboratory Information Management System (LIMS). DSDP (Deep 
+#...Sea Drilling Project) and ODP (Ocean Drilling Program) data are stored at 
+#...the NOAA National Centers for Environmental Information (NCEI) formerly 
+#...known as NGDC (National Geophysical Data Center).
+###############################################################################
 
+#Packages
+if(!require(dplyr)){ #check if the package is installed and sourced
+  install.packages("dplyr") #if not, install the package
+  library(dplyr) #and source the package 
+}
+
+if(!require(data.table)){ #check if the package is installed and sourced
+  install.packages("data.table") #if not, install the package
+  library(data.table) #and source the package 
+}
+
+if(!require(shiny)){ #check if the package is installed and sourced
+  install.packages("shiny") #if not, install the package
+  library(shiny) #and source the package
+}
+
+if(!require(shinythemes)){ #check if the package is installed and sourced
+  install.packages("shinythemes") #if not, install the package
+  library(shinythemes) #and source the package
+}
+
+if(!require(shinyWidgets)){ #check if the package is installed and sourced
+  install.packages("shinyWidgets") #if not, install the package
+  library(shinyWidgets) #and source the package
+}
+###############################################################################
 #load data
 LIMS2_DSDP_NGDC <- read.csv("LIMS2_dsdp_NGDClinks_dt.csv")
 LIMS2_DSDP_JANUS <- read.csv("LIMS2_dsdp_links_final.csv")
@@ -608,8 +641,8 @@ server <- function(input, output, session) {
 ################################################################################
 ################################################################################
   
-  #########---IODP - NGDC - APP #4---####################################################
-  ################################################################################ 
+#########---IODP - NGDC - APP #4---#############################################
+################################################################################ 
   choose_IODP_Exp <- reactive({
     new_df <- subset(LIMS2_IODP_NGDC, Leg == input$input4.1)
     new_df2 <- unique(new_df$sitehole)
@@ -641,7 +674,7 @@ server <- function(input, output, session) {
   })
   
   ##############################################################################
-  # ##############################################################################
+  ##############################################################################
   IODP_txt_choice <- reactive({
     req(input$input4.3 %in% data_types_IODP_NGDC_txt)
     new_df3 <- choose_IODP_data()
@@ -712,8 +745,8 @@ server <- function(input, output, session) {
                   rownames= TRUE, escape = FALSE)
   })
   
-  ################################################################################
-  ################################################################################  
+################################################################################
+################################################################################  
 #########---IODP - APP #3---####################################################
 ################################################################################ 
   IODP_select <- reactive({ #choose expedition and determine results
