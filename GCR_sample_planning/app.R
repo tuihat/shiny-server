@@ -4,33 +4,34 @@
 #Laurel Childress; childress@iodp.tamu.edu
 
 ###############################################################################
-# This application provides several tools for sample planning
-# purposes. (1) The user provides, singularly or in batch, sample
-# requests by 'mbsf' scale (m CSF-A) and the application returns a
-# samples list with appropriate sample IDs. (2) The user supplies a
-# range of cores and sample interval and the application returns a 
-# sample list of repetitive sampling. (3) The user provides a density
-# and either a volume or mass and the alternative is returned.
+# This application provides several tools for sample planning purposes. 
+#...(1) The user provides, singularly or in batch, sample requests by 'mbsf' 
+#...scale (m CSF-A) and the application returns a samples list with appropriate 
+#...sample IDs. (2) The user supplies a range of cores and sample interval and 
+#...the application returns a sample list of repetitive sampling. (3) The user 
+#...provides a density and either a volume or mass and the alternative is 
+#...returned. (4) The user provides samples by sample type and material volumes 
+#...are provided.
 ###############################################################################
 
-if(!require(rhandsontable)){
-  install.packages("rhandsontable")
-  library(rhandsontable) #rhandsontable
+if(!require(rhandsontable)){ #check if the package is installed and sourced
+  install.packages("rhandsontable") #if not, install the package
+  library(rhandsontable) #and source the package
 }
 
-if(!require(shiny)){
-    install.packages("shiny")
-    library(shiny) #shiny
+if(!require(shiny)){ #check if the package is installed and sourced
+  install.packages("shiny") #if not, install the package
+  library(shiny) #and source the package
 }
 
-if(!require(shinyjs)){
-    install.packages("shinyjs")
-    library(shinyjs) #shinyjs
+if(!require(shinyjs)){ #check if the package is installed and sourced
+  install.packages("shinyjs") #if not, install the package
+  library(shinyjs) #and source the package 
 }
 
-if(!require(dplyr)){
-  install.packages("dplyr")
-  library(dplyr) #pipes
+if(!require(dplyr)){ #check if the package is installed and sourced
+  install.packages("dplyr") #if not, install the package
+  library(dplyr) #and source the package 
 }
 
 if(!require(DT)){ #check if the package is installed and sourced
@@ -101,7 +102,9 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                                  DT::dataTableOutput("results_batch") #display the results
                                                  )), br(),
                                     tags$i("These are not official IODP-JRSO applications 
-                                    and functionality is not guaranteed. User assumes all risk.")), #italic disclaimer
+                                    and functionality is not guaranteed. User assumes all risk."),
+                                    br(),
+                                    tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")), #italic disclaimer
                            tabPanel("Repetitive Sample Intervals", #App 2
                                     tags$i("Please note that there are very few guardrails
                                           in this application. If changing values causes
@@ -139,9 +142,10 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                     br(), br(),
                                     DT::dataTableOutput("results2"), #display the results
                                     width = 10,
-                                    #tags$i("These are not official IODP-JRSO applications 
-                                    #and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
-                                    br(),br()),
+                                    tags$i("These are not official IODP-JRSO applications
+                                    and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
+                                    br(),
+                                    tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")),
                            tabPanel("Volume-Mass Calculator", #App 3
                                     h2("Determine mass from volume:"),
                                     numericInput("volume1", "Enter volume (cc):", value = 20),
@@ -159,7 +163,9 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                     h4(HTML(paste0("basalt = 2.9 g/cm",tags$sup("3")))),
                                     h4(HTML(paste0("clay = 1.7 g/cm",tags$sup("3")))), br(),
                                     tags$i("These are not official IODP-JRSO applications 
-                                    and functionality is not guaranteed. User assumes all risk.") #italic disclaimer
+                                    and functionality is not guaranteed. User assumes all risk."),
+                                    br(),
+                                    tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")#italic disclaimer
                            ),
                            tabPanel("Volume by Sample Type", #App 4
                                     h4("Choose whether to paste or hand-type a small number of samples,
@@ -184,7 +190,9 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                                       downloadButton("download4.1", "Download results")),
                                                column(width = 1)),
                                              tags$i("These are not official IODP-JRSO applications 
-                                    and functionality is not guaranteed. User assumes all risk.")),
+                                    and functionality is not guaranteed. User assumes all risk."),
+                                             br(),
+                                             tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")),
                                     tabPanel("Large sample set (batch processing)",
                                              h6("1. Download the template and enter data for all columns."),
                                              fluidRow( #user must comply with template use
@@ -217,8 +225,11 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                              h4("4. Sample lengths greater than 2 cm for types CUBE, CYL and WDGE will be
                                                 reduced to 2 cm in the results."),br(),
                                     tags$i("These are not official IODP-JRSO applications 
-                                    and functionality is not guaranteed. User assumes all risk."))) #italic disclaimer
+                                    and functionality is not guaranteed. User assumes all risk."),
+                                    br(),
+                                    tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"))) #italic disclaimer
                            )
+                           
 ))
 
 server <- function(input, output, session) {
