@@ -1,16 +1,54 @@
-library(dplyr)
+#Ocean Drilling Movie Database
+#started: 1 December 2021
+#updated: 10 April 2023
+#Laurel Childress; childress@iodp.tamu.edu
+
+###############################################################################
+# Search the ocean drilling movie database by expedition and keywords/terms. 
+#...Links to video content provided where available.
+###############################################################################
+
+#Packages
+if(!require(dplyr)){ #check if the package is installed and sourced
+  install.packages("dplyr") #if not, install the package
+  library(dplyr) #and source the package 
+}
+
 if(!require(DT)){ #check if the package is installed and sourced
   install.packages("DT") #if not, install the package
   library(DT) #and source the package 
 }
 
-library(shiny)
-library(shinyjs)
-library(shinyWidgets)
-library(rhandsontable)
-library(shinydashboard)
-library(shinydashboardPlus)
+if(!require(shiny)){ #check if the package is installed and sourced
+  install.packages("shiny") #if not, install the package
+  library(shiny) #and source the package
+}
 
+if(!require(shinyjs)){ #check if the package is installed and sourced
+  install.packages("shinyjs") #if not, install the package
+  library(shinyjs) #and source the package
+}
+
+if(!require(shinyWidgets)){ #check if the package is installed and sourced
+  install.packages("shinyWidgets") #if not, install the package
+  library(shinyWidgets) #and source the package
+}
+
+if(!require(rhandsontable)){ #check if the package is installed and sourced
+  install.packages("rhandsontable") #if not, install the package
+  library(rhandsontable) #and source the package
+}
+
+if(!require(shinydashboard)){ #check if the package is installed and sourced
+  install.packages("shinydashboard") #if not, install the package
+  library(shinydashboard) #and source the package
+}
+
+if(!require(shinydashboardPlus)){ #check if the package is installed and sourced
+  install.packages("shinydashboardPlus") #if not, install the package
+  library(shinydashboardPlus) #and source the package
+}
+###############################################################################
 db <- read.csv("app_outreach_database.csv")
 
 exp_list <- unique(db$Exp.or.Group)
@@ -89,7 +127,7 @@ server <- function(input, output, session) {
     }
     df2 <- do.call("rbind", kwlist)
     df3 <- df2[,c(1,3:10)]
-    df3$YouTube.Link <- paste0("<a href='",df3$YouTube.Link,"'>",df3$YouTube.Link,"</a>")
+    df3$YouTube.Link <- paste0("<a href='",df3$YouTube.Link,"' target='_blank'>",df3$YouTube.Link,"</a>")
     df4 <- df3[,c(8,1,4,5,2,3,6,7,9)]
     names(df4)[1] <- "Exp or Generic Type"
     names(df4)[3] <- "Duration (hh:mm:ss)"
@@ -125,7 +163,6 @@ server <- function(input, output, session) {
     }
     df2 <- do.call("rbind", kwlist)
     df3 <- df2[,c(1,3:10)]
-    # df3$YouTube.Link <- paste0("<a href='",df3$YouTube.Link,"'>",df3$YouTube.Link,"</a>")
     df4 <- df3[,c(8,1,4,5,2,3,6,7,9)]
     names(df4)[1] <- "Exp or Generic Type"
     names(df4)[3] <- "Duration (hh:mm:ss)"
