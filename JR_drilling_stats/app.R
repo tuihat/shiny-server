@@ -5,22 +5,28 @@
 
 ###############################################################################
 # A very basic table and summary of standard JR drilling statistics.
+
+#This application provides a visualization of some JOIDES
+#...Resolution drilling statistics and offers several filters for parameters
+#...such as core recovery and water depth. The entire
+#...database or the selected expeditions can be downloaded. Glomar Challenger
+#...statistics are available as well but should be used with caution.
 ###############################################################################
 
 #Packages
-if(!require(rmarkdown)){
-  install.packages("rmarkdown")
-  library(rmarkdown) #rmarkdown
+if(!require(rmarkdown)){ #check if the package is installed and sourced
+  install.packages("rmarkdown") #if not, install the package
+  library(rmarkdown) #and source the package 
 }
 
-if(!require(ggplot2)){
-  install.packages("ggplot2")
-  library(ggplot2) #ggplot2
+if(!require(ggplot2)){ #check if the package is installed and sourced
+  install.packages("ggplot2") #if not, install the package
+  library(ggplot2) #and source the package 
 }
 
-if(!require(tidyr)){
-  install.packages("tidyr")
-  library(tidyr) #tidyr
+if(!require(tidyr)){ #check if the package is installed and sourced
+  install.packages("tidyr") #if not, install the package
+  library(tidyr) #and source the package 
 }
 
 if(!require(DT)){ #check if the package is installed and sourced
@@ -53,7 +59,7 @@ if(!require(shinydashboardPlus)){ #check if the package is installed and sourced
   library(shinydashboardPlus) #and source the package
 }
 
-import_stats <- read.csv("GLOMAR_JOIDES_ship_drilling_stats.csv")
+import_stats <- read.csv("GLOMAR_JOIDES_ship_drilling_stats.csv") #import data
 #######EXP LIST ORDERFOR USE BELOW#############################################
 JR_exp <- c("100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "124E", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169S", "169", "170", "171A", "171B", "172", "173", "174A", "174B", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "301T", "303", "304", "305", "306", "307", "308", "309", "311", "312", "320T", "320", "321", "321T", "323", "324", "317", "318", "318T", "327", "328", "328T", "329", "330", "330T", "334", "335", "335T", "336", "339", "340T", "340", "342T", "342", "344T", "344", "345", "341T", "341S", "341", "346", "346T", "349P", "349T", "349", "350", "351", "352", "353P/T", "353", "354", "355", "355T", "356T", "356P", "356", "359", "360", "361", "361P", "362T",
 "362", "363", "366", "367", "368", "368P/371T", "371", "369", "372", "374", "375", "376", "376T/378P/T", "368X", "368T", "379", "382", "383", "379T", "385T", "385", "378T", "378", "378S", "387P/T", "384P/T/A", "384", "390P", "390C", "390R", "395P", "395E", "395C", "396", "396T", "391", "392", "390","393","397P",
@@ -68,10 +74,9 @@ all_exp <- c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "11C", "12
 "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161",
 "162", "163", "164", "165", "166", "167", "168", "169S", "169", "170", "171A", "171B", "172", "173", "174A", "174B", "175", "176", "177", "178", "179",
 "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", 
-"201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "301T", "303", "304", "305", "306", "307", "308", "309", "311", "312", "320T", "320", "321", "321T", "323", "324", "317", "318", "318T", "327", "328", "328T", "329", "330", "330T", "334", "335", "335T", "336", "339", "340T", "340", "342T", "342", "344T", "344", "345", "341T", "341S", "341", "346", "346T", "349P", "349T", "349", "350", "351", "352", "353P/T", "353", "354", "355", "355T", "356T", "356P", "356", "359", "360", "361", "361P", "362T", "362", "363", "366", "367", "368", "368P/371T", "371", "369", "372", "374", "375", "376", "376T/378P/T", "368X", "368T", "379", "382", "383", "379T", "385T", "385", "378T", "378", "378S", "387P/T", "384P/T/A", "384", "390P", "390C", "390R", "395P", "395E", "395C", "396", "396T", "391", "392", "390","393","397P",
-"397T","397","398","398P", "399", "395", "400")
+"201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "301T", "303", "304", "305", "306", "307", "308", "309", "311", "312", "320T", "320", "321", "321T", "323", "324", "317", "318", "318T", "327", "328", "328T", "329", "330", "330T", "334", "335", "335T", "336", "339", "340T", "340", "342T", "342", "344T", "344", "345", "341T", "341S", "341", "346", "346T", "349P", "349T", "349", "350", "351", "352", "353P/T", "353", "354", "355", "355T", "356T", "356P", "356", "359", "360", "361", "361P", "362T", "362", "363", "366", "367", "368", "368P/371T", "371", "369", "372", "374", "375", "376", "376T/378P/T", "368X", "368T", "379", "382", "383", "379T", "385T", "385", "378T", "378", "378S", "387P/T", "384P/T/A", "384", "390P", "390C", "390R", "395P", "395E", "395C", "396", "396T", "391", "392", "390","393","397P","397T","397","398","398P", "399", "395", "400")
 
-#maybe nicer if the more recent ones are at the top
+#nicer if the more recent ones are at the top
 JR_exp <- rev(JR_exp)
 all_exp <- rev(all_exp)
 
@@ -274,10 +279,6 @@ server <- function(input, output, session) {
 #########---Output Table---#####################################################  
   output$SiteHoleTable <- DT::renderDataTable({
     pretty_table <- chosen_progs()
-    # pretty_table <- pretty_table[,c(1:22,25,26)]
-    # round(pretty_table$Latitude_DD, digits = 4)
-    # round(pretty_table$Longitude_DD, digits = 4)
-    # pretty_table <- pretty_table[,c(2:35)]
     names(pretty_table)[1] <- "Expedition or Leg"
     names(pretty_table)[2] <- "Science program"
     names(pretty_table)[3] <- "Start date"
