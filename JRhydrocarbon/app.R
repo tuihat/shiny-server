@@ -1,49 +1,55 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
+#Hydrocarbon Safety Monitoring
+#started: 1 December 2021
+#updated: 2 November 2023
+#Laurel Childress; childress@iodp.tamu.edu
 
-if(!require(ellipsis)){
-  install.packages("ellipsis")
-  library(ellipsis) #something...
+###############################################################################
+# This application provides two sub-applications to assist with hydrocarbon 
+#...safety monitoring. One assists in the construction of a thermal gradient. 
+#...The other provides a graphic summary of hydrocarbon and temperature data, 
+#...with guides for anomalous and normal measurements. This application is not 
+#...a replacement for geochemical knowledge or approval from appropriate 
+#...drilling panels. This application will also work better at sea if run locally.
+###############################################################################
+
+#Packages
+if(!require(ellipsis)){ #check if the package is installed and sourced
+  install.packages("ellipsis") #if not, install the package
+  library(ellipsis) #and source the package 
+}
+ 
+if(!require(stats)){ #check if the package is installed and sourced
+    install.packages("stats") #if not, install the package
+    library(stats) #and source the package 
 }
 
-if(!require(stats)){
-    install.packages("stats")
-    library(stats) #statistics
+if(!require(ggplot2)){ #check if the package is installed and sourced
+    install.packages("ggplot2") #if not, install the package
+    library(ggplot2) #and source the package 
 }
 
-if(!require(ggplot2)){
-    install.packages("ggplot2")
-    library(ggplot2) #graphs
+if(!require(dplyr)){ #check if the package is installed and sourced
+    install.packages("dplyr") #if not, install the package
+    library(dplyr) #and source the package 
 }
 
-if(!require(dplyr)){
-    install.packages("dplyr")
-    library(dplyr) #pipes
+if(!require(shiny)){ #check if the package is installed and sourced
+    install.packages("shiny") #if not, install the package
+    library(shiny) #and source the package 
 }
 
-if(!require(shiny)){
-    install.packages("shiny")
-    library(shiny) #shiny
+if(!require(shinyjs)){ #check if the package is installed and sourced
+    install.packages("shinyjs") #if not, install the package
+    library(shinyjs) #and source the package 
 }
-
-if(!require(shinyjs)){
-    install.packages("shinyjs")
-    library(shinyjs) #shinyjs
-}
-
-technote30 <- read.csv("anomalous_gradient.csv", #LIMS file
+###############################################################################
+technote30 <- read.csv("anomalous_gradient.csv", 
                        stringsAsFactors = FALSE)
-technote_normal <- read.csv("normal_lines.csv", #LIMS file
+technote_normal <- read.csv("normal_lines.csv", 
                             stringsAsFactors = FALSE)
 technote30 <- technote30[order(technote30$temp_C),]
 
-# Define UI for application that draws a histogram
+###############################################################################
 ui <- fluidPage(navbarPage("JR Safety Monitoring",
                            tabPanel("Thermal Gradient",
                                     titlePanel("Thermal Gradient"),
