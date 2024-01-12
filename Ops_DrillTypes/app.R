@@ -3,11 +3,41 @@
 #updated: 2 November 2023
 #Laurel Childress; childress@iodp.tamu.edu
 
-library(ggplot2)
-library(dplyr)
-library(shiny)
-library(cowplot)
-library(shinyWidgets)
+###############################################################################
+# Coring statistics of the Glomar Challenger and JOIDES Resolution.
+
+# This application provides a graphic summary of drilling types including 
+#...APC (advanced piston corer), HLAPC (half-length advanced piston corer), 
+#...RCB (rotary core barrel), and XCB (extended core barrel). Recovery counts 
+#...are available by program and expedition. Recovery with depth is also 
+#...available by program and expedition. Scaled and unscaled graphs are available.
+###############################################################################
+
+if(!require(ggplot2)){ #check if the package is installed and sourced
+  install.packages("ggplot2") #if not, install the package
+  library(ggplot2) #and source the package 
+}
+
+if(!require(dplyr)){ #check if the package is installed and sourced
+  install.packages("dplyr") #if not, install the package
+  library(dplyr) #and source the package 
+}
+
+if(!require(shiny)){ #check if the package is installed and sourced
+  install.packages("shiny") #if not, install the package
+  library(shiny) #and source the package
+}
+
+if(!require(cowplot)){ #check if the package is installed and sourced
+  install.packages("cowplot") #if not, install the package
+  library(cowplot) #and source the package
+}
+
+if(!require(shinyWidgets)){ #check if the package is installed and sourced
+  install.packages("shinyWidgets") #if not, install the package
+  library(shinyWidgets) #and source the package
+}
+
 
 exp_stats <- read.csv("DSDP-ODP-IODP_core_summaries_HLAPCcorrected.csv", stringsAsFactors = FALSE)
 #######EXP LIST ORDERFOR USE BELOW#############################################
@@ -93,7 +123,6 @@ ui <- fluidPage(tags$head(tags$style(HTML("
                                                    condition = "input.scaled3 == 'Scaled'", plotOutput("recoveryPlotExp3S", width = 1400, height = 900)),
                                                  conditionalPanel(
                                                    condition = "input.scaled3 == 'Unscaled'", plotOutput("recoveryPlotExp3U", width = 1400, height = 900))),
-                                                 #plotOutput("recoveryPlotExpedition", width = 1400, height = 950)),
                                         tabPanel("Depth and Recovery",
                                                  plotOutput("depthPlot", width = 1400, height = 800)),
                                         tabPanel("Depth and Recovery - Program",
@@ -222,137 +251,6 @@ server <- function(input, output, session) {
       }}
   })
   
-  ##DSDP
-  # observe({
-  #   if (input$selectDSDP > 0) {
-  #     if (input$selectDSDP %% 2 == 0){
-  #       updateCheckboxGroupInput(session=session, inputId="checkDSDPInput",
-  #                                choices = DSDP_only,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkODPInput",
-  #                                choices = ODP,
-  #                                selected = ODP)
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP1Input",
-  #                                choices = IODP_1,
-  #                                selected = IODP_1)
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP2Input",
-  #                                choices = IODP_2,
-  #                                selected = IODP_2)
-  #     }
-  #     else {
-  #       updateCheckboxGroupInput(session=session, inputId="checkDSDPInput",
-  #                                choices = DSDP_only,
-  #                                selected = DSDP_only)
-  #       updateCheckboxGroupInput(session=session, inputId="checkODPInput",
-  #                                choices = ODP,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP1Input",
-  #                                choices = IODP_1,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP2Input",
-  #                                choices = IODP_2,
-  #                                selected = c())
-  #     }}
-  # })
-  # 
-  # ##ODP
-  # observe({
-  #   if (input$selectODP > 0) {
-  #     if (input$selectODP %% 2 == 0){
-  #       updateCheckboxGroupInput(session=session, inputId="checkDSDPInput",
-  #                                choices = DSDP_only,
-  #                                selected = DSDP_only)
-  #       updateCheckboxGroupInput(session=session, inputId="checkODPInput",
-  #                                choices = ODP,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP1Input",
-  #                                choices = IODP_1,
-  #                                selected = IODP_1)
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP2Input",
-  #                                choices = IODP_2,
-  #                                selected = IODP_2)
-  #     }
-  #     else {
-  #       updateCheckboxGroupInput(session=session, inputId="checkDSDPInput",
-  #                                choices = DSDP_only,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkODPInput",
-  #                                choices = ODP,
-  #                                selected = ODP)
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP1Input",
-  #                                choices = IODP_1,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP2Input",
-  #                                choices = IODP_2,
-  #                                selected = c())
-  #     }}
-  # })
-  # 
-  # ##IODP-1
-  # observe({
-  #   if (input$selectIODP1 > 0) {
-  #     if (input$selectIODP1 %% 2 == 0){
-  #       updateCheckboxGroupInput(session=session, inputId="checkDSDPInput",
-  #                                choices = DSDP_only,
-  #                                selected = DSDP_only)
-  #       updateCheckboxGroupInput(session=session, inputId="checkODPInput",
-  #                                choices = ODP,
-  #                                selected = ODP)
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP1Input",
-  #                                choices = IODP_1,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP2Input",
-  #                                choices = IODP_2,
-  #                                selected = IODP_2)
-  #     }
-  #     else {
-  #       updateCheckboxGroupInput(session=session, inputId="checkDSDPInput",
-  #                                choices = DSDP_only,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkODPInput",
-  #                                choices = ODP,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP1Input",
-  #                                choices = IODP_1,
-  #                                selected = IODP_1)
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP2Input",
-  #                                choices = IODP_2,
-  #                                selected = c())
-  #     }}
-  # })
-  # 
-  # ##IODP-2
-  # observe({
-  #   if (input$selectIODP2 > 0) {
-  #     if (input$selectIODP2 %% 2 == 0){
-  #       updateCheckboxGroupInput(session=session, inputId="checkDSDPInput",
-  #                                choices = DSDP_only,
-  #                                selected = DSDP_only)
-  #       updateCheckboxGroupInput(session=session, inputId="checkODPInput",
-  #                                choices = ODP,
-  #                                selected = ODP)
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP1Input",
-  #                                choices = IODP_1,
-  #                                selected = IODP_1)
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP2Input",
-  #                                choices = IODP_2,
-  #                                selected = c())
-  #     }
-  #     else {
-  #       updateCheckboxGroupInput(session=session, inputId="checkDSDPInput",
-  #                                choices = DSDP_only,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkODPInput",
-  #                                choices = ODP,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP1Input",
-  #                                choices = IODP_1,
-  #                                selected = c())
-  #       updateCheckboxGroupInput(session=session, inputId="checkIODP2Input",
-  #                                choices = IODP_2,
-  #                                selected = IODP_2)
-  #     }}
-  # })
   ########TAB1 - RECOVERY PLOTS - UNSCALED######################################
   output$recoveryPlot1U <- renderPlot({
     APC1 <- chosen_exps()
