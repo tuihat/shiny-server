@@ -9,30 +9,29 @@
 #...testing by other EPMs is encouraged. Please report any issues.
 
 ##----------------------Packages------------------------------------------------
-if(!require(rmarkdown)){
-  install.packages("rmarkdown")
-  library(rmarkdown) #more shiny
+if(!require(rmarkdown)){ #check if the package is installed and sourced
+  install.packages("rmarkdown") #if not, install the package
+  library(rmarkdown) #and source the package 
 }
 
-if(!require(dplyr)){
-  install.packages("dplyr")
-  library(dplyr) #pipes
+if(!require(dplyr)){ #check if the package is installed and sourced
+  install.packages("dplyr") #if not, install the package
+  library(dplyr) #and source the package 
 }
 
-if(!require(gtools)){
-  install.packages("gtools")
-  library(gtools) #pipes
+if(!require(gtools)){ #check if the package is installed and sourced
+  install.packages("gtools") #if not, install the package
+  library(gtools) #and source the package 
 }
 
-if(!require(shiny)){
-  install.packages("shiny")
-  library(shiny) #shiny
+if(!require(shiny)){ #check if the package is installed and sourced
+  install.packages("shiny") #if not, install the package
+  library(shiny) #and source the package 
 }
 
-
-if(!require(shinyjs)){
-  install.packages("shinyjs")
-  library(shinyjs) #shinyjs
+if(!require(shinyjs)){ #check if the package is installed and sourced
+  install.packages("shinyjs") #if not, install the package
+  library(shinyjs) #and source the package 
 }
 
 #
@@ -41,14 +40,15 @@ tz_source <- read.csv("R_timezones.csv", stringsAsFactors = FALSE)
 
 ui <- fluidPage(useShinyjs(),
   titlePanel("Coring Summary for EPM Daily Report"),
-              h5("This application is no substitute for actual daily report writing and being diligent. Results are not guaranteed and the application has not been rigorously tested. User accepts all risk."),
+              h5("This application is no substitute for actual daily report writing and being diligent. 
+                 Results are not guaranteed and the application has not been rigorously tested. User accepts all risk."),
               br(),
                 sidebarLayout(
                   sidebarPanel(
                     #GET the date from the user
                     h3("Step 1: choose a date"),
                     h6("(usually this will be yesterday...)"),
-                    dateInput("date", label = "Select date", value = "2021-12-06"),
+                    dateInput("date", label = "Select date", value = "2022-02-16"),
                     hr(),
                     #GET the timezone from the user
                     h3("Step 2: choose a timezone relative to UTC"),
