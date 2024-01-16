@@ -39,8 +39,8 @@ ui <- dashboardPage(
                        target="_blank"), #another app link,
                 footer = "This application provides a visualization of all ocean drilling
             sites for DSDP, ODP, and IODP. The map is interactive and holes can be
-            clicked on to learn further information. The map is subsettable by drilling
-            program, expedition, water depth, and seafloor penetration. A table and severl
+            clicked on to learn further information. The map is subsetted by drilling
+            program, expedition, water depth, and seafloor penetration. A table and several
             graphs are provided at the bottom for additional reference."
         ),
         userBox(width = 12,
@@ -133,8 +133,15 @@ ui <- dashboardPage(
                 location of the JOIDES Resolution and the midnight position for 
                 the past 100 days."
             ),
+            hr(), hr(),
+            fluidRow(
+              column(width = 1),
+              column(width = 5,
+            a("JR Quick Guide",target="_blank",href="JR_quickguide.pdf")),
+              column(width = 6,
+            a("Ocean Drilling Timeline",target="_blank",href="Ocean_Drilling_Timeline.pdf"))),
             #############################
-            hr(), br(), br(),
+            hr(),
                    h4("At Sea Applications", style = 'font-weight: bold;'),
                    userBox(width = 12,
                      title = userDescription(
@@ -234,7 +241,24 @@ ui <- dashboardPage(
               display to students, visitors, and scientists. A preview image is provided, as
               well as a brief overview of the location, science, and age of the material. Links
               to the digital core image, the Initial Report/Proceedings Volume, and the visual core description (VCD)
-              are also provided.")
+              are also provided."),
+          fluidRow(
+            column(width = 12),
+            h2(" ")),
+          hr(),
+          fluidRow(
+            column(width = 1),
+            column(width = 6,
+                   a("LIMS Overview Tutorial",target="_blank",href="https://www.youtube.com/watch?v=hZjOvfSlo3c")),
+            column(width = 5,
+                   a("LIMS CCSF Tutorial",target="_blank",href="https://www.youtube.com/watch?v=sa5BJLjo_Zc"))),
+          br(),
+          fluidRow(
+            column(width = 1),
+            column(width = 5,
+                   a("LIMS Overview Diagram",target="_blank",href="LIMS_overview_diagram.pdf")),
+            column(width = 6,
+                   a("LIMS Find Your Samples Tutorial",target="_blank",href="https://www.youtube.com/watch?v=yVPoWi0QduU"))),
             ),
         ########################################################################
         # hr(style = "border-top: 1px solid #000000;"), #horizontal line
