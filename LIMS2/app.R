@@ -425,7 +425,9 @@ ui <- fluidPage(theme = shinytheme("spacelab"),
                 tags$i("These are not official IODP-JRSO applications 
                                     and functionality is not guaranteed. User assumes all risk."), #italic disclaimer
                 br(),
-                tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")
+                tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
+                br(),
+                tags$i("This app can be cited by https://doi.org/10.5281/zenodo.10498831")
   
 )
 
