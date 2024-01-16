@@ -82,6 +82,8 @@ ui <- dashboardPage(
            not guaranteed. User assumes all risk."), #italic disclaimer
     br(),
     tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
+    br(),
+    tags$i("This app can be cited by https://doi.org/10.5281/zenodo.10498831"),
     tags$head(tags$style(HTML('
         /* logo */
         .skin-blue .main-header .logo {
