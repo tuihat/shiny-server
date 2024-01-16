@@ -104,7 +104,9 @@ ui <- fluidPage(useShinyjs(), #to use shinyjs
                                     tags$i("These are not official IODP-JRSO applications 
                                     and functionality is not guaranteed. User assumes all risk."),
                                     br(),
-                                    tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com")), #italic disclaimer
+                                    tags$i("Questions, comments, concerns, compliments: shinylaurelwebmaster@gmail.com"),
+                                    br(),
+                                    tags$i("This app can be cited by https://doi.org/10.5281/zenodo.10498831")), #italic disclaimer
                            tabPanel("Repetitive Sample Intervals", #App 2
                                     tags$i("Please note that there are very few guardrails
                                           in this application. If changing values causes
