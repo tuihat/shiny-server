@@ -317,8 +317,8 @@ server <- function(input, output, session) {
         
         batched$top_cm <- (as.numeric(batched$requested_mbsf) - as.numeric(batched$Top.depth.CSF.A..m.))*100
         batched$top_cm <- round(batched$top_cm, 2)
-        batched <- batched[,c(1:6, 21, 20)]
-        names(batched)[names(batched) == "top_cm"] <- "Top offset"
+        batched <- batched[,c(1:6, 20, 19)]
+        names(batched)[names(batched) == "top_cm"] <- "Top offset cm"
         names(batched)[names(batched) == "requested_mbsf"] <- "Requested mbsf"
         batched <- batched
 
