@@ -83,6 +83,23 @@ ui <- dashboardPage(
         ),
         userBox(width = 12,
                 title = userDescription(
+                  title = h4("CORK and Legacy Holes"),
+                  subtitle = "",
+                  image = "map_app_image.jpg"
+                ),
+                status = "teal",
+                closable = FALSE,
+                collapsed = TRUE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/CORK_and_legacy/", 
+                       "Visit the app.",
+                       target="_blank"), #another app link,
+                footer = "This application provides a map of CORK (Circulation Obviation Retrofit Kit) 
+                installations, as well as legacy holes which are fitted with re-entry cones (and possibly casing).
+                Tables provide further detailed information."
+        ),
+        userBox(width = 12,
+                title = userDescription(
                   title = h4("Scientific Ocean Drilling Ages"),
                   subtitle = "",
                   image = "timescale.jpg"
