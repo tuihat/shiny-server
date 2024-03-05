@@ -46,8 +46,8 @@ if(!require(shinydashboardPlus)){ #check if the package is installed and sourced
   library(shinydashboardPlus) #and source the package
 }
 
-import_CORK <- read.csv("~/R_Studio/IODP-general/big_and_Shiny/31_CORK_legacyholes/CORK.csv") #import data
-import_legacy <- read.csv("~/R_Studio/IODP-general/big_and_Shiny/31_CORK_legacyholes/Legacy_Holes.csv") #import data
+import_CORK <- read.csv("CORK.csv") #import data
+import_legacy <- read.csv("Legacy_Holes.csv") #import data
 ####################################################
 
 #program colors
