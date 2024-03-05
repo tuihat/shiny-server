@@ -1,0 +1,96 @@
+Expedition,Site,Hole,Special Hole Type,Location,Latitude (DD),Longitude (DD),Water Depth (m below rigfloor),Total Penetration (m),Basement Penetration (m),Number Casing Strings,Casing 1 Size (inches; outer diameter),Casing 1 Bottom Depth (m below seafloor),Casing 2 Size (inches; outer diameter),Casing 2 Bottom Depth (m below seafloor),Casing 3 Size (inches; outer diameter),Casing 3 Bottom Depth (m below seafloor),Program,Comment
+15,146,A,Reentry cone,Caribbean Sea,15.1165,-69.37783333,3949,105,24,1,13.375,50,,,,,DSDP,First operational re-entry - Lacks second casing string
+34,319,A,Reentry cone,East Pacific Rise - E flank,-13.01733333,-101.5243333,4296,157,59,1,13.375,66,,,,,DSDP,Lacks second casing string; bad hole conditions in basement
+34,320,B,Reentry cone,Peru Basin,-9.006666667,-83.53333333,4487,183,29,1,13.375,65,,,,,DSDP,Lacks second casing string; bad hole conditions in basement
+37,332,B,Reentry cone,Mid-Atlantic Ridge - W flank,36.87933333,-33.64283333,1851,437.5,,1,13.375,68,,,,,DSDP,
+37,333,A,Reentry cone,Mid-Atlantic Ridge - W flank,36.84083333,-33.6675,1682,529,311,1,13.375,70,,,,,DSDP,Lost BHA at 488 mbsf; DIANAUT reentry 1990
+45,395,A,Reentry cone,Mid-Atlantic Ridge - W flank,22.75583333,-46.08166667,4494,664,572,2,16,62,11.75,112,,,DSDP,First time setting a reentry cone and casing to basement on deep-sea floor.Hole packed with mud; left open.
+46,396,B,Reentry cone,Mid-Atlantic Ridge - E flank,22.98566667,-43.515,4465,405.5,254,2,16,120,11.75,163.1,,,DSDP,Logged and left open. Wireline reentry: FARE 1998; SISMOBS seismometer tests 1992.
+47,398,D,Reentry cone,Galicia Bank,40.96,-10.71833333,3900,1740,0,1,16,80,,,,,DSDP,Hole filled with sediments
+50,415,A,Reentry cone,off Morocco,31.0275,-11.66616667,2817,1080,0,2,16,68,11.75,311,,,DSDP,Bad hole conditions; filled with cavings/mud
+50,416,A,Reentry cone,off Morocco,32.83633333,-10.801,4203,1624,0,1,16,40,,,,,DSDP,Lacks second casing string; bad hole conditions
+51,417,C,Reentry cone,S Bermuda Rise,25.10933333,-68.04383333,5489,23,0,1,16,23,,,,,DSDP,Lost BHA in hole while running casing
+51,417,D,Reentry cone,S Bermuda Rise,25.1115,-68.047,5489,532,366,1,16,26,,,,,DSDP,Only one casing string
+52,418,A,Reentry cone,S Bermuda Rise,25.03466667,-68.0575,5519,570,544,1,16,74,,,,,DSDP,Cone plugged with mud - Verify
+55,433,C,Reentry cone,Suiko Seamount,44.77716667,170.0205,1874,550,388,1,16,39.3,,,,,DSDP,Lacks second casing string
+58,442,B,Reentry cone,Shikoku Basin,28.98333333,136.05,4634,455,165,1,16,65.5,,,,,DSDP,Lacks second casing string; bad hole conditions
+61,462,A,Reentry cone,Nauru Basin,7.083333333,165.0333333,5177,1068,452,1,16,74.5,,,,,DSDP,Lacks second casing string; basement = sill/sediment sequence
+69,504,A,Reentry cone,Costa Rica Rift,1.233333333,-83.73333333,3458,277,12,1,16,89.7,,,,,DSDP,Lacks second casing string; abandoned when 14 in bit cone lost
+69,504,B,Reentry cone,Costa Rica Rift - S flank,1.233333333,-83.73333333,3460,489,226,2,16,91,11.75,276,,,DSDP,Total penetration at end of Leg 69 = 501 meters. Hole 504B also visited Legs 70; 83; 92; 111; 137; 140;and 148 - Total penetration: 2111 mbsf
+76,534,A,Reentry cone,East of Blake Escarpment,28.35,-75.38333333,4971,1666,32,2,16,86,11.75,533,,,DSDP,Wireline reentry: LFASE; 1989; DIANAUT; 1990
+78,395,A,Reentry cone,Mid-Atlantic Ridge - W flank,22.75,-46.08333333,4483,,572,2,16,62,11.75,112,,,DSDP,Reoccupied for the purpose of downhole geophysical experiments; including downhole seismometer.Left open.
+91,595,B,Reentry cone,SW Pacific,-23.81666667,-165.5333333,5615,124,54,2,16,34,11.75,74,,,DSDP,Ngendei experiment; 1983; stinger left in hole
+92,597,C,Reentry cone,East Pacific Rise - W flank,-18.8,-129.7666667,4164,144,91,1,16,40,,,,,DSDP,Lacks second casing string; good hole in fastest-spread crust
+103,638,C,Reentry cone,Galicia margin,42.15,-12.2,4673,547,0,1,16,40,,,,,ODP,Lacks second casing string
+104,642,E,Reentry cone,Norwegian margin,67.21666667,-2.933333333,1278,1229,917,2,16,51,11.75,369,,,ODP,Top of cone at seafloor; basement = sill/sediment sequence
+105,645,E,Reentry cone,Baffin Bay,70.45,-64.65,2008,1147,0,1,16,21,,,,,ODP,Lacks second casing string; sediment bridges in open hole
+106,648,B,Reentry cone,Mid-Atlantic Ridge axis,22.91666667,-44.95,3333,33,50,1,16,19,,,,,ODP,Hard Rock Guide Base.
+109,395,A,Reentry cone,Mid-Atlantic Ridge - W flank,22.75,-45.08333333,4490,664,572,2,16,62,11.75,112,,,ODP,Reoccupied for the purpose of downhole geophysical experiments; especially temperature; insitu porosity and permeability; and resistivity
+118,735,B,Reentry cone,Atlantis II Fracture Zone,-32.71666667,57.26666667,720,501,501,0,,,,,,,ODP,Hard Rock Guide Base
+123,765,D,Reentry cone,Argo Abyssal Plain,-15.98333333,117.5833333,5714,1195,271,2,16,90.5,11.75,933,,,ODP,"Double ""J"" casing system with two nested casing strings extending to 933.0 mbsf (11 3/4"" casing) 4th longest DSDP/ODP casing"
+126,793,B,Reentry cone,Bonin Arc-Trench System,31.1,140.8833333,2965,1682,,2,16,20,11.75,562.7,,,ODP,"Double ""J"" casing system with two nested casing strings extending to 562.66 mbsf (11 3/4"" casing)"
+127,794,C,Reentry cone,Japan Sea,40.18333333,138.2333333,2809,654,,2,16,90,11.75,372,,,ODP,"Double ""J"" casing system with two nested casing strings extending to 374 mbsf (11 3/4"" casing) - Pipe severed in hole - Not suitable for reentry"
+127,797,C,Reentry cone,Japan Sea,38.61666667,134.5333333,2865,900,,1,16,90,,,,,ODP,"Double ""J"" casing system with one 16"" casing string - Pipe twisted off in hole - Not suitable for reentry"
+128,794,D,Reentry cone,Japan Sea,40.18333333,138.2333333,2807,734,192,2,16,59,11.75,560,,,ODP,"Double ""J"" casing system with two nested casing strings extending to 560.0 mbsf (11 3/4"" casing) - New style reentry cone used for the first time - Broadband seismometer experiment 1989; still in hole"
+128,799,B,Reentry cone,Japan Sea,39.21666667,133.8666667,2084,1084,,2,16,69.9,11.75,439.6,,,ODP,"Double ""J"" casing system with two nested casing strings extending to 439.6 mbsf (11 3/4"" casing) - New style reentry cone used for the second time"
+129,801,C,Reentry cone,West Pacific Jurassic,18.65,156.3666667,5674,594,477,2,16,51,11.75,481,,,ODP,"Double ""J"" casing system with two nested casing strings extending to 481.0 mbsf (11-3/4"" casing - Oldest sampled oceanic crust; Leg 185: 7.4 m DCB coring to TD with 7-1/2 in diameter"
+130,807,C,Reentry cone,Ontong Java Plateau,3.6,156.6333333,2806,1528,148,2,16,57.7,11.75,350.2,,,ODP,"Double ""J"" casing system with two nested casing strings extending t 350.2 mbsf (11-3/4"") - Two bit cones lost in hole"
+131,808,D,Reentry cone,Nankai Trough,32.35,134.95,4673,780,0,2,16,31,,0,,,ODP,741 m 11-3/4 in casing lost on deployment; partly on sea floor - Hole not suitable for reentry
+131,808,E,Reentry cone,Nankai Trough,32.35,134.95,4673,1200,0,2,16,31,11.75,521,,,ODP,Bad hole conditions below casing; ONDO experiment lost in hole
+132,809,F,Reentry cone,Sumisu Rift,31.05,139.8833333,1802,79,79,0,,,,,,,ODP,Mini-HRGB; slim hole cored with DCS
+139,856,H,Reentry cone,Middle Valley Juan de Fuca Ridge,48.43333333,-128.6833333,2424,94,,1,11.75,12,,,,,ODP,Small reentry funnel installed with a 12-m joint of 11-3/4-in. of drill-in casing
+142,864,A,Reentry cone,East Pacific Rise axis,9.516666667,-104.25,2571,15,15,0,,,,,,,ODP,Hard Rock Guide Base
+142,864,C,Reentry cone,East Pacific Rise axis,9.516666667,-104.25,2572,7,7,0,,,,,,,ODP,Hard Rock Guide Base
+149,899,B,Reentry cone,Iberia Abyssal Plain,40.76666667,-12.26666667,5291,562,192,2,,,,50/217,,,ODP,Bit released at 539 mbsf
+158,957,E,Reentry cone,TAG active mound,26.13333333,-44.83333333,3646,126,126,2,13.375,29.1,,,,,ODP,"Dril Quip system with 13-3/8"" casing"
+158,957,L,Reentry cone,TAG active mound,26.13333333,-44.83333333,3645,67,67,2,16,19.5,,,,,ODP,16 in casing; collapsed formation in open hole
+165,999,B,Reentry cone,Columbia Basin,12.75,-78.73333333,2828,1066,0,2,16,62.6,11.75,523.6,,,ODP,"Double ""J"" casing system with two nested casing strings extending to 523.6 mbsf (11 3/4"" casing) - Last of the Double ""J"" installations"
+186,1150,C,Reentry cone,Japan Tranch,39.18333333,143.3333333,2681,1050,0,3,20,58,16,527,,,ODP,Dril Quip reentry system with two nested casing strings and 205 m 10-3/4 in casing lost at bottom of hole - Hole is unusable
+192,1185,B,Reentry cone,Ontong Java Plateau,-0.35,161.6666667,3899,526,125,1,16,28,,,,,ODP,"Dril Quip cone reentry system with 16"" casing only"
+193,1188,F,Reentry cone,E Manus Basin,-3.733333333,151.6666667,1642,387,387,3,16,8,13.375,61.6,10.75,190,ODP,"Standard reentry cone with 8m of 16: casing and a Dril Quip Hanger - Freefall deployed cone with HRRS cone on top of 13-3/8"" casing - 190m of 10-3/4"" casing nested in the 13-3/8""; ADCB cored with 7-1/4 in diameter"
+206,1256,D,Reentry cone,Guatemala Basin,6.733333333,-91.93333333,3635,752,502,2,20,95,16,269.1,,,ODP,"Dril Quip system with two nested casing strings - Hole deepened to 1521 mbsf on Exp 309, 313, 335"
+210,1276,A,Reentry cone,Newfoundland Margin,45.4,-44.78333333,4549,1736.9,0,1,20,107,16,747.8,,,ODP,Dril Quip system with two nested casing strings 
+301,U1301,A,Reentry cone,Juan de Fuca,47.75349167,-127.7638817,2667.3,369.7,107.5,3,20,39,16,259.3,10.75,277.1,IODP,"Dril Quip system with three nested casing strings - CORK-II installed w/4-1/2"" tubing to 287 mbsf"
+301,U1301,B,Reentry cone,Juan de Fuca,47.75381,-127.76377,2667.8,582.8,317.6,3,20,40,16,270.9,10.75,346.2,IODP,"Dril Quip system with three nested casing strings - CORK-II installed w/ 4-1/2"" tubing to 506 mbsf"
+304,U1309,D,Reentry cone,Atlantis Massif,30.16666667,-42.11666667,1645,401,401,1,13.375,20.5,,,,,IODP,Hard Rock Re-entry System used - Cone 5 m above S/F - Hole deepened to 1354.4 on Expeditions 305 & 399
+306,U1315,A,Reentry cone,North Atlantic Climate,67.21234333,2.937366667,1283,179.1,,2,16,40,10.75,160,,,IODP,"Dril Quip system with two nested casing strings - CORK-II installed w/4-1/2"" tubing to 100 mbsf"
+327,U1362,A,Reentry cone,Juan de Fuca Hydrogeology,47.76104667,-127.7612,2672,528,292,3,20,53,16,230,10.75,308.5,IODP,Dril Quip system with three nested casing strings - CORK installed
+327,U1362,B,Reentry cone,Juan de Fuca Hydrogeology,47.75832833,-127.7621867,2672,359,117,3,20,53,16,242,10.75,272,IODP,Dril Quip system with three nested casing strings - CORK installed
+328,U1364,A,Reentry cone,Cascadia,48.69993667,-126.8721517,1318,336,,2,16,52.8,10.75,323.1,,,IODP,Installed RECC & ACORK. Attached 20 jts of 10-3/4 csg to ACORK head. Entire length of ACORK assembly was 329.1 m. Effective depth of assembly into hole was 323.1 m. Installed packer at bottom of 10-3/4 in. csg;
+336,U1382,A,Reentry cone,Mid Atlantic Ridge,22.755885,-46.08151833,4483,210,120,2,16,53.1,10.75,102,,,IODP,Cone set with 53m 16in and 102m of 10.75in casing.CORK set.
+336,U1383,B,Reentry cone,Mid Atlantic Ridge,22.80206833,-46.05271333,4414,89.8,56.8,2,20,35,16,53.8,,,IODP,"Junk in hole from failed 14-3/4"" bit"
+336,U1383,C,Reentry cone,Mid Atlantic Ridge,22.80206833,-46.05277,4414,331.5,293.2,2,16,34.8,10.75,60,,,IODP,CORK set
+350,U1437,D,Reentry cone,Izu-Bonin-Mariana Rear Arc,31.78978667,139.0262167,2116,1865,,3,20,21,16,264.1,10.75,1087.1,IODP,Dril Quip casing system with three nested casing strings
+351,U1438,E,Reentry cone,Izu-Bonin-Mariana Rear Arc,27.38358833,134.3181633,4700,1611,150,2,16,60.1,10.75,604,,,IODP,Dril Quip casing system with two nested casing strings
+352,U1439,C,Reentry cone,Izu-Bonin-Mariana Fore Arc,28.407485,142.6089467,3129,544.3,,1,10.75,178.5,,,,,IODP,Dril Quip re-entry system with 178.45m of casing.
+352,U1440,B,Reentry cone,Izu-Bonin-Mariana Fore Arc,28.44996,142.75374,4775,383.6,258,1,10.75,98.6,,,,,IODP,Dril Quipe-entry system with 98.6m of casing.
+354,U1451,B,Reentry cone,Bengal Fan,8.006813333,88.74124167,3607,1181.3,,1,10.75,400.8,,,,,IODP,"Dril QUipRe-entry system with 402m of casing - 16"" casng hanger"
+355,U1456,D,Reentry cone,Arabian Sea Monsoon,16.62127667,68.839235,3637,1024,,1,10.75,455.1,,,,,IODP,"Dril QUipRe-entry system with 451m of casing - 16"" casing hanger"
+360,U1473,A,Reentry cone,Southwest Indian Ridge Lower Crust and Moho,-32.70603667,57.27813333,710,789.7,789.7,1,13.375,9.5,,,,,IODP,HRT Re-entry system with 9.5 of casing
+362,U1480,G,Reentry cone,Sumatra Subduction Zone,3.03425,91.60561667,4147,1431.6,16,1,10.75,755,,,,,IODP,HRT Re-entry system with 755m of casing
+362,U1481,A,Reentry cone,Sumatra Subduction Zone,2.754768333,91.75961833,4178,1500,,1,10.75,734,,,,,IODP,HRTRe-entry system with 734m of casing
+366,U1492,D,Reentry cone,Mariana Convergent Margin,18.11011333,147.1016683,1243,105,,1,10.75,214.4,,,,,IODP,"Dril Quip Re-entry system with 214.4m of casing - 4 screened joints - 16"" casing hanger"
+366,U1496,C,Reentry cone,Mariana Convergent Margin,18.11011333,147.1016683,1243,105,,1,10.75,98,,,,,IODP,"Dril Quip Re-entry system with 98m of casing - 3 screened joints - 16"" casing hanger"
+366,U1497,D,Reentry cone,Mariana Convergent Margin,16.53758,147.221035,2018,120,,1,10.75,106,,,,,IODP,"Dril Quip Re-entry system with 98m of casing - 3 screened joints - 16"" casing hanger"
+367,U1499,B,Reentry cone,South China Sea I,18.40950833,115.8599833,3769,1081.8,,1,10.75,651,,,,,IODP,"HRT Re-entry system with 651 meters of 10-3/4"" casing"
+367,U1500,B,Reentry cone,South China Sea I,18.30451167,116.2199183,3812.8,1529,,1,10.75,842,,,,,IODP,"HRT Re-entry system with 842.0  meters 10-3/4"" of casing"
+368,U1502,B,Reentry cone,South China Sea II,18.46466333,116.2306817,3774.7,920.8,,1,10.75,723.7,,,,,IODP,"HRT Re-entry system with 723.7  meters 10-3/4"" of casing"
+368,U1503,A,Reentry cone,South China Sea II,18.14383333,116.3140933,3879,995.1,,1,10.75,991.5,,,,,IODP,"DrilQuip system with 16"" casing hanger and 991.5 meters of 10-3/4"" casing - Deepened to 1710.1 on Exp 368X"
+375,U1520,C,Reentry cone,Hikurangi,-38.85948667,179.1318533,3533,1054.1,,1,10.75,642,,,,,IODP,"HRT Re-entry system with 642.0  meters 10-3/4"" of casing"
+375,U1518,H,Reentry cone,Hikurangi,-38.85911667,178.89607,3533,426.5,,1,10.75,422.5,,,,,IODP,"HRT ACORK with 422.5 meters of 10-3/4"" casing"
+375,U1519,B,Reentry cone,Hikurangi,-38.72737667,178.614425,1011.5,285.1,,1,10.75,280,,,,,IODP,"HRT ACORK with 280.0 meters of 10-3/4"" casing"
+376,U1527,C,Reentry cone,Brothers Arc,-34.86104167,179.0542233,1475,238,,1,10.75,95.5,,,,,IODP,"HRT reentry system with 95.5 meters of 10-3/4"" casing"
+376,U1528,B,Reentry cone,Brothers Arc,-34.88203667,179.0684617,1240.3,25.6,,1,10.75,25.6,,,,,IODP,"HRT reentry system with 25.6 meters of 10-3/4"" casing - Reentry system damage while landing casing too close to crater walls "
+376,U1528,D,Reentry cone,Brothers Arc,-34.88203167,179.0686067,1239,359.3,,1,10.75,61.3,,,,,IODP,"HRT reentry system with 61.3 meters of 10-3/4"" casing "
+376,U1531,E,Reentry cone,Brothers Arc,-34.87931833,179.0705733,1361.5,285.1,,1,10.75,17.9,,,,,IODP,"HRT reentry system with 17.9 meters of 10-3/4"" casing - Reentry system set high with shoe at 10.7 and to of cone 7 meters above S/F"
+379,U1532,G,Reentry cone,Amundsen Sea,-68.61159,-107.5254983,3972.5,794,,1,10.75,13.6,,,,,IODP,"HRT reentry system with 13.6 meters of 10-3/4"" casing - System FF deployed "
+379,U1533,B,Reentry cone,Amundsen Sea,-68.73499,-109.0500167,4201.4,382.6,,1,10.75,24.3,,,,,IODP,"HRT reentry system with 24.4 meters of 10-3/4"" casing - System FF deployed "
+390C,U1557,D,Reentry cone,South Atlantic Transect Re-entry Cones,-30.941085,-26.62982,5021.9,64.2,,1,16,60,,,,,IODP,"DrilQuip system with 16"" casing"
+390C,U1558,D,Reentry cone,South Atlantic Transect Re-entry Cones,-30.89635667,-24.84137,4345.7,150,,1,10.75,146.1,,,,,IODP,"HRT reentry system with 146.1 meters of 10-3/4"" casing"
+390C,U1559,B,Reentry cone,South Atlantic Transect Re-entry Cones,-30.26056,-15.03490167,3066.3,58.9,,1,10.75,55.3,,,,,IODP,HRT ACORK with 55.3 meters of casing
+395E,U1560,B,Reentry cone,South Atlantic Transect Re-entry Cones,-30.40342833,-16.92283667,3734.8,124,,1,10.75,122,,,,,IODP,"HRT reentry system with 122.2 meters of 10-3/4"" casing"
+395E,U1557,D,Reentry cone,South Atlantic Transect Re-entry Cones,-30.941085,-26.62982,5021.9,576.6,,2,16,60,10.75,571.6,,,IODP,"Drill Quip system with 16"" and 10-3/4"" nested casing strings"
+395E,U1556,B,Reentry cone,South Atlantic Transect Re-entry Cones,-30.94207333,-26.69912,5013.1,286.2,,1,10.75,284.2,,,,,IODP,"HRT reentry system with 284.2 meters of 10-3/4"" casing"
+395C,U1554,F,Reentry cone,Reykjanis Mantle Convection & Climate,60.125206,-26.7019,1869.8,779.9,132.2,1,10.75,602.2,,,,,IODP,"HRT reentry system with 602.2 meters of 10-3/4"" casing"
+399,U1601,C,Reentry cone,Building Blocks of Life,30.13236167,-42.12012,861,1276.8,1276.8,1,10.75,23,,,,,IODP,"23 meters of 10-3/4"" casing with FFF welded - FF deployed "
+395,U1564,F,Reentry cone,Reykjanis Mantle Convection & Climate,59.850605,-23.2664,2219.5,779.9,132.2,1,10.75,550,,,,,IODP,"HRT reentry system with 550.0 meters of 10-3/4"" casing"

@@ -1,0 +1,41 @@
+Expedition,Site,Hole,Latitude (DD),Longitude (DD),Water Depth (m below rigfloor),CORK Type,Date Deployed,Date Retrieved,Years Installed,Casing Size (inches; Outer Diameter),Casing Length (m),Screens,Number of Packers,Packer Type,Notes,Operations (including third party),Program
+139,857,D,48.44195,-128.71085,2431.5,OJ6000,9/3/1991,9/5/1996,,None,None,,0,,First CORK installation - Confirmed latched,,ODP
+139,858,G,48.456,-128.70885,2426.2,OJ6000,9/9/1991,9/2/1996,,None,None,,0,,"Set ~28"" lower than designed - Padle type 16"" hanger",,ODP
+146,889,C,48.6985,-126.8705,1326,OJ6000,10/22/1992,,,None,None,,0,,Confirmed latched at installation,,ODP
+146,892,B,44.67566667,-125.118,693.5,OJ6000,11/10/1992,,,None,None,,0,,Confirmed latched at installation,,ODP
+156,948,D,15.52433333,-58.71433333,4949,OJ6000,6/30/1994,,,None,None,,0,,Not Latched,,ODP
+156,949,C,15.53683333,-58.71433333,5016,OJ6000,7/23/1994,,,None,None,,0,,Confirmed latched at installation,,ODP
+168,1024,C,47.90885,-128.7500833,2623.3,OJ6000,8/1/1996,,,None,None,,0,,Confirmed latched at installation,,ODP
+168,1025,C,47.88745,-128.64865,2617.2,OJ6000,7/29/1996,,,None,None,,0,,Confirmed latched at installation,,ODP
+168,1026,B,47.76265,-127.7592,2669.1,OJ6000,7/21/1996,7/17/2004,,None,None,,0,,Confirmed latched at installation,,ODP
+168,1027,C,47.75645,-127.7311167,2667.3,OJ6000,7/16/1996,,,None,None,,0,,Confirmed latched at installation,,ODP
+169,857,D,48.44195,-128.71085,2431.5,OJ6000,9/11/1996,,,None,None,,0,,Replaced original CORK set on Leg 139,,ODP
+169,858,G,48.456,-128.70885,2426.2,OJ6000,9/5/1996,,,None,None,,0,,Replaced original CORK set on Leg 139,,ODP
+174B,395,A,22.755865,-46.081015,4494,OJ6000,7/31/1997,9/22/2011,,None,None,,0,,Casing originally set on DSDP Leg 45 - Not latched,,ODP
+195,1200,C,13.78454,146.0028617,2943,OJ6000,3/25/2001,12/14/2016,,None,None,,0,,Confirmed latched at installation,,ODP
+196,808,I,32.353575,134.945005,4686,ACORK,6/28/2001,,,10.75,934,6,2,Inflatable,Site 808 revisited (Holes A-G cored on Leg 131) Could not get CORK all the way down. Pulled BHA and CORK layed over - Still operational and getting data.,,ODP
+196,1173,B,32.24471833,135.0247417,4801.9,ACORK,6/13/2001,,,10.75,660,5,3,Inflatable,"Site 1173 revisited (Hole A cored on Leg 190) Lost DP in borehole, but ACORK still functional",,ODP
+205,1253,A,9.647638333,-86.19056167,4387.2,CORK-II,10/11/2002,,,4.5,505,1,1,Inflatable,First CORK-II installation - Replaced Osmo Sampler on IODP Expedition 301T,,ODP
+205,1254,B,9.661978333,-86.17879,4187,CORK-II,,,,,,,,,"Installation failed - 4-1/2"" casing parted",,ODP
+205,1255,A,9.654526667,-86.18582,4323,CORK-II,11/1/2002,,,4.5,145,1,1,Inflatable,Replaced Osmo Sampler on IODP Expedition 301T,,ODP
+301,1026,B,47.76261833,-127.7591367,2669.1,CORK-II,8/5/2004,,,4.5,202,Mini-screens,1,Inflatable,Replaced CORk installed on Leg 168 with CORK-II,,IODP
+301,U1301,A,47.75349167,-127.7638817,2667.5,CORK-II,7/20/2004,,,4.5,287.5,Mini-screens,1,Inflatable,,,IODP
+301,U1301,B,47.75381,-127.76377,2666.5,CORK-II,8/16/2004,,,4.5,506,Mini-screens,2,Inflatable,Instrument string replaced on Exp 327,,IODP
+306,U1315,A,67.21234333,-2.937366667,1283,CORK-II,4/19/2005,,,None,None,None,0,,Confirmed latched at installation,,IODP
+327,U1362,A,47.76104667,-127.7612,2672,L CORK,8/16/2010,,,4.5,470,Mini-screens,2,Inflatable / Swellable,First use of swellable packers,"Revisited on Atlantis AT18-07 cruise: 10.2204/?iodp.sd.13.01.2011; serviced CORKs, collected data, recovered and deployed autonomous fluid and microbial samplers, collected borehole fluids, deployed flowmeter, and initiated a cross-hole hydrogeologic experiment. Also retrofitted 1027C CORK for pressure monitoring since we could not retrieve it on Exp 327.",IODP
+327,U1362,B,47.75832833,-127.7621867,2672,L CORK,8/29/2010,,,4.5,311,Mini-screens,2,Inflatable / Swellable,First use of swellable packers,,IODP
+328,U1364,A,48.69993667,-126.8721517,1329,ACORK,9/16/2010,,,10.75,323,4,1,Swellable,,,IODP
+336,395,A,22.755865,-46.081015,4494,"4-1/2"" CSG",9/29/2011,,,4.5,532,Mini-screens,2/1,Inflatable/Combo,CORK Retrieved - L CORK broken at 4-1/2 casing connection below CORK head,,IODP
+336,U1382,A,22.755885,-46.08151833,4494,L CORK,10/12/2011,,,4.5,189,Mini-screens,1,Combo,,Revisited on Maria S Merion 2014 and Atlantis 2017 cruises to get data.,IODP
+336,U1383,B,22.80221333,-46.00525933,4425.2,ROV Platform,10/19/2011,,,,,,,,Left open w/ROV Platform for future Simple CORK Installation. ,"CORK-Lite installed in 2012 on Maria S Merion cruise, and revisited on Maria S Merion 2014 and Atlantis 2017 cruises to get data.",IODP
+336,U1383,C,22.80206833,-46.05277,4425.2,L CORK,11/6/2011,,,4.5,248,Mini-screens,2/1,Inflatable/Combo,,Revisited on Maria S Merion 2014 and Atlantis 2017 cruises to get data.,IODP
+341S,858,G,48.45598,-128.7089033,2428,CORK,9/5/1996,5/20/2013,,,,,,,CORK broken during retrieval - bottom left in hole,,IODP
+341S,U1416,A,48.669705,-126.847515,1272,SCIMPI,5/24/2013,,,,,,,,,,IODP
+366,1200,C,13.78454,146.0028617,2943,OJ6000,3/24/2001,12/14/2016,,,,,0,,CORK parted during retrieval attempt,,IODP
+366,U1492,D,15.70949,147.1766517,3677.4,Open,12/31/2016,,,10.75,211,2,0,,Set up for Simple CORK to be deployed by 3rd party,,IODP
+366,U1496,C,18.11011333,147.1016683,1254.3,Open,1/11/2017,,,10.75,106,2,0 to 1,,Set up for Simple CORK to be deployed by 3rd party,,IODP
+366,U1497,D,16.53758,147.221035,2030,Open,1/19/2017,,,10.75,107,2,0,,Set up for Simple CORK to be deployed by 3rd party,,IODP
+375,U1518,H,-38.859175,178.8960283,2640.5,ACORK,3/28/2018,,,10.75,422.5,3,0,,Latched,Revisited to get data (2020 & March of 2021),IODP
+375,U1518,H,-38.859175,178.8960283,2640.5,CORK-II,4/1/2018,,,4.5,412.5,0,2,Swellable,First intallation of CORK-II inside of ACORK,,IODP
+375,U1519,B,-38.72739333,179.614425,1011.5,ACORK,4/16/2018,,,10.75,280,2,0,,,Revisited to get data (2020 & March of 2021),IODP
+375,U1519,B,-38.72739333,179.614425,1011.5,CORK-II,4/18/2018,,,4.5,269,0,0,,,,IODP
