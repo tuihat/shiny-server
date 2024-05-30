@@ -280,7 +280,22 @@ ui <- dashboardPage(
         ########################################################################
         # hr(style = "border-top: 1px solid #000000;"), #horizontal line
         column(width = 3,
-        h4("LILY Applications (coming soon)", style = 'font-weight: bold;'),
+        h4("LILY Applications", style = 'font-weight: bold;'),
+        userBox(width = 12,
+                title = userDescription(
+                  title = h4("About LILY"),
+                  subtitle = "",
+                  image = "LILY_logo.jpg"
+                ),
+                status = "orange",
+                closable = FALSE,
+                collapsed = FALSE,
+                maximizable = TRUE,
+                tags$a(href="https://shinylaurel.com/shiny/LILY_overview/",
+                       "Visit the app.",
+                       target="_blank"), #another app link,
+                footer = "An introduction to the purpose and contents of the LILY database."
+        ),
         userBox(width = 12,
             title = userDescription(
                 title = h4("Lithology Search"),
@@ -289,16 +304,16 @@ ui <- dashboardPage(
             ),
             status = "orange",
             closable = FALSE,
-            collapsed = TRUE,
+            collapsed = FALSE,
             maximizable = TRUE,
-            # tags$a(href="https://shinylaurel.com/shiny/daily_report_maker/", 
-            #        "Visit the app.",
-            #        target="_blank"), #another app link,
-            footer = "This application searches LILY based on text entry."
+            tags$a(href="https://shinylaurel.com/shiny/LILY_lithology_search/",
+                   "Visit the app.",
+                   target="_blank"), #another app link,
+            footer = "This application allows the user to search LILY for specific lithologies. The user can also enter a Sample ID to obtain the lithology for a particular sample."
         ),
         userBox(width = 12,
             title = userDescription(
-                title = h4("Lithology/Coring Type"),
+                title = h4("Lithology/Coring Type (coming soon)"),
                 subtitle = "",
                 image = "LILY_logo.jpg"
             ),
