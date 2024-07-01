@@ -30,8 +30,9 @@ ui <- dashboardPage(
         h4(HTML("<b>The PDF is interactive and best navigated by downloading the document and viewing 
         it near full screen. Navigate through the document by clicking on items, links, and action
         buttons on each page.</b>"), style="text-align:center"),
-        ########################################################################
         br(),
+        h5(HTML("<i>Current version: 1.0</i>"), style="text-align:center"),
+        ########################################################################
         hr(style = "border-top: 1px solid #000000;"), #horizontal line
         uiOutput("pdfview"),
         ########################################################################
