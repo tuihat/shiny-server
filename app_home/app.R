@@ -189,7 +189,17 @@ ui <- dashboardPage(
               that is not stored in the Laboratory Information Management System (LIMS).
               DSDP (Deep Sea Drilling Project) and ODP (Ocean Drilling Program) data are 
               stored at the NOAA National Centers for Environmental Information (NCEI) 
-              formerly known as NGDC (National Geophysical Data Center)."),  
+              formerly known as NGDC (National Geophysical Data Center)."),
+          userBox(width = 12,
+                  title = userDescription(
+                    title = h4(HTML("<a style=color:white; href='https://shinylaurel.com/shiny/core_data_access/' target='_blank'>Data and Core Access Guide</a>")),
+                    subtitle = "",
+                    image = "data_core_access.jpg"
+                  ),
+                  status = "purple",
+                  closable = FALSE,
+                  maximizable = TRUE,
+                  footer = "An interactive PDF guide on how to access scientific ocean drilling data and cores."),
           userBox(width = 12,
                 title = userDescription(
                   title = h4(HTML("<a style=color:white; href='https://shinylaurel.com/shiny/GCR_sample_planning/' target='_blank'>GCR Sample Planning</a>")),
@@ -319,7 +329,7 @@ ui <- dashboardPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output, session) {
-
+  
 }
 
 # Run the application 
